@@ -1,5 +1,3 @@
-local Http = game:GetService("HttpService")
-local GAMENAME = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 ---Main---
 local LoadedUiHub 
 UserSettings():GetService("UserGameSettings").MasterVolume = 0
