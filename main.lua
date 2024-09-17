@@ -393,56 +393,6 @@ local function base64_encode(data)
         return base64_chars:sub(c+1,c+1)
     end)..({ '', '==', '=' })[#data%3+1])
 end
-
-update_seed()
-
-local function REQS(...)
-    local arg = {...}
-    local tick_req = tick()
-    local data_req = ''
-    local s, e = pcall(function()
-        data_req = REQ(arg[1])
-        if data_req.StatusCode ~= 200 then
-            RemoveKey()
-            game.Players.LocalPlayer:Kick("bad request!")
-            return
-        end
-        if not data_req.Success then
-            RemoveKey()
-            game.Players.LocalPlayer:Kick("bad request!")
-            return
-        end
-        if not data_req.Success then
-            RemoveKey()
-            game.Players.LocalPlayer:Kick("bad request!")
-            return
-        end
-        if not data_req.Headers then
-            RemoveKey()
-            game.Players.LocalPlayer:Kick("bad request!")
-            return
-        end
-    end)
-    if not s then
-        RemoveKey()
-        game.Players.LocalPlayer:Kick("bad request!")
-        return
-    end
-    if s and tick() - tick_req < 0.001 then
-        RemoveKey()
-        game.Players.LocalPlayer:Kick("bad request!")
-        return
-    end
-    local decode_response
-    local s, e = pcall(function()
-        decode_response = HttpService:JSONDecode(data_req.Body)
-    end)
-    if not s then
-        RemoveKey()
-        game.Players.LocalPlayer:Kick("bad request!")
-        --while true do end
-        return
-    end
     if decode_response.error ~= 0 then
         if not decode_response.message:find('Token') then
             RemoveKey()
