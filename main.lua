@@ -1,10 +1,4 @@
--- tsuo hub deob...
 
-
-
-if getgenv().ScriptExecute then return print('Script Already Execute') end
-local start_check_time = tick()
-getgenv().ScriptExecute = true
         --- Hub Values ---
         Hub = {}
         Hub.Name = "Tsuo Hub"
