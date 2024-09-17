@@ -1,25 +1,6 @@
 -- tsuo hub deob...
     
-    if sign_match == decode_response.sign then
-        print(("Whitelist Loaded - %ss"):format(math.floor(tick() - start_check_time)))
-        print(decode_response.message)
-        Notify.New(decode_response.message, 5)
-        local expired = tonumber(decode_response.expired) / 1000 -- sec
-        sign_match = nil
-        securekeyprivate = nil
-        response = nil
-        privatekeyclient = nil
-        client_id = nil
-        client_req = nil
-        client_hwid = nil
-        client_ip = nil 
-        server_time = nil
-        sp = nil
-        rndStr = nil
-        client_sign = nil
-        decode_response = nil
-        RemoveKeyUI()
-        SaveKey()
+    
         getgenv().ScriptExecute = true
         if _G.Backycho then
             return
