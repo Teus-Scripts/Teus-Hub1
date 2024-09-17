@@ -1,4 +1,51 @@
-
+-- tsuo hub deob...
+    
+    if sign_match == decode_response.sign then
+        print(("Whitelist Loaded - %ss"):format(math.floor(tick() - start_check_time)))
+        print(decode_response.message)
+        Notify.New(decode_response.message, 5)
+        local expired = tonumber(decode_response.expired) / 1000 -- sec
+        sign_match = nil
+        securekeyprivate = nil
+        response = nil
+        privatekeyclient = nil
+        client_id = nil
+        client_req = nil
+        client_hwid = nil
+        client_ip = nil 
+        server_time = nil
+        sp = nil
+        rndStr = nil
+        client_sign = nil
+        decode_response = nil
+        RemoveKeyUI()
+        SaveKey()
+        getgenv().ScriptExecute = true
+        if _G.Backycho then
+            return
+        end
+        if getgenv().YMFLOADED then
+            return
+        end
+        local LoadedUiHub 
+        UserSettings():GetService("UserGameSettings").MasterVolume = 0
+        spawn(
+            function()
+                getgenv().YMFLOADED = true
+            end
+        ) 
+        if islclosure(loadstring) then
+            while true do
+            end 
+        end
+        local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+        repeat
+            task.wait()
+        until game:IsLoaded() and game.Players and game.Players.LocalPlayer
+        if islclosure(loadstring) then
+            while true do
+            end -- Crash cracking ppl
+        end
         --- Hub Values ---
         Hub = {}
         Hub.Name = "Tsuo Hub"
@@ -8902,3 +8949,63 @@
         ------ Attack Functions ---------
         
         loadstring(game:HttpGet("https://raw.githubusercontent.com/memaybeohub/Function-Scripts/main/FastAttackLoader.lua"))()
+        -- Final Load --
+        LoadedUiHub = true
+        Window:SelectTab(1)
+        Fluent:Notify(
+            {
+                Title = "Tsuo Hub",
+                Content = "The script has been loaded successful.",
+                Duration = 15
+            }
+        )
+            else
+        RemoveKey()
+        Notify.New('key expired / does not exist', 5)
+    	print('key expired / does not exist')
+        sign_match = nil
+        securekeyprivate = nil
+        response = nil
+        privatekeyclient = nil
+        client_id = nil
+        client_req = nil
+        client_hwid = nil
+        client_ip = nil 
+        server_time = nil
+        sp = nil
+        rndStr = nil
+        client_sign = nil
+        decode_response = nil
+    end
+end
+
+spawn(function()
+    local KEY = ReadKey()
+    if KEY and #KEY >= 2 then
+        object.Desc.Text = 'Succesfully loaded key!'
+        Notify.New("Succesfully loaded key!", 5)
+        wl(KEY)
+    end
+end)
+
+object.CheckKey.MouseButton1Click:Connect(function()
+    if not GetKeyText() or #GetKeyText() < 10 then
+        object.Desc.Text = 'Please input your key';
+        spawn(function()
+            delay(5, function()
+                object.Desc.Text = "Click 'Get Key' button to get your key!"
+            end);
+        end)
+        return
+    end
+    wl(GetKeyText())
+end)
+ 
+object.GetKey.MouseButton1Click:Connect(function()
+    print('get key')
+    --object.Desc.Text = 'cccc'
+    local link = (URL..'getkey?hwid=%s'):format(REQ({Url = URL..'api/hwid', Method = 'GET'}).Body)
+    object.TextBox.Text = link
+    setclipboard(link)
+end)
+
