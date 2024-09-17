@@ -1,8 +1,4 @@
--- tsuo hub deob...
-    
-    
-        getgenv().ScriptExecute = true
-        end
+
         --- Hub Values ---
         Hub = {}
         Hub.Name = "Tsuo Hub"
