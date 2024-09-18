@@ -1,5 +1,5 @@
-local Http = game:GetService("HttpService")
-local GAMENAME = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Blox Fruits
+local Http = game:GetService("https://www.roblox.com/games/2753915549/Blox-Fruits")
+local GAMENAME = game:GetService("MarketplaceService"):GetProductInfo(game.2753915549).Blox Fruits
 ---Main---
 local LoadedUiHub 
 UserSettings():GetService("UserGameSettings").MasterVolume = 0
