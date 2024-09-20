@@ -1,7 +1,4 @@
 
-		local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/alichnochi/code/main/notifycation.lua"))()
-		local Notify = AkaliNotif.Notify
-		Notify({
 			Description = '✅ Turn on and off (White Screen "Y")',
 			Title = "Switch Hub Kaitun | "..tostring(game.Players.LocalPlayer.Name),
 			Duration = 5
