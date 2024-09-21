@@ -6301,36 +6301,17 @@ Tabs.Misc:AddButton({
 	end
 })
 
---// Carrega a função de reconexão automática
-function AutoRejoin()
-    local retryTime = 10  -- Tempo entre tentativas de reconexão
-
-    -- Tenta reconectar após uma falha de teleporte
-    game.Players.LocalPlayer.OnTeleport:Connect(function(teleportState)
-        if teleportState == Enum.TeleportState.Failed then
-            while true do
-                print("Tentando reconectar...")
-                pcall(function()
-                    game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
-                end)
-                wait(retryTime)  -- Aguarda antes de tentar novamente
-            end
-        end
-    end)
-end
-
---// Detecta se o jogador foi expulso ou desconectado por problema de rede
-game.CoreGui.RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(child)
-    if child.Name == "ErrorPrompt" then
-        local errorMsg = child.MessageArea.ErrorFrame.ErrorMessage.Text
-        if string.find(errorMsg, "has been kicked") or string.find(errorMsg, "Please check your internet") then
-            print("Desconexão detectada: Tentando reconectar...")
-            AutoRejoin()
-        end
-    end
+local ToggleRejoin = Tabs.Misc:AddToggle("ToggleRejoin", {Title = "Auto Rejoin", Description = "Tự động vào lại khi bị văng", Default = true })
+ToggleRejoin:OnChanged(function(Value)
+	_G.AutoRejoin = Value
 end)
 
---// Início do script principal do jogo
-print("Script de reconexão automática iniciado.")
--- Aqui você pode adicionar o restante do seu código
--- Por exemplo: Funções de GUI, manipulação de personagens, etc.
+game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(a)
+	if a.Name == "ErrorPrompt" and _G.AutoRejoin then
+		repeat
+			wait(1)
+			game:GetService("TeleportService"):Teleport(game.PlaceId)
+		until false
+	end
+end)
+
