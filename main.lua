@@ -6305,18 +6305,24 @@ local Players = game:GetService("Players")
 local TeleportService = game:GetService("TeleportService")
 
 local function autoRejoin(player)
-    wait(5) -- Espera 5 segundos antes de tentar reconectar
-    -- Tenta reconectar o jogador ao jogo
+    -- Wait for a few seconds before trying to reconnect
+    wait(5)
+
+    -- Attempt to teleport the player back to the same place
     TeleportService:Teleport(game.PlaceId, player)
 end
 
--- Conectar a função ao evento PlayerRemoving
+local function onPlayerRemoving(player)
+    -- Call the reconnection function
+    autoRejoin(player)
+end
+
+-- Connect the function to the PlayerRemoving event
+Players.PlayerRemoving:Connect(onPlayerRemoving)
+
+-- Log message to check when a player disconnects or is kicked
 Players.PlayerRemoving:Connect(function(player)
-    if player then
-        -- Verifica se a desconexão foi por causa da internet
-        if player:IsInGroup(0) then -- Esta verificação é apenas um exemplo
-            autoRejoin(player)
-        end
-    end
+    print(player.Name .. " was disconnected or kicked. Attempting to reconnect...")
 end)
+
 
