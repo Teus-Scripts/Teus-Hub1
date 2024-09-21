@@ -2007,7 +2007,7 @@ end
         function TP2(P1)
         local Distance = (P1.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
         if Distance >= 1 then
-        Speed = 350
+        Speed = 330
         end
         game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear), {
           CFrame = P1
@@ -2339,7 +2339,6 @@ ImageButton.Image = "rbxassetid://111005674884784"
 UICorner.CornerRadius = UDim.new(0, 30)
 UICorner.Parent = ImageButton
 
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(244, 0, 0)), ColorSequenceKeypoint.new(0.32, Color3.fromRGB(146, 255, 251)), ColorSequenceKeypoint.new(0.65, Color3.fromRGB(180, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(96, 255, 231))}
 UIGradient.Parent = ImageButton
 
 UIAspectRatioConstraint.Parent = ImageButton
@@ -2355,7 +2354,7 @@ local function HCEGY_fake_script()
 	tween:Play()
 end
 coroutine.wrap(HCEGY_fake_script)()
-local function YTZCAJC_fake_script()
+local function YTZCAJC_fake_script()31))}
 	local script = Instance.new('LocalScript', ImageButton)
 
 	local UIS = game:GetService('UserInputService')
