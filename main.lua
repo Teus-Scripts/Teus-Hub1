@@ -6300,3 +6300,23 @@ Tabs.Misc:AddButton({
 		game.Players.localPlayer.PlayerGui.Main.Titles.Visible = true
 	end
 })
+
+local Players = game:GetService("Players")
+local TeleportService = game:GetService("TeleportService")
+
+local function autoRejoin(player)
+    wait(5) -- Espera 5 segundos antes de tentar reconectar
+    -- Tenta reconectar o jogador ao jogo
+    TeleportService:Teleport(game.PlaceId, player)
+end
+
+-- Conectar a função ao evento PlayerRemoving
+Players.PlayerRemoving:Connect(function(player)
+    if player then
+        -- Verifica se a desconexão foi por causa da internet
+        if player:IsInGroup(0) then -- Esta verificação é apenas um exemplo
+            autoRejoin(player)
+        end
+    end
+end)
+
