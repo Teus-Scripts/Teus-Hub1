@@ -2007,7 +2007,7 @@ end
         function TP2(P1)
         local Distance = (P1.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
         if Distance >= 1 then
-        Speed = 330
+        Speed = 350
         end
         game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear), {
           CFrame = P1
@@ -2332,6 +2332,7 @@ ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageButton.Position = UDim2.new(0.10615778, 0, 0.16217947, 0)
 ImageButton.Size = UDim2.new(0.0627121851, 0, 0.107579626, 0)
 ImageButton.Image = "rbxassetid://111005674884784"
@@ -2339,6 +2340,7 @@ ImageButton.Image = "rbxassetid://111005674884784"
 UICorner.CornerRadius = UDim.new(0, 30)
 UICorner.Parent = ImageButton
 
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(244, 0, 0)), ColorSequenceKeypoint.new(0.32, Color3.fromRGB(146, 255, 251)), ColorSequenceKeypoint.new(0.65, Color3.fromRGB(180, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(96, 255, 231))}
 UIGradient.Parent = ImageButton
 
 UIAspectRatioConstraint.Parent = ImageButton
@@ -2354,7 +2356,7 @@ local function HCEGY_fake_script()
 	tween:Play()
 end
 coroutine.wrap(HCEGY_fake_script)()
-local function YTZCAJC_fake_script()31))}
+local function YTZCAJC_fake_script()
 	local script = Instance.new('LocalScript', ImageButton)
 
 	local UIS = game:GetService('UserInputService')
@@ -6300,28 +6302,36 @@ Tabs.Misc:AddButton({
 	end
 })
 
-local Players = game:GetService("Players")
-local TeleportService = game:GetService("TeleportService")
+--// Carrega a função de reconexão automática
+function AutoRejoin()
+    local retryTime = 10  -- Tempo entre tentativas de reconexão
 
-local function autoRejoin(player)
-    -- Wait for a few seconds before trying to reconnect
-    wait(5)
-
-    -- Attempt to teleport the player back to the same place
-    TeleportService:Teleport(game.PlaceId, player)
+    -- Tenta reconectar após uma falha de teleporte
+    game.Players.LocalPlayer.OnTeleport:Connect(function(teleportState)
+        if teleportState == Enum.TeleportState.Failed then
+            while true do
+                print("Tentando reconectar...")
+                pcall(function()
+                    game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+                end)
+                wait(retryTime)  -- Aguarda antes de tentar novamente
+            end
+        end
+    end)
 end
 
-local function onPlayerRemoving(player)
-    -- Call the reconnection function
-    autoRejoin(player)
-end
-
--- Connect the function to the PlayerRemoving event
-Players.PlayerRemoving:Connect(onPlayerRemoving)
-
--- Log message to check when a player disconnects or is kicked
-Players.PlayerRemoving:Connect(function(player)
-    print(player.Name .. " was disconnected or kicked. Attempting to reconnect...")
+--// Detecta se o jogador foi expulso ou desconectado por problema de rede
+game.CoreGui.RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(child)
+    if child.Name == "ErrorPrompt" then
+        local errorMsg = child.MessageArea.ErrorFrame.ErrorMessage.Text
+        if string.find(errorMsg, "has been kicked") or string.find(errorMsg, "Please check your internet") then
+            print("Desconexão detectada: Tentando reconectar...")
+            AutoRejoin()
+        end
+    end
 end)
 
-
+--// Início do script principal do jogo
+print("Script de reconexão automática iniciado.")
+-- Aqui você pode adicionar o restante do seu código
+-- Por exemplo: Funções de GUI, manipulação de personagens, etc.
