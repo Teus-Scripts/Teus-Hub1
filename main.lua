@@ -6359,3 +6359,28 @@ funcaoB()
 
 -- Salvando o estado
 salvarEstadoFuncoes()
+
+-- Defina a facção globalmente usando getgenv
+getgenv().Team = "Marines" -- Pode ser "Marines" ou "Pirates"
+
+-- Função para mudar a facção com base no valor de getgenv().Team
+local function mudarFaccao()
+    -- Verifica se a facção escolhida é válida
+    if getgenv().Team == "Marines" or getgenv().Team == "Pirates" then
+        -- Procura o RemoteEvent que faz a mudança de facção
+        local teamChangeRemote = game:GetService("ReplicatedStorage"):FindFirstChild("ChangeTeamRemote") -- Nome fictício, depende do jogo
+
+        if teamChangeRemote then
+            -- Envia o valor da facção para o servidor
+            teamChangeRemote:FireServer(getgenv().Team)
+            print("Mudança para a facção: " .. getgenv().Team)
+        else
+            print("RemoteEvent para mudança de facção não encontrado.")
+        end
+    else
+        print("Facção inválida: escolha 'Marines' ou 'Pirates'.")
+    end
+end
+
+-- Chama a função para mudar a facção com base no valor definido em getgenv().Team
+mudarFaccao()
