@@ -6315,3 +6315,47 @@ game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(func
 	end
 end)
 
+-- Tabela que armazena o estado das funções
+local funcoes_ativas = {}
+
+-- Funções de exemplo
+function funcaoA()
+    print("Função A ativa")
+    -- Salvar estado como ativo
+    funcoes_ativas["funcaoA"] = true
+end
+
+function funcaoB()
+    print("Função B ativa")
+    -- Salvar estado como ativo
+    funcoes_ativas["funcaoB"] = true
+end
+
+function funcaoC()
+    print("Função C ativa")
+    -- Salvar estado como ativo
+    funcoes_ativas["funcaoC"] = true
+end
+
+-- Função para salvar o estado das funções em um arquivo
+function salvarEstadoFuncoes()
+    local arquivo = io.open("estado_funcoes.lua", "w")
+    if arquivo then
+        arquivo:write("return {\n")
+        for nome, estado in pairs(funcoes_ativas) do
+            arquivo:write(string.format("  %s = %s,\n", nome, tostring(estado)))
+        end
+        arquivo:write("}\n")
+        arquivo:close()
+        print("Estado das funções salvo em estado_funcoes.lua")
+    else
+        print("Erro ao salvar o estado das funções.")
+    end
+end
+
+-- Ativando funções de exemplo
+funcaoA()
+funcaoB()
+
+-- Salvando o estado
+salvarEstadoFuncoes()
