@@ -6360,27 +6360,26 @@ funcaoB()
 -- Salvando o estado
 salvarEstadoFuncoes()
 
--- Defina a facção globalmente usando getgenv
-getgenv().Team = "Marines" -- Pode ser "Marines" ou "Pirates"
+local Team = "Marine"
 
--- Função para mudar a facção com base no valor de getgenv().Team
-local function mudarFaccao()
-    -- Verifica se a facção escolhida é válida
-    if getgenv().Team == "Marines" or getgenv().Team == "Pirates" then
-        -- Procura o RemoteEvent que faz a mudança de facção
-        local teamChangeRemote = game:GetService("ReplicatedStorage"):FindFirstChild("ChangeTeamRemote") -- Nome fictício, depende do jogo
-
-        if teamChangeRemote then
-            -- Envia o valor da facção para o servidor
-            teamChangeRemote:FireServer(getgenv().Team)
-            print("Mudança para a facção: " .. getgenv().Team)
-        else
-            print("RemoteEvent para mudança de facção não encontrado.")
+if game:GetService("Players").LocalPlayer.PlayerGui.Main:FindFirstChild("ChooseTeam") then
+    repeat wait()
+        if game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Main").ChooseTeam.Visible == true then
+            if Team == "Pirate" then
+                for i, v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Activated)) do                                                                                                 
+                    v.Function()
+                end
+            elseif Team == "Marine" then
+                for i, v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton.Activated)) do                                                                                                
+                    v.Function()
+                end
+            else
+                -- fallback para "Pirate" se não for Marine
+                for i, v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Activated)) do                                                                                                
+                    v.Function()
+                end
+            end
         end
-    else
-        print("Facção inválida: escolha 'Marines' ou 'Pirates'.")
-    end
+    until game.Players.LocalPlayer.Team ~= nil and game:IsLoaded()
 end
 
--- Chama a função para mudar a facção com base no valor definido em getgenv().Team
-mudarFaccao()
