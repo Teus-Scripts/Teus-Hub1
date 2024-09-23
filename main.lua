@@ -251,9 +251,9 @@ if _G.Switch_Hub_Series_R then
 			end
 		end
 	 end)
-	 Old_World = false
-	 New_World = false
-	 Three_World = false
+	 Old_World = true
+	 New_World = true
+	 Three_World = true
 	 local placeId = game.PlaceId
 	 if placeId == 2753915549 then
 	 Old_World = true
