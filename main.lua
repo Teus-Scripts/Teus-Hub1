@@ -3,8 +3,8 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 ----------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
-    Title = "	Teus Hub | Blox Fruits",
-    SubTitle = "By Teus",
+    Title = "Fai Fao Hub | Blox Fruits",
+    SubTitle = "Version 3.1",
     TabWidth = 160,
     Size = UDim2.fromOffset(500, 320),
     Acrylic = true,
@@ -7400,7 +7400,7 @@ spawn(function()
         elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
             Hop()
             Fluent:Notify({
-                Title = "Teus Hub",
+                Title = "Fai Fao Hub",
                 Content = "Turn Off Find Full Moon...",
                 SubContent = "", -- Optional
                 Duration = 5 -- Set to nil to make the notification not disappear
@@ -7408,7 +7408,7 @@ spawn(function()
         elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
             Hop()
             Fluent:Notify({
-                Title = "Teus Hub",
+                Title = "Fai Fao Hub",
                 Content = "Hop...",
                 SubContent = "", -- Optional
                 Duration = 5 -- Set to nil to make the notification not disappear
@@ -7416,7 +7416,7 @@ spawn(function()
         elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
             Hop()
             Fluent:Notify({
-                Title = "Teus Hub",
+                Title = "Fai Fao Hub",
                 Content = "Hop...",
                 SubContent = "", -- Optional
                 Duration = 5 -- Set to nil to make the notification not disappear
@@ -7451,8 +7451,8 @@ end)
 end
 ----------------------------------------------------------------------------------------------------------------------------------------------
 Fluent:Notify({
-    Title = "Teus Hub",
+    Title = "Fai Fao Hub",
     Content = "The script has been loaded.",
     Durtion = 3
 })
-warn(Teus Hub Loading Completed !!")
+warn("Fai Fao Hub Loading Completed !!")
