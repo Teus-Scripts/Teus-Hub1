@@ -12,7 +12,6 @@ getgenv().RAM = { -- Log Des
 }
 
 getgenv().Setting = { -- Setting Script / ตั้งค่าสคริปต์
-    ['FPS Booster'] = _G.Setting['FPS Booster'],
     ['White Screen'] = true,
     ['Disible Gui'] = _G.Setting['Close Ui'],
     ['Lock Fruit'] = 1000000,
@@ -101,7 +100,6 @@ if _G.On_Next_Generation then
 		_G.Quest['Evo Race V3'] = true
     end
     _G.Main = {
-        ['FPS Booster'] = getgenv().Setting['FPS Booster'],
         ['White Screen'] = getgenv().Setting['White Screen'],
         ['Close Ui'] = getgenv().Setting['Disible Gui'],
         ['AFK Check'] = getgenv().Setting['AFK Check'],
@@ -173,7 +171,7 @@ if _G.Switch_Hub_Series_R then
 		if _G.Main['FPS Booster'] then
 			game:GetService("Players").LocalPlayer.PlayerGui.Notifications.Enabled = false
 			shared = {}
-			shared.BC_1 = true
+			shared.BC_1 = false
 			shared.BC_2 = nil
 
 			if shared.BC_1 and shared.BC_2 == nil then
