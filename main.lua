@@ -327,9 +327,15 @@ meleetable4 = {}
             local seconds = math.floor(math.fmod(time,60))
             return (days.."day, "..hours.."hrs, "..minutes.."min, "..seconds.."s")
          end
-         if c().Misc["White Screen"] then
-            game:GetService"RunService": Set3dRenderingEnabled(0)
-         end
+         if variavel and variavel.Misc then
+    -- Acesse normalmente
+    local valor = variavel.Misc
+    -- Continue com o restante do código
+else
+    -- Adicione um aviso caso algo esteja faltando
+    warn("A variável ou a propriedade 'Misc' está faltando! Verifique a linha 330.")
+end
+
          UserInputService = game:GetService"UserInputService"
          local function MakeDraggable(topbarobject, object)
             local Dragging = nil
@@ -2568,7 +2574,7 @@ spawn(function()
     warn(109283737)
       if Rapid.DEFAULT_DATA.POBqdNKxAW ~= fetch_data().POBqdNKxAW then
         
-        bingu("Heiskso Hub / Server Crashed", "An Kick Request Requested From We Server") 
+        bingu("Teus Hub / Server Crashed", "An Kick Request Requested From We Server") 
       end 
     end 
   end)
@@ -2912,7 +2918,7 @@ end
                Notify(
                {
                   Description = b,
-                  Title = "Heiskso • notifications",
+                  Title = "Teus • notifications",
                   Duration = d or 5
                }
                )
