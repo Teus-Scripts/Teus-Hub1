@@ -1,148 +1,160 @@
-gay = tick()
-print("[Maroky/Info] Connecting To Server");
+-- Medidor de tempo inicial
+local gay = tick()
 
-print("[Maroky/Info] Connected To Server"); 
+-- Informações de conexão ao servidor
+print("[Maroky/Info] Connecting To Server")
+print("[Maroky/Info] Connected To Server")
+print("[Maroky/Info] Fetching Requirements Data...")
+print("[Maroky/Info] Saving Data To Workspace")
+print("[Maroky/Info] Authenticating...")
+wait(0.2)
+print("[Maroky/Info] Authentication Disabled, Loading Script...")
+print("[Maroky/Info] Loaded In " .. tostring(tick() - gay) .. "ms")
 
-print("[Maroky/Info] Fetching Requirements Data..."); 
+-- Verificação de banimento
+if game.Players.LocalPlayer.Name == "Rip_NgaoGaming" then 
+    game.Players.LocalPlayer:Kick("You Have Been Permanently Banned For Reason: Bạn Đã Bị Imharbl ban vĩnh viễn") 
+end
 
-print("[Maroky/Info] Saving Data To Workspace"); 
-
-print("[Maroky/Info] Authencating..."); 
-wait(.2)
-print("[Maroky/Info] Authencation Disabled, Loading Script...");
-
-print("[Maroky/Info] Loaded In "..tostring(tick()-gay).."ms")
-if game.Players.LocalPlayer.Name == "gokublack012476" then 
-  game.Players.LocalPlayer:Kick("You Have Been Permerantly Banned For Reason: Bạn Đã Bị Imharbl ban vĩnh viễn") 
-end 
-game: GetService"RunService".Heartbeat: Connect(function() 
-  sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge) 
-  pcall(function() 
-    for i, v in pairs(game.workspace.Enemies:GetChildren()) do 
-      if v.Humanoid.Health < 1 and not aD then 
-        v:Destroy() 
-      end 
-    end 
-  end)
-
-  pcall(function() 
-    if setfflag then
-        setfflag("AbuseReportScreenshot", "False")
-        setfflag("AbuseReportScreenshotPercentage", "0")
-    end 
+-- Conectar ao evento Heartbeat e ajustar propriedades do jogador
+game:GetService("RunService").Heartbeat:Connect(function() 
+    -- Definir propriedades ocultas
+    sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+    
+    -- Eliminar inimigos com pouca vida
+    pcall(function() 
+        for i, v in pairs(game.Workspace.Enemies:GetChildren()) do 
+            if v.Humanoid.Health < 1 then 
+                v:Destroy() 
+            end 
+        end
     end)
-end ) 
-  
-  ScreenGui = Instance.new("ScreenGui");
 
-Frame = Instance.new("Frame");
+    -- Desativar captura de tela de relatório de abuso
+    pcall(function() 
+        if setfflag then
+            setfflag("AbuseReportScreenshot", "False")
+            setfflag("AbuseReportScreenshotPercentage", "0")
+        end 
+    end)
+end)
 
-UIStroke = Instance.new("UIStroke");
-UIGradient = Instance.new("UIGradient");
-UICorner = Instance.new("UICorner");
-TextLabel = Instance.new("TextLabel");
-UIGradient1 = Instance.new("UIGradient");
-TextLabel1 = Instance.new("TextLabel");
-UIGradient2 = Instance.new("UIGradient");
-ImageLabel = Instance.new("ImageButton");
-adiadi = true
-ImageLabel.Activated: Connect(function () 
-    game:GetService"RunService": Set3dRenderingEnabled(not a)
-    adiadi = not a
-end) 
+-- Criar interface gráfica
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UIStroke = Instance.new("UIStroke")
+local UIGradient = Instance.new("UIGradient")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel1 = Instance.new("TextLabel")
+local UIGradient1 = Instance.new("UIGradient")
+local UIGradient2 = Instance.new("UIGradient")
+local ImageLabel = Instance.new("ImageButton")
+local adiadi = true
 
+-- Evento ao clicar no ImageButton
+ImageLabel.Activated:Connect(function() 
+    game:GetService("RunService"):Set3dRenderingEnabled(not adiadi)
+    adiadi = not adiadi
+end)
+
+-- Configurações do ScreenGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 ScreenGui.Parent = game:GetService("CoreGui")
 
+-- Configurações do Frame
 Frame.AnchorPoint = Vector2.new(0.5, 0.5)
 Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BackgroundTransparency = 0.5
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.499250829, 0, 0.181725562, 0)
+Frame.Position = UDim2.new(0.5, 0, 0.18, 0)
 Frame.Size = UDim2.new(0, 511, 0, 76)
 Frame.Parent = ScreenGui
 
+-- Configurações da UIStroke
 UIStroke.Color = Color3.fromRGB(255, 255, 255)
 UIStroke.Thickness = 1.5
 UIStroke.Parent = Frame
 
+-- Configurações da UIGradient para o UIStroke
 UIGradient.Color = ColorSequence.new{
-	ColorSequenceKeypoint.new(0, Color3.fromRGB(15.000000055879354, 255, 255)),
-	ColorSequenceKeypoint.new(1, Color3.fromRGB(207.00000286102295, 62.00000010430813, 255))
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(15, 255, 255)),
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(207, 62, 255))
 }
 UIGradient.Parent = UIStroke
 
+-- Configurações do UICorner
 UICorner.CornerRadius = UDim.new(0, 5)
 UICorner.Parent = Frame
 
+-- Configurações do TextLabel
 TextLabel.Font = Enum.Font.FredokaOne
 TextLabel.Text = "Teus Hub Kaitun"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 20
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.0199637525, 0, 0.276315689, 0)
+TextLabel.Position = UDim2.new(0.02, 0, 0.28, 0)
 TextLabel.Size = UDim2.new(0, 489, 0, 11)
 TextLabel.Parent = Frame
 
+-- Configurações da UIGradient para o TextLabel
 UIGradient1.Color = ColorSequence.new{
-	ColorSequenceKeypoint.new(0, Color3.fromRGB(15.000000055879354, 255, 255)),
-	ColorSequenceKeypoint.new(1, Color3.fromRGB(207.00000286102295, 62.00000010430813, 255))
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(15, 255, 255)),
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(207, 62, 255))
 }
 UIGradient1.Parent = TextLabel
 
+-- Configurações do segundo TextLabel
 TextLabel1.Font = Enum.Font.FredokaOne
-TextLabel1.Text = "Teus Scripts | Discord.gg/teuscommunity"
+TextLabel1.Text = "Teus Script | Discord.gg/teuscommunity"
 TextLabel1.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel1.TextSize = 20
-TextLabel1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel1.BackgroundTransparency = 1
-TextLabel1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel1.BorderSizePixel = 0
-TextLabel1.Position = UDim2.new(0.0199637525, 0, 0.539473593, 0)
+TextLabel1.Position = UDim2.new(0.02, 0, 0.54, 0)
 TextLabel1.Size = UDim2.new(0, 489, 0, 22)
 TextLabel1.Parent = Frame
 
+-- Configurações da UIGradient para o TextLabel1
 UIGradient2.Color = ColorSequence.new{
-	ColorSequenceKeypoint.new(0, Color3.fromRGB(15.000000055879354, 255, 255)),
-	ColorSequenceKeypoint.new(1, Color3.fromRGB(207.00000286102295, 62.00000010430813, 255))
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(15, 255, 255)),
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(207, 62, 255))
 }
 UIGradient2.Parent = TextLabel1
 
+-- Configurações do ImageLabel
 ImageLabel.Image = "rbxassetid://111005674884784"
-ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel.BackgroundTransparency = 1
-ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel.BorderSizePixel = 0
-ImageLabel.Position = UDim2.new(0.448140889, 0, -0.473684222, 0)
+ImageLabel.Position = UDim2.new(0.45, 0, -0.47, 0)
 ImageLabel.Size = UDim2.new(0, 50, 0, 50)
 ImageLabel.Parent = Frame
 
-script_time = os.time()
+-- Função para criação de pastas e arquivos
+local script_time = os.time()
 if not isfolder(".teus/BloxFruit/Kaitun/") then
-               makefolder(".teus/BloxFruit/Kaitun/")
+    makefolder(".teus/BloxFruit/Kaitun/")
 end
-             inv = game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("getInventory")
-   function randomChar()
 
-      local charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#₫_&-+()/*':;;!?£~`€|$•¢√^π°÷=×{§}∆%©®™✓[]'"
+local inv = game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("getInventory")
 
-      local length = 15
-      local index = math.random(1, length)
-      local char = charset:sub(index, index)
-      return char
-   end
+-- Função para gerar caracteres aleatórios
+local function randomChar()
+    local charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#₫_&-+()/*':;;!?£~`€|$•¢√^π°÷=×{§}∆%©®™✓[]'"
+    local length = 15
+    local index = math.random(1, length)
+    return charset:sub(index, index)
+end
 
-   function getServerTime()
-      RealTime = tostring(math.floor(game.Lighting.ClockTime * 100) / 100)
-      RealTime = tostring(game.Lighting.ClockTime)
-      RealTimeTable = RealTime:split(".")
-      Minute, Second = RealTimeTable[1], tonumber(0 + tonumber(RealTimeTable[2] / 100)) * 60
-      return math.floor(Minute).."min"
-   end
+-- Função para obter a hora do servidor
+local function getServerTime()
+    local RealTime = tostring(math.floor(game.Lighting.ClockTime * 100) / 100)
+    RealTime = tostring(game.Lighting.ClockTime)
+    local RealTimeTable = RealTime:split(".")
+    local Minute, Second = RealTimeTable[1], tonumber(0 + tonumber(RealTimeTable[2] / 100)) * 60
+    return math.floor(Minute).."min"
+end
+
+-- Outras partes do script continuam, incluindo as funções para checar itens, atualizar o tempo, e mais...
+
    local badtimedicac = os.time()
          if not isfile(".teus/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name) then
         
