@@ -12,7 +12,7 @@ wait(.2)
 print("[Maroky/Info] Authencation Disabled, Loading Script...");
 
 print("[Maroky/Info] Loaded In "..tostring(tick()-gay).."ms")
-if game.Players.LocalPlayer.Name == "Rip_NgaoGaming" then 
+if game.Players.LocalPlayer.Name == "gokublack012476" then 
   game.Players.LocalPlayer:Kick("You Have Been Permerantly Banned For Reason: Bạn Đã Bị Imharbl ban vĩnh viễn") 
 end 
 game: GetService"RunService".Heartbeat: Connect(function() 
@@ -122,8 +122,8 @@ ImageLabel.Size = UDim2.new(0, 50, 0, 50)
 ImageLabel.Parent = Frame
 
 script_time = os.time()
-if not isfolder(".heiskso/BloxFruit/Kaitun/") then
-               makefolder(".heiskso/BloxFruit/Kaitun/")
+if not isfolder(".teus/BloxFruit/Kaitun/") then
+               makefolder(".teus/BloxFruit/Kaitun/")
 end
              inv = game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("getInventory")
    function randomChar()
@@ -144,29 +144,29 @@ end
       return math.floor(Minute).."min"
    end
    local badtimedicac = os.time()
-         if not isfile(".heiskso/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name) then
+         if not isfile(".teus/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name) then
         
-         writefile(".heiskso/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name, "0")
+         writefile(".teus/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name, "0")
          esltime = 0 
          end 
-   ctent2 = readfile(".heiskso/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name)
+   ctent2 = readfile(".teus/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name)
    function updatetime()
-      if not isfile(".heiskso/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name) then
+      if not isfile(".teus/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name) then
        
-         writefile(".heiskso/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name, "0")
+         writefile(".teus/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name, "0")
          esltime = 0
       else
-         ctent = readfile(".heiskso/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name)
+         ctent = readfile(".teus/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name)
          if tonumber(ctent) or ctent == "0" or ctent == "1" then
             esltime = tonumber(ctent2 or 0) + (os.time()-(badtimedicac or os.time()))
-            writefile(".heiskso/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name, tostring(esltime))
+            writefile(".teus/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name, tostring(esltime))
             pcall(function() clockm:SetText(disp_time(esltime))end)
             pcall(function() TextLabel_7.Text = getServerTime() end)
 
          else
             noti("Something Wrong With Config, Automatically Generate A New One")
             esltime = "0"
-            writefile(".heiskso/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name, "0")
+            writefile(".teus/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name, "0")
          end
          end end
 
@@ -502,7 +502,7 @@ local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
 
 local Window = Library:CreateWindow({
 
-    Title = 'Heiskso Community Free Scripts '..os.date("%d".." ".."%B".." ".."%Y"),
+    Title = 'Teus Community Free Scripts '..os.date("%d".." ".."%B".." ".."%Y"),
 
     Center = true, 
     AutoShow = true, 
@@ -547,7 +547,7 @@ local CheckQuest = LeftGroupBox8:AddTab('Unlock Quest')
 local LeftGroupBox4 = Tabs.Main:AddLeftTabbox("Main")
 local CheckGun = LeftGroupBox4:AddTab('Guns')
 
-Info:AddLabel("Heiskso Community Kaitun Script") 
+Info:AddLabel("Teus Community Kaitun Script") 
     Time = Info:AddLabel("ServerTime")
     function UpdateTime()
         local GameTime = math.floor(workspace.DistributedGameTime+0.5)
@@ -1067,10 +1067,10 @@ fruitMap[#fruitMap+1]="Bird-Bird: Phonex"
          local bN = "!Blacklist_Servers.json"
          function SaveSettings2()
             local HttpService = game:GetService("HttpService")
-            if not isfolder(".heiskso/utils/") then
-               makefolder(".heiskso/utils/")
+            if not isfolder(".teus/utils/") then
+               makefolder(".teus/utils/")
             end
-            writefile(".heiskso/utils/" .. bN, HttpService:JSONEncode(bM))
+            writefile(".teus/utils/" .. bN, HttpService:JSONEncode(bM))
          end
          function ReadSetting2()
             local s, o =
@@ -1078,10 +1078,10 @@ fruitMap[#fruitMap+1]="Bird-Bird: Phonex"
             function()
                local HttpService = game:GetService("HttpService")
                Hub = game:GetService("HttpService")
-               if not isfolder(".heiskso/utils/") then
-                  makefolder(".heiskso/utils/")
+               if not isfolder(".teus/utils/") then
+                  makefolder(".teus/utils/")
                end
-               return HttpService:JSONDecode(readfile(".heiskso/utils/" .. bN))
+               return HttpService:JSONDecode(readfile(".teus/utils/" .. bN))
             end
             )
             if s then
