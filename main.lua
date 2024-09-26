@@ -18,22 +18,10 @@ repeat wait(1)
             end
         end
     end)
-until game.Players.localPlayer.Neutral == false
+until game.Players.localPlayer.Neutral == true
 if _G.Fast_Delay == nil then
 	_G.Fast_Delay = 0.3
 end
-spawn(function()
-    while true do wait()
-        getgenv().rejoin = game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(Kick)
-            if not _G.TP_Ser and _G.Rejoin then
-                if Kick.Name == 'ErrorPrompt' and Kick:FindFirstChild('MessageArea') and Kick.MessageArea:FindFirstChild("ErrorFrame") then
-                    game:GetService("TeleportService"):Teleport(game.PlaceId)
-                    wait(50)
-                end
-            end
-        end)
-    end
-end)
 
 local VirtualUser=game:service'VirtualUser'
 game:service'Players'.LocalPlayer.Idled:connect(function()
