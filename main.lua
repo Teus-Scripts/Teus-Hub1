@@ -18,7 +18,7 @@ repeat wait(1)
             end
         end
     end)
-until game.Players.localPlayer.Neutral == false
+until game.Players.localPlayer.Neutral == true
 if _G.Fast_Delay == nil then
 	_G.Fast_Delay = 0.3
 end
@@ -47,9 +47,9 @@ spawn(function()
 	end
 end)
 
-Old_World = false
-New_World = false
-Three_World = false
+Old_World = true
+New_World = true
+Three_World = true
 local placeId = game.PlaceId
 if placeId == 2753915549 then
     Old_World = true
@@ -61,7 +61,7 @@ end
 _G.Color = Color3.fromRGB(68, 202, 186)
 
 _G.Setting_table = {
-    Auto_Farm = false,
+    Auto_Farm = true,
     FastAttack = true,
 	Auto_Buso = true,
 	Auto_Ken = true,
