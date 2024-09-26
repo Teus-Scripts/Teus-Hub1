@@ -91,8 +91,8 @@ getgenv()['Get_Setting'] = function(Name)
     end
 end
 getgenv()['Update_Setting'] = function(Name)
-    if not _G.Dis and isfolder('Switch Hub BF Premium') and isfile('Switch Hub BF Premium/'..Name..'.json') then
-        writefile('Switch Hub BF Premium/'..Name..'.json',JsonEncode(_G.Setting_table))
+    if not _G.Dis and isfolder('Teus Hub BF Premium') and isfile('Teus Hub BF Premium/'..Name..'.json') then
+        writefile('Teus Hub BF Premium/'..Name..'.json',JsonEncode(_G.Setting_table))
 	elseif not _G.Dis then
         Check_Setting(Name)
     end
@@ -129,7 +129,7 @@ end
 
 function Text(value)
     game.StarterGui:SetCore("SendNotification", {
-        Title = "Switch Notification", 
+        Title = "Teus Notification", 
         Text = tostring(value),
         Icon = "http://www.roblox.com/asset/?id=9606070311",
         Duration = 10
@@ -137,7 +137,7 @@ function Text(value)
 end
 function Com()
     game.StarterGui:SetCore("SendNotification", {
-        Title = "Switch Notification", 
+        Title = "Teus Notification", 
         Text = "✅  Complete",
         Icon = "http://www.roblox.com/asset/?id=9606070311",
         Duration = 5
@@ -2246,7 +2246,7 @@ if IKAI then
 		ToggleImgUi.BackgroundTransparency = 1
 		ToggleImgUi.Position = UDim2.new(0.0454545468, 0, 0.125000313, 0)
 		ToggleImgUi.Size = UDim2.new(0, 35, 0, 35)
-		ToggleImgUi.Image = "rbxassetid://9606070311"
+		ToggleImgUi.Image = "rbxassetid://111005674884784"
 		-- http://www.roblox.com/asset/?id=9605991378
 		Uitoggle.Name = "Uitoggle"
 		Uitoggle.Parent = ToggleFrameUi
