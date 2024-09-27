@@ -8,17 +8,12 @@ print("[Teus/Info] Fetching Requirements Data...");
 print("[Teus/Info] Saving Data To Workspace"); 
 
 print("[Teus/Info] Saving Data To Workspace"); 
-print("[Teus/Info] Saving Data To Workspace"); 
-print("[Teus/Info] Saving Data To Workspace"); 
-print("[Teus/Info] Saving Data To Workspace"); 
+print("[Teus/Info] Saving Data To Workspace");  
 print("[Teus/Info] Authencating..."); 
 wait(.2)
 print("[Teus/Info] Authencation Disabled, Loading Script...");
 
 print("[Teus/Info] Loaded In "..tostring(tick()-gay).."ms")
-if game.Players.LocalPlayer.Name == "Teus" then 
-  game.Players.LocalPlayer:Kick("You Have Been Permerantly Banned For Reason: Bạn Đã Bị Imharbl ban vĩnh viễn") 
-end 
 game: GetService"RunService".Heartbeat: Connect(function() 
   sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge) 
   pcall(function() 
@@ -124,8 +119,3 @@ ImageLabel.BorderSizePixel = 0
 ImageLabel.Position = UDim2.new(0.448140889, 0, -0.473684222, 0)
 ImageLabel.Size = UDim2.new(0, 50, 0, 50)
 ImageLabel.Parent = Frame
-
-script_time = os.time()
-if not isfolder(".teus/BloxFruit/Kaitun/") then
-               makefolder(".teus/BloxFruit/Kaitun/")
-end
