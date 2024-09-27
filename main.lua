@@ -3,7 +3,7 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 ----------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
-    Title = "Teus Hub | Blox Fruits",
+    Title = "Teus Hub",
     SubTitle = "Discord.gg/teuscommunity",
     TabWidth = 160,
     Size = UDim2.fromOffset(500, 320),
@@ -2516,7 +2516,7 @@ ImageButton.BorderSizePixel = 0
 ImageButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
 ImageButton.Size = UDim2.new(0, 50, 0, 50)
 ImageButton.Draggable = true
-ImageButton.Image = "http://www.roblox.com/asset/?id=16024431693"
+ImageButton.Image = "rbxassetid://111005674884784"
 ImageButton.MouseButton1Down:connect(function()
     game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.End,false,game)
 end)
@@ -2537,7 +2537,7 @@ local listfastattack = {'Normal Attack','Fast Attack','Super Fast Attack'}
 
     local DropdownDelayAttack = Tabs.Main:AddDropdown("DropdownDelayAttack", {
         Title = "Select Fast Attack",
-        Description = "Chọn Tốc Độ Đánh",
+        Description = "",
         Values = listfastattack,
         Multi = false,
         Default = 1,
@@ -2718,7 +2718,7 @@ end)
 
     local ToggleMobAura = Tabs.Main:AddToggle("ToggleMobAura", {
         Title = "Kill Near | Mob Aura",
-        Description = "Đánh Quái Ở Gần",
+        Description = "",
         Default = false })
     ToggleMobAura:OnChanged(function(Value)
         _G.AutoNear = Value
@@ -2806,7 +2806,7 @@ end)
 
 Tabs.Main:AddButton({
     Title = "Auto Chest",
-    Description = "Nhặt rương",
+    Description = "",
     Callback = function()
         _G.JoinTeam = "Pirates"
         _G.Stop_If_Has_Items = true
@@ -2816,7 +2816,7 @@ Tabs.Main:AddButton({
 
       Tabs.Main:AddButton({
         Title = "Redeem All Code",
-        Description = "Nhập Hết Code",
+        Description = "",
         Callback = function()
             RedeemCode()
         end
@@ -2828,7 +2828,7 @@ Tabs.Main:AddButton({
 
     Tabs.Main:AddButton({
         Title = "Fps Booster",
-        Description = "Giảm Lag",
+        Description = "",
         Callback = function()
             FPSBooster()
         end
@@ -3656,7 +3656,7 @@ if Third_Sea then
 	
 local ToggleNocliprock = Tabs.Main:AddToggle("ToggleNocliprock", {
     Title = "No Clip Rock",
-    Description = "Đi xuyên Đá", 
+    Description = "", 
     Default = false })
 ToggleNocliprock:OnChanged(function(Value)
     _G.Nocliprock = Value
@@ -3695,7 +3695,7 @@ end)
 	
 	local SetSpeedBoatSlider = Tabs.Main:AddSlider("SliderSpeedBoat", {
 	Title = "Set Speed boat",
-	Description = "Chỉnh tốc độ thuyền",
+	Description = "",
 	Default = 300,
 	Min = 0,
 	Max = 1000,
