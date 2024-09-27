@@ -13,9 +13,9 @@ print("[Teus/Info] Saving Data To Workspace");
 print("[Teus/Info] Saving Data To Workspace"); 
 print("[Teus/Info] Authencating..."); 
 wait(.2)
-print("[Maroky/Info] Authencation Disabled, Loading Script...");
+print("[Teus/Info] Authencation Disabled, Loading Script...");
 
-print("[Maroky/Info] Loaded In "..tostring(tick()-gay).."ms")
+print("[Teus/Info] Loaded In "..tostring(tick()-gay).."ms")
 if game.Players.LocalPlayer.Name == "Teus" then 
   game.Players.LocalPlayer:Kick("You Have Been Permerantly Banned For Reason: Bạn Đã Bị Imharbl ban vĩnh viễn") 
 end 
@@ -99,7 +99,7 @@ UIGradient1.Color = ColorSequence.new{
 UIGradient1.Parent = TextLabel
 
 TextLabel1.Font = Enum.Font.FredokaOne
-TextLabel1.Text = "Heiskso Script • .gg/yF4VEq7aDH"
+TextLabel1.Text = "Teus Script | Discord.gg/teuscommunity"
 TextLabel1.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel1.TextSize = 20
 TextLabel1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -116,7 +116,7 @@ UIGradient2.Color = ColorSequence.new{
 }
 UIGradient2.Parent = TextLabel1
 
-ImageLabel.Image = "rbxassetid://15992619207"
+ImageLabel.Image = "rbxassetid://111005674884784"
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel.BackgroundTransparency = 1
 ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -126,8 +126,8 @@ ImageLabel.Size = UDim2.new(0, 50, 0, 50)
 ImageLabel.Parent = Frame
 
 script_time = os.time()
-if not isfolder(".heiskso/BloxFruit/Kaitun/") then
-               makefolder(".heiskso/BloxFruit/Kaitun/")
+if not isfolder(".teus/BloxFruit/Kaitun/") then
+               makefolder(".teus/BloxFruit/Kaitun/")
 end
              inv = game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("getInventory")
    function randomChar()
