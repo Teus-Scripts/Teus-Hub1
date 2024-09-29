@@ -51,4 +51,4 @@ _G.BypassTeleport = false -- set it true if u wanna fast tp (idk if bug or not)
 
 _G.SupperFixLag = true
 
-loadstring(game:HttpGet(""))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Teus-Scripts/Teus-Hub1/refs/heads/main/main.lua"))()
