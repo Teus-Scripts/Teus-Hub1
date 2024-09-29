@@ -1,21 +1,4 @@
- game: GetService"RunService".Heartbeat: Connect(function() 
-  sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge) 
-  pcall(function() 
-    for i, v in pairs(game.workspace.Enemies:GetChildren()) do 
-      if v.Humanoid.Health < 1 and not aD then 
-        v:Destroy() 
-      end 
-    end 
-  end)
 
-  pcall(function() 
-    if setfflag then
-        setfflag("AbuseReportScreenshot", "False")
-        setfflag("AbuseReportScreenshotPercentage", "0")
-    end 
-    end)
-end ) 
-  
   ScreenGui = Instance.new("ScreenGui");
 
 Frame = Instance.new("Frame");
