@@ -1,21 +1,4 @@
-gay = tick()
-print("[Maroky/Info] Connecting To Server");
-
-print("[Maroky/Info] Connected To Server"); 
-
-print("[Maroky/Info] Fetching Requirements Data..."); 
-
-print("[Maroky/Info] Saving Data To Workspace"); 
-
-print("[Maroky/Info] Authencating..."); 
-wait(.2)
-print("[Maroky/Info] Authencation Disabled, Loading Script...");
-
-print("[Maroky/Info] Loaded In "..tostring(tick()-gay).."ms")
-if game.Players.LocalPlayer.Name == "Rip_NgaoGaming" then 
-  game.Players.LocalPlayer:Kick("You Have Been Permerantly Banned For Reason: Bạn Đã Bị Imharbl ban vĩnh viễn") 
-end 
-game: GetService"RunService".Heartbeat: Connect(function() 
+ game: GetService"RunService".Heartbeat: Connect(function() 
   sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge) 
   pcall(function() 
     for i, v in pairs(game.workspace.Enemies:GetChildren()) do 
