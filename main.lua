@@ -5022,55 +5022,6 @@ spawn(function()
         return old(...)
     end)
 end)
--- Configurações
-local config = {
-    Misc = {
-        Ui = true,
-        WhiteScreen = true,
-        FastAttackDelay = 0.1,
-        RemoveTerrain = true,
-        Webhook = {
-            Enable = true,
-            Url = "https://discord.com/api/webhooks/1148250879070310531/eOkXIZsij1FxJaEJHLfZaUvzWgD2NtMZa64HUeslwBcXPA7mwrc2DjfnlP9A2Y9MihiD",
-            Image = {"https://e7.pngegg.com/pngimages/128/635/png-clipart-sakura-tree-cherry-blossom-cherry-branch-color-thumbnail.png"}
-        }
-    },
-    Process = {
-        AutoBuy3LegendarySword = true,
-        AutoBuyHakiColor = true,
-        Bartilo = true,
-        HunterQuest = true,
-        Saber = true,
-        V2Race = true,
-        V3Race = true,
-        AutoHop = {
-            Enable = true,
-            Delay = 3600
-        },
-        AutoKatakuriWhileMaxed = {
-            Enable = true,
-            Until = 100000
-        },
-        AutoBoneWhileMaxed = {
-            Enable = true,
-            Until = 100000
-        },
-        HopForRipIndra = true,
-        ForceRengoku = true,
-        AutoRaidWhileCantStore = true,
-        FarmFruitMasteryAfterDoneCdkQuest = true,
-        LockAwakeningFruit = true,
-        SoulGuitar = true
-    },
-    Fruit = {
-        AutoLootSpawnFruit = true,
-        EatWhileCantStore = true,
-        AutoRaidWhileCantStore = true,
-        FragmentsLimitByFruitLootRaid = 5000,
-        RandomFruit = true,
-        Snipe = {}
-    }
-}
 
 -- Funções
 local function getMeleeMastery(melee)
