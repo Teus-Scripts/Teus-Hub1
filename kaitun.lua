@@ -122,8 +122,8 @@ ImageLabel.Size = UDim2.new(0, 50, 0, 50)
 ImageLabel.Parent = Frame
 
 script_time = os.time()
-if not isfolder(".heiskso/BloxFruit/Kaitun/") then
-               makefolder(".heiskso/BloxFruit/Kaitun/")
+if not isfolder(".teus/BloxFruit/Kaitun/") then
+               makefolder(".teus/BloxFruit/Kaitun/")
 end
              inv = game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("getInventory")
    function randomChar()
