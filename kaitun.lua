@@ -77,7 +77,7 @@ UICorner.CornerRadius = UDim.new(0, 5)
 UICorner.Parent = Frame
 
 TextLabel.Font = Enum.Font.FredokaOne
-TextLabel.Text = "Teus Hub Kaitun / Config By Teus :) "
+TextLabel.Text = "Config By Teus :) "
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 20
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
