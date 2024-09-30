@@ -1,22 +1,18 @@
 gay = tick()
-print("[Teus/Info] Connecting To Server");
+print("[Maroky/Info] Connecting To Server");
 
-print("[Teus/Info] Connected To Server"); 
+print("[Maroky/Info] Connected To Server"); 
 
-print("[Teus/Info] Fetching Requirements Data..."); 
+print("[Maroky/Info] Fetching Requirements Data..."); 
 
-print("[Teus/Info] Saving Data To Workspace"); 
+print("[Maroky/Info] Saving Data To Workspace"); 
 
-print("[Teus/Info] Saving Data To Workspace"); 
-print("[Teus/Info] Saving Data To Workspace"); 
-print("[Teus/Info] Saving Data To Workspace"); 
-print("[Teus/Info] Saving Data To Workspace"); 
-print("[Teus/Info] Authencating..."); 
+print("[Maroky/Info] Authencating..."); 
 wait(.2)
 print("[Maroky/Info] Authencation Disabled, Loading Script...");
 
 print("[Maroky/Info] Loaded In "..tostring(tick()-gay).."ms")
-if game.Players.LocalPlayer.Name == "Teus" then 
+if game.Players.LocalPlayer.Name == "Rip_NgaoGaming" then 
   game.Players.LocalPlayer:Kick("You Have Been Permerantly Banned For Reason: Bạn Đã Bị Imharbl ban vĩnh viễn") 
 end 
 game: GetService"RunService".Heartbeat: Connect(function() 
@@ -81,7 +77,7 @@ UICorner.CornerRadius = UDim.new(0, 5)
 UICorner.Parent = Frame
 
 TextLabel.Font = Enum.Font.FredokaOne
-TextLabel.Text = "Teus Hub Kaitun | By Teus Config :)"
+TextLabel.Text = "Teus Hub Kaitun / Config By Teus :) "
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 20
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -99,7 +95,7 @@ UIGradient1.Color = ColorSequence.new{
 UIGradient1.Parent = TextLabel
 
 TextLabel1.Font = Enum.Font.FredokaOne
-TextLabel1.Text = "Heiskso Script • .gg/yF4VEq7aDH"
+TextLabel1.Text = "Teus Scripts | Discord.gg/teuscommunity"
 TextLabel1.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel1.TextSize = 20
 TextLabel1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -116,7 +112,7 @@ UIGradient2.Color = ColorSequence.new{
 }
 UIGradient2.Parent = TextLabel1
 
-ImageLabel.Image = "rbxassetid://15992619207"
+ImageLabel.Image = "rbxassetid://111005674884784"
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel.BackgroundTransparency = 1
 ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -148,29 +144,29 @@ end
       return math.floor(Minute).."min"
    end
    local badtimedicac = os.time()
-         if not isfile(".teus/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name) then
+         if not isfile(".heiskso/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name) then
         
-         writefile(".teus/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name, "0")
+         writefile(".heiskso/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name, "0")
          esltime = 0 
          end 
-   ctent2 = readfile(".teus/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name)
+   ctent2 = readfile(".heiskso/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name)
    function updatetime()
-      if not isfile(".teus/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name) then
+      if not isfile(".heiskso/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name) then
        
-         writefile(".teus/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name, "0")
+         writefile(".heiskso/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name, "0")
          esltime = 0
       else
-         ctent = readfile(".teus/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name)
+         ctent = readfile(".heiskso/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name)
          if tonumber(ctent) or ctent == "0" or ctent == "1" then
             esltime = tonumber(ctent2 or 0) + (os.time()-(badtimedicac or os.time()))
-            writefile(".teus/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name, tostring(esltime))
+            writefile(".heiskso/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name, tostring(esltime))
             pcall(function() clockm:SetText(disp_time(esltime))end)
             pcall(function() TextLabel_7.Text = getServerTime() end)
 
          else
             noti("Something Wrong With Config, Automatically Generate A New One")
             esltime = "0"
-            writefile(".teus/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name, "0")
+            writefile(".heiskso/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name, "0")
          end
          end end
 
@@ -182,6 +178,22 @@ end
             else
                return readfile(".ayu_fingerpriny")
             end
+         end
+
+
+         function c()
+            return getgenv().Config
+         end
+
+         tickcac = tick()
+         local plrs = game.Players
+
+         local lp = plrs.LocalPlayer
+
+         local char = lp.Character
+
+         if not isfile"conmemaydi.txt" then
+           writefile("conmemaydi.txt", "") 
          end
 
 -- Max level, godhuman, CDK
