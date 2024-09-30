@@ -162,6 +162,7 @@ end
             writefile(".teus/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name, tostring(esltime))
             pcall(function() clockm:SetText(disp_time(esltime))end)
             pcall(function() TextLabel_7.Text = getServerTime() end)
+
 -- Max level, godhuman, CDK
 getgenv().Configs = {
     ["Team"] = "Pirates",
