@@ -7,7 +7,7 @@ local ThemeManager = loadstring(game:HttpGet(repo3 .. 'addons/ThemeManager.lua')
 local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
 
 game.StarterGui:SetCore("SendNotification", {
-      Icon = "rbxassetid://";
+      Icon = "rbxassetid://111005674884784";
       Title = "Xero Hub Scripts", 
       Text = "Discord : gg/MgzMeg4jBV",
   })
