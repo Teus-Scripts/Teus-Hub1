@@ -1,3 +1,4 @@
+
 local Notif = {}
 
 local CoreGUI = game:GetService("CoreGui")
@@ -366,7 +367,7 @@ function Update:Window(text,logo,keybind)
     Ping.Position = UDim2.new(0.28, 0,0.074, 0)
     Ping.Size = UDim2.new(0, 225, 0, 25)
     Ping.Font = Enum.Font.GothamSemibold
-    Ping.Text = "Blox Fruit | discord.gg/Dg5nr8CrVV          [RightControl]"
+    Ping.Text = "Blox Fruit | YT SHIN X HUB.          [RightControl]"
     Ping.TextColor3 = Color3.fromRGB(255,255,255)
     Ping.TextSize = 14.000
     Ping.TextXAlignment = Enum.TextXAlignment.Left
@@ -390,7 +391,7 @@ function Update:Window(text,logo,keybind)
     UserText.TextColor3 = Color3.fromRGB(255, 255, 255)
     UserText.Size = UDim2.new(0, 80, 0, 25)
     UserText.Font = Enum.Font.GothamSemibold
-    UserText.Text = "Min Gaming Hub"
+    UserText.Text = "SHIN X HUB"
     UserText.TextScaled = true
     UserText.TextSize = 17.000
     UserText.TextWrapped = true
@@ -3418,7 +3419,7 @@ end)
         localplayer=game:GetService("Players").LocalPlayer
         game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart")
         local torso = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
-        local speedSET=25
+        local speedSET=30
         local keys={a=false,d=false,w=false,s=false}
         local e1
         local e2
@@ -3825,7 +3826,7 @@ getgenv().HyperCahayas = function(p)
     end)
     
 
-local Library = Update:Window("Min Gaming Hub","",Enum.KeyCode.RightControl);
+local Library = Update:Window("SHIN X HUB","",Enum.KeyCode.RightControl);
 local Main = Library:AddTab("Main","4483345998")
 local M = Library:AddTab("Item","4483345998")
 local Ss = Library:AddTab("Stats","4483345998")
@@ -4664,53 +4665,179 @@ spawn(function()
 end)
 
     Main:AddToggle("Fast Attack [ SUPER OP ]",false,function(value)
-       _G.HyperSonic = value
+       FastAttackSpeed = value
     end)      
     
+_G.Fast_Delay = 0.02
+
+local CurveFrame = debug.getupvalues(require(game:GetService("Players").LocalPlayer.PlayerScripts:WaitForChild("CombatFramework")))[2]
+local VirtualUser = game:GetService("VirtualUser")
+local RigControllerR = debug.getupvalues(require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework.RigController))[2]
+local Client = game:GetService("Players").LocalPlayer
+local DMG = require(Client.PlayerScripts.CombatFramework.Particle.Damage)
 local CameraShaker = require(game.ReplicatedStorage.Util.CameraShaker)
-CombatFrameworkR = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
-y = debug.getupvalues(CombatFrameworkR)[2]
-spawn(function()
-    game:GetService("RunService").RenderStepped:Connect(function()
-        if _G.FastAttack or _G.HyperSonic then
-            if typeof(y) == "table" then
-                pcall(function()
-                    CameraShaker:Stop()
-                    y.activeController.timeToNextAttack = (math.huge^math.huge^math.huge)
-                    y.activeController.timeToNextAttack = 0
-                    y.activeController.hitboxMagnitude = 60
-                    y.activeController.active = false
-                    y.activeController.timeToNextBlock = 0
-                    y.activeController.focusStart = 1655503339.0980349
-                    y.activeController.increment = 1
-                    y.activeController.blocking = false
-                    y.activeController.attacking = false
-                    y.activeController.humanoid.AutoRotate = true
-                end)
+CameraShaker:Stop()
+function CurveFuckWeapon()
+    local p13 = CurveFrame.activeController
+    local wea = p13.blades[1]
+    if not wea then
+        return
+    end
+    while wea.Parent ~= game.Players.LocalPlayer.Character do
+        wea = wea.Parent
+    end
+    return wea
+end
+
+function getHits(Size)
+    local Hits = {}
+    local Enemies = workspace.Enemies:GetChildren()
+    local Characters = workspace.Characters:GetChildren()
+    for i = 1, #Enemies do
+        local v = Enemies[i]
+        local Human = v:FindFirstChildOfClass("Humanoid")
+        if
+            Human and Human.RootPart and Human.Health > 0 and
+                game.Players.LocalPlayer:DistanceFromCharacter(Human.RootPart.Position) < Size + 5
+         then
+            table.insert(Hits, Human.RootPart)
+        end
+    end
+    for i = 1, #Characters do
+        local v = Characters[i]
+        if v ~= game.Players.LocalPlayer.Character then
+            local Human = v:FindFirstChildOfClass("Humanoid")
+            if
+                Human and Human.RootPart and Human.Health > 0 and
+                    game.Players.LocalPlayer:DistanceFromCharacter(Human.RootPart.Position) < Size + 5
+             then
+                table.insert(Hits, Human.RootPart)
             end
         end
+    end
+    return Hits
+end
+
+function Boost()
+    task.spawn(function()
+        game:GetService("ReplicatedStorage").RigControllerEvent:FireServer("weaponChange",tostring(CurveFuckWeapon()))
     end)
-end)
-spawn(function()
-    game:GetService("RunService").RenderStepped:Connect(function()
-        if _G.FastAttack == true or _G.HyperSonic == true then
-            game.Players.LocalPlayer.Character.Stun.Value = 0
-            game.Players.LocalPlayer.Character.Busy.Value = false        
-        end
+end
+
+function Unboost()
+    tsak.spawn(function()
+        game:GetService("ReplicatedStorage").RigControllerEvent:FireServer("unequipWeapon",tostring(CurveFuckWeapon()))
     end)
-end)
-    
-spawn(function()
-while wait(.1) do
-    if _G.HyperSonic then
-        pcall(function()
-            repeat task.wait(0,09)
-                AttackHit()
-            until not _G.HyperSonic
+end
+
+local cdnormal = 0
+local Animation = Instance.new("Animation")
+local CooldownFastAttack = 0
+
+FastAttack = function()
+    local ac = CurveFrame.activeController
+    if ac and ac.equipped then
+        task.spawn(function()
+            if tick() - cdnormal > 0.5 then
+                ac:attack()
+                cdnormal = tick()
+            else
+                Animation.AnimationId = ac.anims.basic[2]
+                ac.humanoid:LoadAnimation(Animation):Play(1, 1)
+                game:GetService("ReplicatedStorage").RigControllerEvent:FireServer("hit", getHits(120), 2, "")
+            end
         end)
     end
 end
-end)    
+
+bs = tick()
+task.spawn(function()
+    while task.wait(_G.Fast_Delay) do
+        if FastAttackSpeed then
+            _G.Fast = true
+            if bs - tick() > 0.75 then
+                task.wait()
+                bs = tick()
+            end
+            pcall(function()
+                for i, v in pairs(game.Workspace.Enemies:GetChildren()) do
+                    if v.Humanoid.Health > 0 then
+                        if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 100 then
+                            FastAttack()
+                            task.wait()
+                            Boost()
+                        end
+                    end
+                end
+            end)
+        end
+    end
+end)
+
+k = tick()
+task.spawn(function()
+    if _G.Fast then
+    while task.wait(.2) do
+            if k - tick() > 0.75 then
+                task.wait()
+                k = tick()
+            end
+            end
+            pcall(function()
+                for i, v in pairs(game.Workspace.Enemies:GetChildren()) do
+                    if v.Humanoid.Health > 0 then
+                        if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 100 then
+                            task.wait(.000025)
+                            Unboost()
+                        end
+                    end
+                end
+            end)
+    end
+end)
+
+task.spawn(function()
+    while task.wait() do
+        if _G.Fast then
+       pcall(function()
+        CurveFrame.activeController.timeToNextAttack = 0
+        CurveFrame.activeController.focusStart = 0
+        CurveFrame.activeController.hitboxMagnitude = 200
+        CurveFrame.activeController.humanoid.AutoRotate = true
+        CurveFrame.activeController.increment = 1 + 1 / 1
+       end)
+    end
+    end
+end)
+
+abc = true
+task.spawn(function()
+    local a = game.Players.LocalPlayer
+    local b = require(a.PlayerScripts.CombatFramework.Particle)
+    local c = require(game:GetService("ReplicatedStorage").CombatFramework.RigLib)
+    if not shared.orl then
+        shared.orl = c.wrapAttackAnimationAsync
+    end
+    if not shared.cpc then
+        shared.cpc = b.play
+    end
+    if abc then
+        pcall(function()
+            c.wrapAttackAnimationAsync = function(d, e, f, g, h)
+            local i = c.getBladeHits(e, f, g)
+            if i then
+                b.play = function()
+                end
+                d:Play(0.25, 0.25, 0.25)
+                h(i)
+                b.play = shared.cpc
+                wait(.5)
+                d:Stop()
+            end
+            end
+        end)
+    end
+end)
     
 Main:AddToggle("Auto Click",false,function(value)
 _G.AutoClick = value
@@ -14012,7 +14139,7 @@ end)
         NoDodgeCool()
     end)
     
-    Misc:AddToggle("Auto Active Race",_G.AutoAgility,function(value)
+    Misc:AddToggle("การแข่งขันอัตโนมัติแบบแอคทีฟ",_G.AutoAgility,function(value)
         _G.AutoAgility = value
     end)
     
@@ -14026,7 +14153,7 @@ end)
         end)
     end)
     
-    Misc:AddToggle("Infinite Soru",getgenv().InfSoru,function(value)
+    Misc:AddToggle("โซรุอินฟินิตี้",getgenv().InfSoru,function(value)
         getgenv().InfSoru = value
     end)
     
@@ -14052,7 +14179,7 @@ end)
         end
     end)
     
-    Misc:AddToggle("Walk on Water",true,function(value)
+    Misc:AddToggle("เดินบนน้ำ",true,function(value)
         _G.WalkWater = value
     end)
     
@@ -14068,7 +14195,7 @@ end)
 			end
 		end)
     
-    Misc:AddToggle("NoClip",_G.NOCLIP,function(value)
+    Misc:AddToggle("เดิน ทะลุ",_G.NOCLIP,function(value)
         _G.NOCLIP = value
     end)
 	
@@ -14084,7 +14211,7 @@ end)
         end
     end)
     
-    Misc:AddButton("Remove Lave",function()
+    Misc:AddButton("ลบ ลาวา",function()
 		for i,v in pairs(game.Workspace:GetDescendants()) do
 			if v.Name == "Lava" then   
 				v:Destroy()
