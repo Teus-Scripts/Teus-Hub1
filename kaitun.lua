@@ -12,8 +12,9 @@ getgenv().RAM = { -- Log Des
 }
 
 getgenv().Setting = { -- Setting Script / ตั้งค่าสคริปต์
-        ['White Screen'] = true,
-    ['Disible Gui'] = _G.Setting['Close Ui'],
+    ['FPS Booster'] = _G.Setting['FPS Booster'],
+    ['White Screen'] = true,
+	['Disible Gui'] = (_G.Setting and _G.Setting['Close Ui']) or false,
     ['Lock Fruit'] = 1000000,
     ['AFK Check'] = 150,
     ['Rejoin'] = true
@@ -102,7 +103,7 @@ if _G.On_Next_Generation then
     _G.Main = {
         ['FPS Booster'] = getgenv().Setting['FPS Booster'],
         ['White Screen'] = getgenv().Setting['White Screen'],
-        ['Close Ui'] = getgenv().Setting['Disible Gui'],
+		['Close Ui'] = (getgenv().Setting and getgenv().Setting['Disible Gui']) or false,
         ['AFK Check'] = getgenv().Setting['AFK Check'],
         ['Lock Fruit'] = getgenv().Setting['Lock Fruit'],
         ['Rejoin'] = getgenv().Setting['Rejoin'],
