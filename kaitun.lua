@@ -12,7 +12,7 @@ getgenv().RAM = { -- Log Des
 }
 
 getgenv().Setting = { -- Setting Script / ตั้งค่าสคริปต์
-    ['White Screen'] = false,
+        ['White Screen'] = true,
     ['Disible Gui'] = _G.Setting['Close Ui'],
     ['Lock Fruit'] = 1000000,
     ['AFK Check'] = 150,
