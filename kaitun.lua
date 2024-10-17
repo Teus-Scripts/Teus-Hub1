@@ -1,3 +1,79 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ChatSplitter = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local Title = Instance.new("TextLabel")
+local X = Instance.new("TextButton")
+local Frame_2 = Instance.new("Frame")
+local Chat = Instance.new("TextBox")
+local ChatBtn = Instance.new("TextButton")
+local DelayBox = Instance.new("TextBox")
+local minimze = Instance.new("TextButton")
+
+--Properties:
+
+ChatSplitter.Name = "ChatSplitter"
+ChatSplitter.Parent = game.CoreGui
+ChatSplitter.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ChatSplitter.ResetOnSpawn = true
+
+Frame.Parent = ChatSplitter
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frame.LayoutOrder = 1
+Frame.Position = UDim2.new(0.302132696, 0, 0.0430440791, 0)
+Frame.Size = UDim2.new(0, 323, 0, 25)
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BorderColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.Position = UDim2.new(0.0120000001, 0, 0.119999997, 0)
+ImageLabel.Size = UDim2.new(0, 19, 0, 19)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=9645662961"
+
+Title.Name = "Title"
+Title.Parent = Frame
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Title.Position = UDim2.new(0.0897832811, 0, 0, 0)
+Title.Size = UDim2.new(0, 136, 0, 25)
+Title.Font = Enum.Font.SourceSans
+Title.Text = "ChatSplitter - v0.1"
+Title.TextColor3 = Color3.fromRGB(0, 0, 0)
+Title.TextSize = 14.000
+Title.TextXAlignment = Enum.TextXAlignment.Left
+
+X.Name = "X"
+X.Parent = Frame
+X.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+X.BorderColor3 = Color3.fromRGB(255, 255, 255)
+X.Position = UDim2.new(0.836000025, 0, 0, 0)
+X.Size = UDim2.new(0, 51, 0, 23)
+X.Font = Enum.Font.Gotham
+X.Text = "X"
+X.TextColor3 = Color3.fromRGB(0, 0, 0)
+X.TextSize = 16.000
+
+Frame_2.Parent = Frame
+Frame_2.Active = true
+Frame_2.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Frame_2.BorderColor3 = Color3.fromRGB(45, 45, 45)
+Frame_2.Position = UDim2.new(-0.00127285696, 0, 1, 0)
+Frame_2.Size = UDim2.new(0, 323, 0, 107)
+
+Chat.Name = "Chat"
+Chat.Parent = Frame_2
+Chat.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Chat.BorderColor3 = Color3.fromRGB(25, 25, 25)
+Chat.Position = UDim2.new(0.0247678012, 0, 0.120135188, 0)
+Chat.Size = UDim2.new(0, 192, 0, 41)
+Chat.Font = Enum.Font.SourceSans
+Chat.PlaceholderText = "Enter Your Chat Here."
 Chat.Text = ".gg/teuscommunity"
 Chat.TextColor3 = Color3.fromRGB(255, 255, 255)
 Chat.TextScaled = true
@@ -23,7 +99,7 @@ DelayBox.BorderColor3 = Color3.fromRGB(25, 25, 25)
 DelayBox.Position = UDim2.new(0.690402508, 0, 0.126890033, 0)
 DelayBox.Size = UDim2.new(0, 84, 0, 42)
 DelayBox.Font = Enum.Font.SourceSans
-DelayBox.Text = "20"
+DelayBox.Text = "0.7"
 DelayBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 DelayBox.TextScaled = true
 DelayBox.TextSize = 14.000
