@@ -74,7 +74,7 @@ Chat.Position = UDim2.new(0.0247678012, 0, 0.120135188, 0)
 Chat.Size = UDim2.new(0, 192, 0, 41)
 Chat.Font = Enum.Font.SourceSans
 Chat.PlaceholderText = "Enter Your Chat Here."
-Chat.Text = ".gg/teuscommunity"
+Chat.Text = ""
 Chat.TextColor3 = Color3.fromRGB(255, 255, 255)
 Chat.TextScaled = true
 Chat.TextSize = 14.000
@@ -188,3 +188,4 @@ local function AYOPMNY_fake_script() -- minimze.LocalScript
 	end)
 end
 coroutine.wrap(AYOPMNY_fake_script)()
+
