@@ -19,7 +19,7 @@ local minimze = Instance.new("TextButton")
 ChatSplitter.Name = "ChatSplitter"
 ChatSplitter.Parent = game.CoreGui
 ChatSplitter.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ChatSplitter.ResetOnSpawn = true
+ChatSplitter.ResetOnSpawn = false
 
 Frame.Parent = ChatSplitter
 Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
