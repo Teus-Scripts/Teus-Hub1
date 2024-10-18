@@ -1,17 +1,20 @@
-print("[Teus/Info] Connecting To Server");
+gay = tick()
+print("[Maroky/Info] Connecting To Server");
 
-print("[Teus/Info] Connected To Server"); 
+print("[Maroky/Info] Connected To Server"); 
 
-print("[Teus/Info] Fetching Requirements Data..."); 
+print("[Maroky/Info] Fetching Requirements Data..."); 
 
-print("[Teus/Info] Saving Data To Workspace"); 
+print("[Maroky/Info] Saving Data To Workspace"); 
 
-print("[Teus/Info] Authencating..."); 
+print("[Maroky/Info] Authencating..."); 
 wait(.2)
-print("[Teus/Info] Authencation Disabled, Loading Script...");
+print("[Maroky/Info] Authencation Disabled, Loading Script...");
 
-print("[Teus/Info] Loaded In "..tostring(tick()-gay).."ms")
-
+print("[Maroky/Info] Loaded In "..tostring(tick()-gay).."ms")
+if game.Players.LocalPlayer.Name == "Rip_NgaoGaming" then 
+  game.Players.LocalPlayer:Kick("You Have Been Permerantly Banned For Reason: Bạn Đã Bị Imharbl ban vĩnh viễn") 
+end 
 game: GetService"RunService".Heartbeat: Connect(function() 
   sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge) 
   pcall(function() 
@@ -30,7 +33,7 @@ game: GetService"RunService".Heartbeat: Connect(function()
     end)
 end ) 
   
-ScreenGui = Instance.new("ScreenGui");
+  ScreenGui = Instance.new("ScreenGui");
 
 Frame = Instance.new("Frame");
 
@@ -53,7 +56,7 @@ ScreenGui.Parent = game:GetService("CoreGui")
 
 Frame.AnchorPoint = Vector2.new(0.5, 0.5)
 Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BackgroundTransparency = 0 -- Transparência removida
+Frame.BackgroundTransparency = 0.5
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0.499250829, 0, 0.181725562, 0)
@@ -119,47 +122,60 @@ ImageLabel.Size = UDim2.new(0, 50, 0, 50)
 ImageLabel.Parent = Frame
 
 script_time = os.time()
-if not isfolder(".teus/BloxFruit/Kaitun/") then -- Mudança para "teus"
-               makefolder(".teus/BloxFruit/Kaitun/") -- Mudança para "teus"
+if not isfolder(".heiskso/BloxFruit/Kaitun/") then
+               makefolder(".heiskso/BloxFruit/Kaitun/")
 end
-inv = game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("getInventory")
+             inv = game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("getInventory")
+   function randomChar()
 
-function randomChar()
+      local charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#₫_&-+()/*':;;!?£~`€|$•¢√^π°÷=×{§}∆%©®™✓[]'"
 
-    local charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#₫_&-+()/*':;;!?£~`€|$•¢√^π°÷=×{§}∆%©®™✓[]'"
+      local length = 15
+      local index = math.random(1, length)
+      local char = charset:sub(index, index)
+      return char
+   end
 
-    local length = 15
-    local index = math.random(1, length)
-    local char = charset:sub(index, index)
-    return char
-end
-
-function getServerTime()
-    RealTime = tostring(math.floor(game.Lighting.ClockTime * 100) / 100)
-    RealTime = tostring(game.Lighting.ClockTime)
-    RealTimeTable = RealTime:split(".")
-    Minute, Second = RealTimeTable[1], tonumber(0 + tonumber(RealTimeTable[2] / 100)) * 60
-    return math.floor(Minute).."min"
-end
-local badtimedicac = os.time()
-if not isfile(".teus/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name) then -- Mudança para "teus"
-    writefile(".teus/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name, "0") -- Mudança para "teus"
-    esltime = 0 
-end 
-ctent2 = readfile(".teus/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name) -- Mudança para "teus"
-function updatetime()
-    if not isfile(".teus/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name) then -- Mudança para "teus"
-        writefile(".teus/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name, "0") -- Mudança para "teus"
-        esltime = 0
-    else
-        ctent = readfile(".teus/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name) -- Mudança para "teus"
-        if tonumber(ctent) or ctent == "0" or ctent == "1" then
+   function getServerTime()
+      RealTime = tostring(math.floor(game.Lighting.ClockTime * 100) / 100)
+      RealTime = tostring(game.Lighting.ClockTime)
+      RealTimeTable = RealTime:split(".")
+      Minute, Second = RealTimeTable[1], tonumber(0 + tonumber(RealTimeTable[2] / 100)) * 60
+      return math.floor(Minute).."min"
+   end
+   local badtimedicac = os.time()
+         if not isfile(".heiskso/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name) then
+        
+         writefile(".heiskso/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name, "0")
+         esltime = 0 
+         end 
+   ctent2 = readfile(".heiskso/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name)
+   function updatetime()
+      if not isfile(".heiskso/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name) then
+       
+         writefile(".heiskso/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name, "0")
+         esltime = 0
+      else
+         ctent = readfile(".heiskso/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name)
+         if tonumber(ctent) or ctent == "0" or ctent == "1" then
             esltime = tonumber(ctent2 or 0) + (os.time()-(badtimedicac or os.time()))
-            writefile(".teus/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name, tostring(esltime)) -- Mudança para "teus"
+            writefile(".heiskso/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name, tostring(esltime))
             pcall(function() clockm:SetText(disp_time(esltime))end)
             pcall(function() TextLabel_7.Text = getServerTime() end)
 
-        else
+         else
             noti("Something Wrong With Config, Automatically Generate A New One")
             esltime = "0"
-            writefile(".teus/BloxFruit/Kaitun/eslapedtime
+            writefile(".heiskso/BloxFruit/Kaitun/eslapedtime."..game.Players.LocalPlayer.Name, "0")
+         end
+         end end
+
+         function AYU_FINGERPRINT()
+            if not isfile(".ayu_fingerprint") then
+               fingerprint = randomChar()
+               savefile(".ayu_fingerprint", fingerprint)
+               return fingerprint
+            else
+               return readfile(".ayu_fingerpriny")
+            end
+         end
