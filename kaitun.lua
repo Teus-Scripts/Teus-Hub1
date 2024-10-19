@@ -56,7 +56,7 @@ ScreenGui.Parent = game:GetService("CoreGui")
 
 Frame.AnchorPoint = Vector2.new(0.5, 0.5)
 Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BackgroundTransparency = 0.5
+Frame.BackgroundTransparency = 0
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0.499250829, 0, 0.181725562, 0)
@@ -77,7 +77,7 @@ UICorner.CornerRadius = UDim.new(0, 5)
 UICorner.Parent = Frame
 
 TextLabel.Font = Enum.Font.FredokaOne
-TextLabel.Text = "Heiskso Hub Kaitun / Cuttay"
+TextLabel.Text = "Teus Hub Kaitun"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 20
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -95,7 +95,7 @@ UIGradient1.Color = ColorSequence.new{
 UIGradient1.Parent = TextLabel
 
 TextLabel1.Font = Enum.Font.FredokaOne
-TextLabel1.Text = "Heiskso Script • .gg/yF4VEq7aDH"
+TextLabel1.Text = "Teus Script | Discord.gg/teuscommunity"
 TextLabel1.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel1.TextSize = 20
 TextLabel1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -112,7 +112,7 @@ UIGradient2.Color = ColorSequence.new{
 }
 UIGradient2.Parent = TextLabel1
 
-ImageLabel.Image = "rbxassetid://15992619207"
+ImageLabel.Image = "rbxassetid://111005674884784"
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel.BackgroundTransparency = 1
 ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
