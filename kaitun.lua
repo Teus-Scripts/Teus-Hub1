@@ -60,7 +60,7 @@ Frame.BackgroundTransparency = 0
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0.499250829, 0, 0.181725562, 0)
-Frame.Size = UDim2.new(0, 800, 0, 71)
+Frame.Size = UDim2.new(0, 800, 0, 100)
 Frame.Parent = ScreenGui
 
 UIStroke.Color = Color3.fromRGB(255, 255, 255)
