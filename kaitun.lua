@@ -85,7 +85,7 @@ TextLabel.BackgroundTransparency = 1
 TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.BorderSizePixel = 0
 TextLabel.Position = UDim2.new(0.0199637525, 0, 0.276315689, 0)
-TextLabel.Size = UDim2.new(0, 489, 0, 11)
+TextLabel.Size = UDim2.new(0, 500, 0, 15)
 TextLabel.Parent = Frame
 
 UIGradient1.Color = ColorSequence.new{
