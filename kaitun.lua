@@ -56,11 +56,11 @@ ScreenGui.Parent = game:GetService("CoreGui")
 
 Frame.AnchorPoint = Vector2.new(0.5, 0.5)
 Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BackgroundTransparency = 0.5
+Frame.BackgroundTransparency = 0
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0.499250829, 0, 0.181725562, 0)
-Frame.Size = UDim2.new(0, 511, 0, 76)
+Frame.Size = UDim2.new(0, 600, 0, 100)
 Frame.Parent = ScreenGui
 
 UIStroke.Color = Color3.fromRGB(255, 255, 255)
@@ -112,7 +112,7 @@ UIGradient2.Color = ColorSequence.new{
 }
 UIGradient2.Parent = TextLabel1
 
-ImageLabel.Image = "rbxassetid://15992619207"
+ImageLabel.Image = "rbxassetid://111005674884784"
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel.BackgroundTransparency = 1
 ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
