@@ -1,3 +1,4 @@
+local Update = loadstring(Game:HttpGet"https://raw.githubusercontent.com/Teus-Scripts/Teus-Hub1/refs/heads/main/sla.lua")()
 local Alert = loadstring(Game:HttpGet"https://raw.githubusercontent.com/Teus-Scripts/Teus-Hub1/refs/heads/main/livro.lua")()
 local Library = Update:Window("Blox Fruits")
 local Main = Library:Tab("Main","rbxassetid://10723407389")
