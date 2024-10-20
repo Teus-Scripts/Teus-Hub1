@@ -1,29 +1,3 @@
-
-		click(game:GetService("Players").LocalPlayer.PlayerGui.Main.MenuButton) -- open menu
-		wait(.5)
-		click(game:GetService("Players").LocalPlayer.PlayerGui.Main.InventoryButton) -- open Beg
-		wait(.5)
-		CheckPhoto('Treasure')
-		game:GetService("Players").LocalPlayer.PlayerGui.Main.InventoryContainer.Visible = true
-		Load_Info('Blox Fruit','FruitB')
-		game:GetService("CoreGui")["Switch Hub C"].FruitB.Visible = true
-		click(game:GetService("Players").LocalPlayer.PlayerGui.Main.MenuButton) -- open menu
-		]]
-		wait(.5)
-		if _G.Setting['Black Screen'] then
-			ToggleImgUi.ImageTransparency = 0.3
-			uihide = true
-			game:GetService("CoreGui")["Switch Hub"].Enabled = true
-			game.Lighting.ExposureCompensation = -10
-			--BlurSwitch.Size = 80
-			togle_up = true
-			wait()
-			ToggleImgUi.ImageTransparency = 0
-		end
-		function Set_Status_X(vu)
-			game:GetService("CoreGui")["Switch Hub"].Text3.Fragments.Text = vu
-		end
-		--[[
 		local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/alichnochi/code/main/notifycation.lua"))()
 		local Notify = AkaliNotif.Notify
 		Notify({
