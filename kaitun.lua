@@ -125,7 +125,7 @@ G2L["3"]["CornerRadius"] = UDim.new(0, 9);
 G2L["4"] = Instance.new("ImageLabel", G2L["2"]);
 G2L["4"]["BorderSizePixel"] = 0;
 G2L["4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4"]["Image"] = [[http://www.roblox.com/asset/?id=114239849954263]];
+G2L["4"]["Image"] = [[http://www.roblox.com/asset/?id=]];
 G2L["4"]["Size"] = UDim2.new(0, 66, 0, 66);
 G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["4"]["BackgroundTransparency"] = 1;
