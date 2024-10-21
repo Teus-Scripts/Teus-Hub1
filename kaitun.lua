@@ -147,9 +147,9 @@ G2L["7"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fr
 G2L["8"] = Instance.new("ImageLabel", G2L["2"]);
 G2L["8"]["BorderSizePixel"] = 0;
 G2L["8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["8"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["8"]["AnchorPoint"] = Vector2.new(0.20, 0.20);
 G2L["8"]["Image"] = [[http://www.roblox.com/asset/?id=114239849954263]];
-G2L["8"]["Size"] = UDim2.new(0, 250, 0, 245);
+G2L["8"]["Size"] = UDim2.new(0, 300, 0, 300);
 G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["8"]["BackgroundTransparency"] = 1;
 G2L["8"]["Position"] = UDim2.new(0.86037, 0, 0.43562, 0);
