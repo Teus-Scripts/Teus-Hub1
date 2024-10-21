@@ -152,7 +152,7 @@ G2L["8"]["Image"] = [[http://www.roblox.com/asset/?id=114239849954263]];
 G2L["8"]["Size"] = UDim2.new(0, 255, 0, 250);
 G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["8"]["BackgroundTransparency"] = 1;
-G2L["8"]["Position"] = UDim2.new(0.86037, 0, 0.43562, 0);
+G2L["8"]["Position"] = UDim2.new(0.96037, 0, 0.43562, 0);
 
 -- StarterGui.ScreenGui.Frame.ImageLabel.UICorner
 G2L["9"] = Instance.new("UICorner", G2L["8"]);
