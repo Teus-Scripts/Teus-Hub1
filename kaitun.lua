@@ -150,7 +150,7 @@ G2L["8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["8"]["AnchorPoint"] = Vector2.new(0.5, 0.3);
 G2L["8"]["Image"] = [[http://www.roblox.com/asset/?id=114239849954263]];
 G2L["8"]["Size"] = UDim2.new(0, 300, 0, 295);
-G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 1);
 G2L["8"]["BackgroundTransparency"] = 1;
 G2L["8"]["Position"] = UDim2.new(0.86037, 0, 0.43562, 0);
 
