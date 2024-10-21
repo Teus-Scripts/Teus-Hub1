@@ -1046,9 +1046,9 @@ end)
 local u5 = require(game.ReplicatedStorage:WaitForChild("Notification"))
 spawn(function()
     while wt() do
-        u5.new("<Color=Yellow>Server: discord.gg/teuscommunity<Color=/>"):Display()
-        u5.new("<Color=Yellow>Dms: teus<Color=/>"):Display() 
-        u5.new("<Color=Yellow>ID:908924282883674142<Color=/>"):Display() 
+        u5.new("<Color=Yellow><Color=/>"):Display()
+        u5.new("<Color=Yellow><Color=/>"):Display() 
+        u5.new("<Color=Yellow><Color=/>"):Display() 
         wt(20)
     end
 end)
