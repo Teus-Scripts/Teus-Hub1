@@ -125,7 +125,7 @@ G2L["3"]["CornerRadius"] = UDim.new(0, 9);
 G2L["4"] = Instance.new("ImageLabel", G2L["2"]);
 G2L["4"]["BorderSizePixel"] = 0;
 G2L["4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4"]["Image"] = [[http://www.roblox.com/asset/?id=18748074579]];
+G2L["4"]["Image"] = [[http://www.roblox.com/asset/?id=114239849954263]];
 G2L["4"]["Size"] = UDim2.new(0, 66, 0, 66);
 G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["4"]["BackgroundTransparency"] = 1;
@@ -148,7 +148,7 @@ G2L["8"] = Instance.new("ImageLabel", G2L["2"]);
 G2L["8"]["BorderSizePixel"] = 0;
 G2L["8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["8"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["8"]["Image"] = [[http://www.roblox.com/asset/?id=18747987014]];
+G2L["8"]["Image"] = [[http://www.roblox.com/asset/?id=114239849954263]];
 G2L["8"]["Size"] = UDim2.new(0, 183, 0, 183);
 G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["8"]["BackgroundTransparency"] = 1;
@@ -1048,7 +1048,7 @@ spawn(function()
     while wt() do
         u5.new("<Color=Yellow>Server: discord.gg/teuscommunity<Color=/>"):Display()
         u5.new("<Color=Yellow>Dms: teus<Color=/>"):Display() 
-        u5.new("<Color=Yellow>ID: 879370807778902057<Color=/>"):Display() 
+        u5.new("<Color=Yellow>ID:908924282883674142<Color=/>"):Display() 
         wt(20)
     end
 end)
