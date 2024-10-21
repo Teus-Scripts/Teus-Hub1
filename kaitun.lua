@@ -20,7 +20,7 @@ getgenv().Config = {
     },
     ["Chat"] = {
         ["Enabled"] = false,
-        ["Message"] = {"Tsuo is Playing Free Fire", ".gg/tsuoscripts"}
+        ["Message"] = {"teus", ".gg/teuscommunity"}
     },
     ["Custom Y Run"] = {
         ["Enabled"] = false,
@@ -110,7 +110,7 @@ G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 -- StarterGui.ScreenGui.Frame
 G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["BorderSizePixel"] = 0;
-G2L["2"]["BackgroundColor3"] = Color3.fromRGB(72, 15, 86);
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["2"]["Size"] = UDim2.new(0.85, 0, 0.85, 0);
 G2L["2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
@@ -169,7 +169,7 @@ G2L["a"]["BackgroundTransparency"] = 0.99;
 G2L["a"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["a"]["Size"] = UDim2.new(0, 200, 0, 50);
 G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a"]["Text"] = [[TSUOHUB AUTOBOUNTY ]];
+G2L["a"]["Text"] = [[TEUSHUB AUTOBOUNTY ]];
 G2L["a"]["Position"] = UDim2.new(0.31096, 0, 0.10074, 0);
 
 -- StarterGui.ScreenGui.Frame.TextLabel.UIGradient
@@ -345,13 +345,13 @@ G2L["25"] = Instance.new("TextLabel", G2L["2"]);
 G2L["25"]["BorderSizePixel"] = 0;
 G2L["25"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["25"]["TextSize"] = 22;
-G2L["25"]["FontFace"] = Font.new([[rbxassetid://12187375422]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["25"]["FontFace"] = Font.new([[rbxassetid://114239849954263]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
 G2L["25"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["25"]["BackgroundTransparency"] = 0.99;
 G2L["25"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["25"]["Size"] = UDim2.new(0, 200, 0, 50);
 G2L["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["25"]["Text"] = [[discord.gg/tsuoscripts]];
+G2L["25"]["Text"] = [[discord.gg/teuscommunity]];
 G2L["25"]["Position"] = UDim2.new(0.75045, 0, 0.10228, 0);
 
 -- StarterGui.ScreenGui.Frame.TextLabel.UIGradient
@@ -377,7 +377,7 @@ G2L["29"]["ScaleType"] = Enum.ScaleType.Slice;
 G2L["29"]["ImageTransparency"] = 0.86;
 G2L["29"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["29"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["29"]["Image"] = [[rbxassetid://1316045217]];
+G2L["29"]["Image"] = [[rbxassetid://114239849954263]];
 G2L["29"]["Size"] = UDim2.new(1, 4, 1, 4);
 G2L["29"]["BackgroundTransparency"] = 1;
 G2L["29"]["Name"] = [[umbraShadow]];
@@ -391,7 +391,7 @@ G2L["2a"]["ScaleType"] = Enum.ScaleType.Slice;
 G2L["2a"]["ImageTransparency"] = 0.88;
 G2L["2a"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2a"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["2a"]["Image"] = [[rbxassetid://1316045217]];
+G2L["2a"]["Image"] = [[rbxassetid://114239849954263]];
 G2L["2a"]["Size"] = UDim2.new(1, 4, 1, 4);
 G2L["2a"]["BackgroundTransparency"] = 1;
 G2L["2a"]["Name"] = [[penumbraShadow]];
@@ -405,13 +405,13 @@ G2L["2b"]["ScaleType"] = Enum.ScaleType.Slice;
 G2L["2b"]["ImageTransparency"] = 0.88;
 G2L["2b"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2b"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["2b"]["Image"] = [[rbxassetid://1316045217]];
+G2L["2b"]["Image"] = [[rbxassetid://114239849954263]];
 G2L["2b"]["Size"] = UDim2.new(1, 4, 1, 4);
 G2L["2b"]["BackgroundTransparency"] = 1;
 G2L["2b"]["Name"] = [[ambientShadow]];
 G2L["2b"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
-local foldername = "Tsuo Hub"
+local foldername = "Teus Hub"
 local filename = game.Players.LocalPlayer.Name.."_Main.json"
 
 function saveSettings()
@@ -436,7 +436,7 @@ end
 
 loadSettings()
 
-local foldername = "Tsuo Hub"
+local foldername = "Teus Hub"
 local filename = game.Players.LocalPlayer.Name.."_Main.json"
 
 function saveSettings()
@@ -1046,8 +1046,8 @@ end)
 local u5 = require(game.ReplicatedStorage:WaitForChild("Notification"))
 spawn(function()
     while wt() do
-        u5.new("<Color=Yellow>Server: discord.gg/tsuoscripts<Color=/>"):Display()
-        u5.new("<Color=Yellow>Dms: tsuo9<Color=/>"):Display() 
+        u5.new("<Color=Yellow>Server: discord.gg/teuscommunity<Color=/>"):Display()
+        u5.new("<Color=Yellow>Dms: teus<Color=/>"):Display() 
         u5.new("<Color=Yellow>ID: 879370807778902057<Color=/>"):Display() 
         wt(20)
     end
