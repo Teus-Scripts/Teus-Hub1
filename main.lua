@@ -2760,8 +2760,8 @@ loadSettings()
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "HadesGod [Free Premium 7 Days]",
-    SubTitle = " By ZkanixZ#0 • Hades_x112#0",
+    Title = "Teus Hub",
+    SubTitle = " By Teus Scripts",
     TabWidth = 140,
     Size = UDim2.fromOffset(480, 320),
     Acrylic = false, 
