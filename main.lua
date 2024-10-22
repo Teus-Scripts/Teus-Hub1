@@ -2749,7 +2749,7 @@ TextLabel.BorderSizePixel = 0
 TextLabel.Position = UDim2.new(0.359138072, 0, -0.025062656, 0)
 TextLabel.Size = UDim2.new(0, 200, 0, 50)
 TextLabel.Font = Enum.Font.FredokaOne
-TextLabel.Text = "discord.gg/H9q9RuKxqk"
+TextLabel.Text = ""
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 19.000
 
