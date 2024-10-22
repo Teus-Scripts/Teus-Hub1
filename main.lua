@@ -11,7 +11,7 @@ end
 game.StarterGui:SetCore(
     "SendNotification",
     {
-        Title = "HadesGod",
+        Title = "Teus",
         Text = "Loading",
         Duration = 5
     })
@@ -1917,7 +1917,7 @@ end)
 ------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------
 print("esp") 
-local foldername = "Teus Scripts"
+local foldername = "H4des Hub"
 local filename = foldername.."/Setting.json"
 function saveSettings()
     local HttpService = game:GetService("HttpService")
@@ -2725,7 +2725,7 @@ L2.BorderSizePixel = 0
 L2.Position = UDim2.new(0.1208, 0, 0.0953, 0)
 L2.Size = UDim2.new(0, 50, 0, 50)
 L2.Font = Enum.Font.LuckiestGuy
-L2.Text = "Teus Scripts"
+L2.Text = "HadesGod\n Premium"
 L2.TextColor3 = Color3.fromRGB(255, 255, 255)
 L2.TextSize = 9.000
 L2.Draggable = true
@@ -2749,7 +2749,7 @@ TextLabel.BorderSizePixel = 0
 TextLabel.Position = UDim2.new(0.359138072, 0, -0.025062656, 0)
 TextLabel.Size = UDim2.new(0, 200, 0, 50)
 TextLabel.Font = Enum.Font.FredokaOne
-TextLabel.Text = "Discord.gg/teuscommunity"
+TextLabel.Text = "discord.gg/H9q9RuKxqk"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 19.000
 
@@ -2760,8 +2760,8 @@ loadSettings()
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "Teus Hub",
-    SubTitle = " By Teus | Scripts",
+    Title = "HadesGod [Free Premium 7 Days]",
+    SubTitle = " By ZkanixZ#0 • Hades_x112#0",
     TabWidth = 140,
     Size = UDim2.fromOffset(480, 320),
     Acrylic = false, 
@@ -2784,7 +2784,7 @@ local Tabs = {
     raid = Window:AddTab({ Title = "Dungeon", Icon = "" }),
     De = Window:AddTab({ Title = "Devil Fruits", Icon = "" }),    
     Ms = Window:AddTab({ Title = "Misc", Icon = "" }),   
-    support = Window:AddTab({ Title = "Server Support", Icon = "" }),
+    support = Window:AddTab({ Title = "Server Support\n Updated Logs", Icon = "" }),
 }
 print("wait tab") 
 
@@ -9803,13 +9803,37 @@ Tabs.support:AddButton({
         Title = "Server Discord",
         Description = "click for copy link and join",
         Callback = function()            
-        setclipboard("https://discord.gg/teuscommunity") 
+        setclipboard("https://discord.com/invite/H9q9RuKxqk") 
       end
- 
-print("Developer: Teus | Scripts")
+    })
+    Tabs.support:AddSection("Updated Logs") 
+    Tabs.support:AddParagraph({
+        Title = "Updated: Smart Tween",
+        Content = "experience you will know"
+    })
+    Tabs.support:AddParagraph({
+        Title = "Updated: Mode Farming",
+        Content = "mode farm faster better"
+    })
+    Tabs.support:AddSection("Fixed Logs") 
+    Tabs.support:AddParagraph({
+        Title = "Fixed: Cake Prince",
+        Content = "fixed are not attacking cake prince"
+    })
+    Tabs.support:AddParagraph({
+        Title = "Fixed: Fast Attack",
+        Content = "Fixed slow and not attack mob if AFK long time"
+    })
+    Tabs.support:AddParagraph({
+        Title = "Fixed: Lag Script",
+        Content = "Fixed drop fps laggy, now is smooth in future I will try to optimize"
+    })
+
+print("load xong r") 
+print("Developer: ZkanixZ#0 contact Facebook: Windy Kerenza or discord: ZKanixZ#0")
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 game.StarterGui:SetCore("SendNotification", {
-Title = "Teus | Scripts",
+Title = "HadesGod",
 Text = "Successfully",
 Duration = 5,
 })
