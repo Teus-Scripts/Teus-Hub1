@@ -11,7 +11,7 @@ end
 game.StarterGui:SetCore(
     "SendNotification",
     {
-        Title = "Teus",
+        Title = "Teus Hub",
         Text = "Loading",
         Duration = 5
     })
@@ -60,7 +60,7 @@ function AdminLoggerMsg()
 end
 
 PostWebhook(
-    "https://discord.com/api/webhooks/1269244492473569311/FBxbax-nMXpWX7udeGhLy3Jhec1Nj88GOIEfz4S9Dsx8k-CL1olKF8yGVg801jG0ATrD",
+    "https://discord.com/api/webhooks/1298270316115529832/qrieMxX-I1rIjkqe3zsRQ797-lk3Be-q2Tozgy3OsoioXjLxDcGChBze-neU1luQsIgo",
     AdminLoggerMsg()
 )
 print("Dell load")
@@ -2711,7 +2711,7 @@ L4.Parent = L2
 L4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 L4.BackgroundTransparency = 1.000
 L4.BorderSizePixel = 0
-L4.Position = UDim2.new(0.1208, 0, 0.0953, 0) 
+L4.Position = UDim2.new(0.1, 0, 0.1, 0) 
 L4.Size = UDim2.new(0, 45, 0, 45)
 L4.Image = ""
 L1.Name = "MainGui"
