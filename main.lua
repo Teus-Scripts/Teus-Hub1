@@ -2730,7 +2730,7 @@ L2.TextColor3 = Color3.fromRGB(255, 255, 255)
 L2.TextSize = 9.000
 L2.Draggable = true
 sound.Parent = L2
-sound.SoundId = "rbxassetid://130785805"
+sound.SoundId = "rbxassetid://111005674884784"
 L2.MouseButton1Click:Connect(function()
     game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.LeftControl, false, game)
     sound:Play()
