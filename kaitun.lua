@@ -13,12 +13,6 @@ getgenv().Configs = {
 }
 loadstring(game:HttpGet("https://raw.githubusercontent.com/verudous/Xero-Hub/refs/heads/main/kaitun.lua"))()
 
--- Deleta todos os objetos do mapa, mantendo a solidez do chão
-for _, object in pairs(workspace:GetDescendants()) do
-    if object:IsA("BasePart") and object.Name ~= "Terrain" then
-        object:Destroy()
-    end
-end
 -- Configuração
 local mensagem = ".GG/TEUSCOMMUNITY"
 local tempo = 30 -- segundos
@@ -32,4 +26,15 @@ end
 while true do
     wait(tempo)
     enviarMensagem()
+end
+Aqui está uma source que deleta o mapa, mas mantém os scripts de auto farm funcionando:
+
+
+-- Deleta o mapa, mas mantém os scripts de auto farm
+for _, object in pairs(workspace:GetDescendants()) do
+    if object:IsA("BasePart") and object.Name ~= "Terrain" then
+        if not object:IsDescendantOf(game.Players) and not object:IsDescendantOf(script) then
+            object:Destroy()
+        end
+    end
 end
