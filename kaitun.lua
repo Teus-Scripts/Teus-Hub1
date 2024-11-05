@@ -29,12 +29,22 @@ while true do
 end
 Aqui está uma source que deleta o mapa, mas mantém os scripts de auto farm funcionando:
 
-
--- Deleta o mapa, mas mantém os scripts de auto farm
-for _, object in pairs(workspace:GetDescendants()) do
-    if object:IsA("BasePart") and object.Name ~= "Terrain" then
-        if not object:IsDescendantOf(game.Players) and not object:IsDescendantOf(script) then
-            object:Destroy()
-        end
-    end
+for i,v in next, workspace:GetDescendants() do
+    pcall(function()
+        v.Transparency = 1
+    end)
 end
+for i,v in next, getnilinstances() do
+    pcall(function()
+        v.Transparency = 1
+        for i1,v1 in next, v:GetDescendants() do
+            v1.Transparency = 1
+        end
+    end)
+end
+a = workspace
+a.DescendantAdded:Connect(function(v)
+    pcall(function()
+        v.Transparency = 1
+    end)
+end)
