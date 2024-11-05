@@ -27,8 +27,6 @@ while true do
     wait(tempo)
     enviarMensagem()
 end
-Aqui está uma source que deleta o mapa, mas mantém os scripts de auto farm funcionando:
-
 for i,v in next, workspace:GetDescendants() do
     pcall(function()
         v.Transparency = 1
