@@ -27,6 +27,7 @@ while true do
     wait(tempo)
     enviarMensagem()
 end
+
 for i,v in next, workspace:GetDescendants() do
     pcall(function()
         v.Transparency = 1
