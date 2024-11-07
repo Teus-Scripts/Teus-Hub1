@@ -91,7 +91,7 @@ getgenv().Mastery = { -- Farm Mastery / ฟามมาสเตอรี่
 
 _G.On_Next_Generation = true
 if _G.On_Next_Generation then
-    _G.Switch_Hub_Series_R = true
+    _G.Teus_Hub_Series_R = true
     _G.Quest = {
         ['RGB'] = getgenv().Quest['RGB Haki']
     }
@@ -127,7 +127,8 @@ if type(Bijan) == 'table' then
 else
 	game:Shutdown()
 end
-if _G.Teus_Hub_Series_R then
+if _G.
+Teus_Hub_Series_R then
 	if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
 	
 	local function click(a)
