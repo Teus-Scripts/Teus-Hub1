@@ -406,7 +406,7 @@ if _G.Switch_Hub_Series_R then
 		end
 		-- Switch Hub
 		local Switch_Hub = Instance.new("ScreenGui")
-		Switch_Hub.Name = "Switch Hub"
+		Switch_Hub.Name = "Teus Hub"
 		Switch_Hub.Parent = game:GetService("CoreGui")
 		Switch_Hub.Enabled = false
 		
@@ -447,7 +447,7 @@ if _G.Switch_Hub_Series_R then
 		
 		-- Name
 		local F_Text = Instance.new("Frame")
-		F_Text.Name = "Teus Hub"
+		F_Text.Name = "Text"
 		F_Text.Parent = game:GetService("CoreGui")["Switch Hub"]
 		F_Text.Size = UDim2.new(1, 0, 1, 0)
 		F_Text.Position = UDim2.new(0, 0, 0, 0)
