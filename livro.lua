@@ -720,7 +720,7 @@ if _G.Switch_Hub_Series_R then
 		local uig = Instance.new("UIGridLayout")
 		uig.Parent = game:GetService("CoreGui")["Switch Hub C"].FruitB
 		uig.CellSize = UDim2.new(0, 55, 0, 55)
-		--[[
+		--[
 		click(game:GetService("Players").LocalPlayer.PlayerGui.Main.MenuButton) -- open menu
 		wait(.5)
 		click(game:GetService("Players").LocalPlayer.PlayerGui.Main.InventoryButton) -- open Beg
@@ -745,7 +745,7 @@ if _G.Switch_Hub_Series_R then
 		function Set_Status_X(vu)
 			game:GetService("CoreGui")["Switch Hub"].Text3.Fragments.Text = vu
 		end
-		--[[
+		--
 		local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/alichnochi/code/main/notifycation.lua"))()
 		local Notify = AkaliNotif.Notify
 		Notify({
@@ -797,7 +797,7 @@ if _G.Switch_Hub_Series_R then
 						Auto_Farm_Kaitun = true
 						togle_upx = false
 					else
-						Auto_Farm_Kaitun = true
+						Auto_Farm_Kaitun = false
 						togle_upx = true
 					end
 				end
@@ -1070,7 +1070,7 @@ if _G.Switch_Hub_Series_R then
 			TleP = true
 		end
 	})
-	--[[
+	--[
 	local Capcut_S = General_T:CreateSection({
 		Name = " Capcut ",
 		Side = 'Left'
@@ -4020,7 +4020,7 @@ if _G.Switch_Hub_Series_R then
 					if game.Players.LocalPlayer.Character.Stun.Value == 0 and Auto_Farm_Kaitun and not Stop_Attack then
 						AttackNoCD()
 						wait(0.17)
-						--[[
+						--[
 						game:GetService("RunService").Stepped:wait()
 						if time_all_x >= 20 then
 							if not Farm_Attack then
@@ -6760,7 +6760,7 @@ if _G.Switch_Hub_Series_R then
 	end)
 
 
-	--[[
+	--[
 	C_Position = {
 	[1] = nil
 	}
