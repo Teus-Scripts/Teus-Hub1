@@ -1,4 +1,3 @@
-
 if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
 
 getgenv().Faster = { 
