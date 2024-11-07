@@ -667,7 +667,7 @@ if _G.Switch_Hub_Series_R then
 		Yedhee.TextSize = 12.000
 		
 		if game.CoreGui:FindFirstChild('Teus Hub C') then
-			game.CoreGui:FindFirstChild('Switch Hub C'):Destroy()
+			game.CoreGui:FindFirstChild('Teus Hub C'):Destroy()
 		end
 		local function click(a)
 			game:GetService("VirtualInputManager"):SendMouseButtonEvent(a.AbsolutePosition.X+a.AbsoluteSize.X/2.5,a.AbsolutePosition.Y+50,0,true,a,1)
