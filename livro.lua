@@ -1,10 +1,7 @@
-
-require(game.ReplicatedStorage.Notification).new("<Color=Blue>@Tomcaythue99<Color=/>"):Display()
-
 if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
 
 getgenv().Faster = { 
-    ['CDK Super Fast'] = true, -- Spawn Admin / Tuấn Quang 
+    ['CDK Super Fast'] = true, -- Spawn Admin / เสกแอดมิน
     ['Buy Color Haki'] = 3 -- Legendary Haki Max 3
 }
 
@@ -13,10 +10,9 @@ getgenv().RAM = { -- Log Des
     ['Delay'] = 600 
 }
 
-getgenv().Setting = { -- Setting Script / Thiết Lập Kịch Bản 
-   Setting the Script
+getgenv().Setting = { -- Setting Script / ตั้งค่าสคริปต์
     ['FPS Booster'] = _G.Setting['FPS Booster'],
-    ['White Screen'] = false,
+    ['White Screen'] = true,
     ['Disible Gui'] = _G.Setting['Close Ui'],
     ['Lock Fruit'] = 1000000,
     ['AFK Check'] = 150,
@@ -40,13 +36,13 @@ getgenv().Quest = { -- Farm Quest / ทำเควส
 if _G.Race['Lock Race'] then
 	--getgenv().Quest['Evo Race']['Select Race'][1] = tostring(game.Players.LocalPlayer.Data.Race.Value)
 end
-getgenv().Fruit = { -- Select Fruit / Chọn kết quả mong muốn
+getgenv().Fruit = { -- Select Fruit / เลือกผลที่ต้องการ
     ['Main'] = _G.Fruit['Main Fruit'],
     ['Select Fruit'] = _G.Fruit['Select Fruit'], 
     ['Bring Fruit'] = true 
 }
 
-getgenv().Melee = { -- Farm Melee / Shop 
+getgenv().Melee = { -- Farm Melee / ฟามหมัด
     ['Superhuman'] = true,
     ['Death Step'] = true,
     ['Sharkman Karate'] = true,
@@ -59,7 +55,7 @@ getgenv().Sword = _G.Sword
 
 getgenv().Gun = _G.Gun
 
-getgenv().Mastery = { -- Farm Mastery / 
+getgenv().Mastery = { -- Farm Mastery / ฟามมาสเตอรี่
     ['Melee'] = _G.Mastery['Melee'],
     ['Fruit'] = _G.Mastery['Fruit'],
 
@@ -94,7 +90,7 @@ getgenv().Mastery = { -- Farm Mastery /
 
 _G.On_Next_Generation = true
 if _G.On_Next_Generation then
-    _G.Switch_Hub_Series_R = true
+    _G.cathub_Hub_Series_R = true
     _G.Quest = {
         ['RGB'] = getgenv().Quest['RGB Haki']
     }
@@ -130,7 +126,7 @@ if type(Bijan) == 'table' then
 else
 	game:Shutdown()
 end
-if _G.Switch_Hub_Series_R then
+if _G.cathub_Hub_Series_R then
 	if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
 	
 	local function click(a)
@@ -205,7 +201,7 @@ if _G.Switch_Hub_Series_R then
 					elseif v:IsA("MeshPart") then
 						v.Material = "Plastic";v.Reflectance = 0;v.TextureId = 0;v.CastShadow = false;v.RenderFidelity = Enum.RenderFidelity.Performance;
 					elseif v.ClassName == "SpecialMesh" then
-						v.TextureId = "rbxassetid://";
+						v.TextureId = "rbxassetid://0";
 					elseif v.ClassName == "Shirt" or v.ClassName == "Pants" or v.ClassName == "Accessory" then
 						v:Destroy();
 					end
@@ -405,141 +401,141 @@ if _G.Switch_Hub_Series_R then
 			return bit_zes
 		end
 
-		if game:GetService("CoreGui"):FindFirstChild('Switch Hub') then
-			game:GetService("CoreGui"):FindFirstChild('Switch Hub'):Destroy()
+		if game:GetService("CoreGui"):FindFirstChild('cathub Hub') then
+			game:GetService("CoreGui"):FindFirstChild('cathub Hub'):Destroy()
 		end
-		-- Switch Hub
-		local Switch_Hub = Instance.new("ScreenGui")
-		Switch_Hub.Name = "Switch Hub"
-		Switch_Hub.Parent = game:GetService("CoreGui")
-		Switch_Hub.Enabled = false
+		-- cathub Hub
+		local cathub_Hub = Instance.new("ScreenGui")
+		cathub_Hub.Name = "cathub Hub"
+		cathub_Hub.Parent = game:GetService("CoreGui")
+		cathub_Hub.Enabled = false
 		
 		
 		game:GetService("Players").LocalPlayer.PlayerGui.Main.BottomHUDList.SafeZone.Visible = false
 		game:GetService("Players").LocalPlayer.PlayerGui.Main.Code.Visible = false
-		-- Switch Hub 7M
+		-- cathub Hub 7M
 		local F_Level = Instance.new("Frame")
 		F_Level.Name = "Level"
-		F_Level.Parent = game:GetService("CoreGui")["Switch Hub"]
+		F_Level.Parent = game:GetService("CoreGui")["cathub Hub"]
 		F_Level.Size = UDim2.new(1, 0, 1, 0)
 		F_Level.Position = UDim2.new(0, 0, 0, 0)
 		F_Level.AnchorPoint = Vector2.new(0.5, 0.5)
 		F_Level.Transparency = 1
-		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Switch Hub"].Level
-		game:GetService("CoreGui")["Switch Hub"].Level.Fragments.TextColor3 = Color3.fromRGB(0, 255, 186) 
-		game:GetService("CoreGui")["Switch Hub"].Level.Fragments.Text = "Switch Hub"
-		game:GetService("CoreGui")["Switch Hub"].Level.Fragments.Size = UDim2.new(1, 0, 0, 40)
-		game:GetService("CoreGui")["Switch Hub"].Level.Fragments.TextXAlignment = 'Center'
-		game:GetService("CoreGui")["Switch Hub"].Level.Position = UDim2.new(0.5, 0, -0.2, 0)
-		game:GetService("CoreGui")["Switch Hub"].Level.Fragments.TextStrokeTransparency = 1
+		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["cathub Hub"].Level
+		game:GetService("CoreGui")["cathub Hub"].Level.Fragments.TextColor3 = Color3.fromRGB(0, 255, 186) 
+		game:GetService("CoreGui")["cathub Hub"].Level.Fragments.Text = "cathub Hub"
+		game:GetService("CoreGui")["cathub Hub"].Level.Fragments.Size = UDim2.new(1, 0, 0, 40)
+		game:GetService("CoreGui")["cathub Hub"].Level.Fragments.TextXAlignment = 'Center'
+		game:GetService("CoreGui")["cathub Hub"].Level.Position = UDim2.new(0.5, 0, -0.2, 0)
+		game:GetService("CoreGui")["cathub Hub"].Level.Fragments.TextStrokeTransparency = 1
 		
 		-- Time
 		local F_Text2 = Instance.new("Frame")
 		F_Text2.Name = "Text2"
-		F_Text2.Parent = game:GetService("CoreGui")["Switch Hub"]
+		F_Text2.Parent = game:GetService("CoreGui")["cathub Hub"]
 		F_Text2.Size = UDim2.new(1, 0, 1, 0)
 		F_Text2.Position = UDim2.new(0, 0, 0, 0)
 		F_Text2.AnchorPoint = Vector2.new(0.5, 0.5)
 		F_Text2.Transparency = 1
-		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Switch Hub"].Text2
-		game:GetService("CoreGui")["Switch Hub"].Text2.Fragments.TextColor3 = Color3.fromRGB(245, 245, 245)
-		game:GetService("CoreGui")["Switch Hub"].Text2.Fragments.Text = ""
-		game:GetService("CoreGui")["Switch Hub"].Text2.Fragments.Size = UDim2.new(1, 0, 0, 25)
-		game:GetService("CoreGui")["Switch Hub"].Text2.Fragments.TextXAlignment = 'Center'
-		game:GetService("CoreGui")["Switch Hub"].Text2.Position = UDim2.new(0.5, 0, -0.1, 0)
-		game:GetService("CoreGui")["Switch Hub"].Text2.Fragments.TextStrokeTransparency = 1
+		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["cathub Hub"].Text2
+		game:GetService("CoreGui")["cathub Hub"].Text2.Fragments.TextColor3 = Color3.fromRGB(245, 245, 245)
+		game:GetService("CoreGui")["cathub Hub"].Text2.Fragments.Text = ""
+		game:GetService("CoreGui")["cathub Hub"].Text2.Fragments.Size = UDim2.new(1, 0, 0, 25)
+		game:GetService("CoreGui")["cathub Hub"].Text2.Fragments.TextXAlignment = 'Center'
+		game:GetService("CoreGui")["cathub Hub"].Text2.Position = UDim2.new(0.5, 0, -0.1, 0)
+		game:GetService("CoreGui")["cathub Hub"].Text2.Fragments.TextStrokeTransparency = 1
 		
 		-- Name
 		local F_Text = Instance.new("Frame")
 		F_Text.Name = "Text"
-		F_Text.Parent = game:GetService("CoreGui")["Switch Hub"]
+		F_Text.Parent = game:GetService("CoreGui")["cathub Hub"]
 		F_Text.Size = UDim2.new(1, 0, 1, 0)
 		F_Text.Position = UDim2.new(0, 0, 0, 0)
 		F_Text.AnchorPoint = Vector2.new(0.5, 0.5)
 		F_Text.Transparency = 1
-		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Switch Hub"].Text
-		game:GetService("CoreGui")["Switch Hub"].Text.Fragments.TextColor3 = Color3.fromRGB(245, 245, 245)
-		game:GetService("CoreGui")["Switch Hub"].Text.Fragments.Text = '( '..game.Players.LocalPlayer.Name..' )'
-		game:GetService("CoreGui")["Switch Hub"].Text.Fragments.Size = UDim2.new(1, 0, 0, 25)
-		game:GetService("CoreGui")["Switch Hub"].Text.Fragments.TextXAlignment = 'Center'
-		game:GetService("CoreGui")["Switch Hub"].Text.Position = UDim2.new(0.5, 0, 0.14, 0)
-		game:GetService("CoreGui")["Switch Hub"].Text.Fragments.TextStrokeTransparency = 1
+		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["cathub Hub"].Text
+		game:GetService("CoreGui")["cathub Hub"].Text.Fragments.TextColor3 = Color3.fromRGB(245, 245, 245)
+		game:GetService("CoreGui")["cathub Hub"].Text.Fragments.Text = '( '..game.Players.LocalPlayer.Name..' )'
+		game:GetService("CoreGui")["cathub Hub"].Text.Fragments.Size = UDim2.new(1, 0, 0, 25)
+		game:GetService("CoreGui")["cathub Hub"].Text.Fragments.TextXAlignment = 'Center'
+		game:GetService("CoreGui")["cathub Hub"].Text.Position = UDim2.new(0.5, 0, 0.14, 0)
+		game:GetService("CoreGui")["cathub Hub"].Text.Fragments.TextStrokeTransparency = 1
 		-- Status
 		local F_Text3 = Instance.new("Frame")
 		F_Text3.Name = "Text3"
-		F_Text3.Parent = game:GetService("CoreGui")["Switch Hub"]
+		F_Text3.Parent = game:GetService("CoreGui")["cathub Hub"]
 		F_Text3.Size = UDim2.new(1, 0, 1, 0)
 		F_Text3.Position = UDim2.new(0, 0, 0, 0)
 		F_Text3.AnchorPoint = Vector2.new(0.5, 0.5)
 		F_Text3.Transparency = 1
-		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Switch Hub"].Text3
-		game:GetService("CoreGui")["Switch Hub"].Text3.Fragments.TextColor3 = Color3.fromRGB(0, 255, 186) 
-		game:GetService("CoreGui")["Switch Hub"].Text3.Fragments.Text = 'Status: Farm Level.'
-		game:GetService("CoreGui")["Switch Hub"].Text3.Fragments.Size = UDim2.new(1, 0, 0, 28)
-		game:GetService("CoreGui")["Switch Hub"].Text3.Fragments.TextXAlignment = 'Center'
-		game:GetService("CoreGui")["Switch Hub"].Text3.Position = UDim2.new(0.5, 0, 0.22, 0)
-		game:GetService("CoreGui")["Switch Hub"].Text3.Fragments.TextStrokeTransparency = 1
+		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["cathub Hub"].Text3
+		game:GetService("CoreGui")["cathub Hub"].Text3.Fragments.TextColor3 = Color3.fromRGB(0, 255, 186) 
+		game:GetService("CoreGui")["cathub Hub"].Text3.Fragments.Text = 'Status: Farm Level.'
+		game:GetService("CoreGui")["cathub Hub"].Text3.Fragments.Size = UDim2.new(1, 0, 0, 28)
+		game:GetService("CoreGui")["cathub Hub"].Text3.Fragments.TextXAlignment = 'Center'
+		game:GetService("CoreGui")["cathub Hub"].Text3.Position = UDim2.new(0.5, 0, 0.22, 0)
+		game:GetService("CoreGui")["cathub Hub"].Text3.Fragments.TextStrokeTransparency = 1
 		-- Item Sanguine Art
 		local F_Text5 = Instance.new("Frame")
 		F_Text5.Name = "Text5"
-		F_Text5.Parent = game:GetService("CoreGui")["Switch Hub"]
+		F_Text5.Parent = game:GetService("CoreGui")["cathub Hub"]
 		F_Text5.Size = UDim2.new(1, 0, 1, 0)
 		F_Text5.Position = UDim2.new(0, 0, 0, 0)
 		F_Text5.AnchorPoint = Vector2.new(0.5, 0.5)
 		F_Text5.Transparency = 1
-		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Switch Hub"].Text5
-		game:GetService("CoreGui")["Switch Hub"].Text5.Fragments.TextColor3 = Color3.fromRGB(245, 245, 245)
-		game:GetService("CoreGui")["Switch Hub"].Text5.Fragments.Text = '...'
-		game:GetService("CoreGui")["Switch Hub"].Text5.Fragments.Size = UDim2.new(1, 0, 0, 25)
-		game:GetService("CoreGui")["Switch Hub"].Text5.Fragments.TextXAlignment = 'Center'
-		game:GetService("CoreGui")["Switch Hub"].Text5.Position = UDim2.new(0.5, 0, 0.38, 0)
-		game:GetService("CoreGui")["Switch Hub"].Text5.Fragments.TextStrokeTransparency = 1
+		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["cathub Hub"].Text5
+		game:GetService("CoreGui")["cathub Hub"].Text5.Fragments.TextColor3 = Color3.fromRGB(245, 245, 245)
+		game:GetService("CoreGui")["cathub Hub"].Text5.Fragments.Text = '...'
+		game:GetService("CoreGui")["cathub Hub"].Text5.Fragments.Size = UDim2.new(1, 0, 0, 25)
+		game:GetService("CoreGui")["cathub Hub"].Text5.Fragments.TextXAlignment = 'Center'
+		game:GetService("CoreGui")["cathub Hub"].Text5.Position = UDim2.new(0.5, 0, 0.38, 0)
+		game:GetService("CoreGui")["cathub Hub"].Text5.Fragments.TextStrokeTransparency = 1
 		-- Full Moon
 		local F_Text6 = Instance.new("Frame")
 		F_Text6.Name = "Text6"
-		F_Text6.Parent = game:GetService("CoreGui")["Switch Hub"]
+		F_Text6.Parent = game:GetService("CoreGui")["cathub Hub"]
 		F_Text6.Size = UDim2.new(1, 0, 1, 0)
 		F_Text6.Position = UDim2.new(0, 0, 0, 0)
 		F_Text6.AnchorPoint = Vector2.new(0.5, 0.5)
 		F_Text6.Transparency = 1
-		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Switch Hub"].Text6
-		game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.TextColor3 = Color3.fromRGB(255,140,0)
-		game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Text = '🌕 75% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
-		game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Size = UDim2.new(1, 0, 0, 25)
-		game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.TextXAlignment = 'Center'
-		game:GetService("CoreGui")["Switch Hub"].Text6.Position = UDim2.new(0.5, 0, -0.03, 0)
-		game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.TextStrokeTransparency = 1
+		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["cathub Hub"].Text6
+		game:GetService("CoreGui")["cathub Hub"].Text6.Fragments.TextColor3 = Color3.fromRGB(255,140,0)
+		game:GetService("CoreGui")["cathub Hub"].Text6.Fragments.Text = '🌕 75% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+		game:GetService("CoreGui")["cathub Hub"].Text6.Fragments.Size = UDim2.new(1, 0, 0, 25)
+		game:GetService("CoreGui")["cathub Hub"].Text6.Fragments.TextXAlignment = 'Center'
+		game:GetService("CoreGui")["cathub Hub"].Text6.Position = UDim2.new(0.5, 0, -0.03, 0)
+		game:GetService("CoreGui")["cathub Hub"].Text6.Fragments.TextStrokeTransparency = 1
 		spawn(function()
 			while wait(1) do
 				pcall(function()
 					if Three_World then
 						if game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149431" then
-							game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Text = '🌕 100% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["cathub Hub"].Text6.Fragments.Text = '🌕 100% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149052" then
-							game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Text = '🌕 75% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["cathub Hub"].Text6.Fragments.Text = '🌕 75% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709143733" then
-							game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Text = '🌕 50% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["cathub Hub"].Text6.Fragments.Text = '🌕 50% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709150401" then
-							game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Text = '🌕 25% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["cathub Hub"].Text6.Fragments.Text = '🌕 25% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149680" then
-							game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Text = '🌕 15% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["cathub Hub"].Text6.Fragments.Text = '🌕 15% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						else 
-							game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Text = '🌕 0% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["cathub Hub"].Text6.Fragments.Text = '🌕 0% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						end 
 						local scripttime=game.Workspace.DistributedGameTime
 						local seconds = scripttime%60
 						minutes = math.floor(scripttime/60%60)
 						hours = math.floor(scripttime/3600)
 						local tempo = string.format("%.0f Hours, %.0f Minutes, %.0f Seconds", hours ,minutes, seconds)
-						game:GetService("CoreGui")["Switch Hub"].Text2.Fragments.Text = tempo
+						game:GetService("CoreGui")["cathub Hub"].Text2.Fragments.Text = tempo
 					else
-						game:GetService("CoreGui")["Switch Hub"].Text6.Fragments.Text = '🌕 0% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+						game:GetService("CoreGui")["cathub Hub"].Text6.Fragments.Text = '🌕 0% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						local scripttime=game.Workspace.DistributedGameTime
 						local seconds = scripttime%60
 						minutes = math.floor(scripttime/60%60)
 						hours = math.floor(scripttime/3600)
 						local tempo = string.format("%.0f Hours, %.0f Minutes, %.0f Seconds", hours ,minutes, seconds)
-						game:GetService("CoreGui")["Switch Hub"].Text2.Fragments.Text = tempo
+						game:GetService("CoreGui")["cathub Hub"].Text2.Fragments.Text = tempo
 					end
 				end)
 			end
@@ -547,37 +543,37 @@ if _G.Switch_Hub_Series_R then
 		-- Sanguine Art
 		local F_Text4 = Instance.new("Frame")
 		F_Text4.Name = "Text4"
-		F_Text4.Parent = game:GetService("CoreGui")["Switch Hub"]
+		F_Text4.Parent = game:GetService("CoreGui")["cathub Hub"]
 		F_Text4.Size = UDim2.new(1, 0, 1, 0)
 		F_Text4.Position = UDim2.new(0, 0, 0, 0)
 		F_Text4.AnchorPoint = Vector2.new(0.5, 0.5)
 		F_Text4.Transparency = 1
-		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Switch Hub"].Text4
-		game:GetService("CoreGui")["Switch Hub"].Text4.Fragments.TextColor3 = Color3.fromRGB(0, 255, 186) 
-		game:GetService("CoreGui")["Switch Hub"].Text4.Fragments.Text = '...'
-		game:GetService("CoreGui")["Switch Hub"].Text4.Fragments.Size = UDim2.new(1, 0, 0, 35)
-		game:GetService("CoreGui")["Switch Hub"].Text4.Fragments.TextXAlignment = 'Center'
-		game:GetService("CoreGui")["Switch Hub"].Text4.Position = UDim2.new(0.5, 0, 0.47, 0)
-		game:GetService("CoreGui")["Switch Hub"].Text4.Fragments.TextStrokeTransparency = 1
+		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["cathub Hub"].Text4
+		game:GetService("CoreGui")["cathub Hub"].Text4.Fragments.TextColor3 = Color3.fromRGB(0, 255, 186) 
+		game:GetService("CoreGui")["cathub Hub"].Text4.Fragments.Text = '...'
+		game:GetService("CoreGui")["cathub Hub"].Text4.Fragments.Size = UDim2.new(1, 0, 0, 35)
+		game:GetService("CoreGui")["cathub Hub"].Text4.Fragments.TextXAlignment = 'Center'
+		game:GetService("CoreGui")["cathub Hub"].Text4.Position = UDim2.new(0.5, 0, 0.47, 0)
+		game:GetService("CoreGui")["cathub Hub"].Text4.Fragments.TextStrokeTransparency = 1
 
-		local BlurSwitch = Instance.new("BlurEffect")
-		BlurSwitch.Name = "SwitchBlur"
-		BlurSwitch.Parent = game:GetService("Lighting")
-		BlurSwitch.Enabled = true
-		BlurSwitch.Size = 0
+		local Blurcathub = Instance.new("BlurEffect")
+		Blurcathub.Name = "cathubBlur"
+		Blurcathub.Parent = game:GetService("Lighting")
+		Blurcathub.Enabled = true
+		Blurcathub.Size = 0
 		
 		game:GetService("UserInputService").InputBegan:Connect(function(input, isTyping)
 			if not isTyping then
 				if input.KeyCode == Enum.KeyCode.B then
 					if togle_up then
-						game:GetService("CoreGui")["Switch Hub"].Enabled = false
+						game:GetService("CoreGui")["cathub Hub"].Enabled = false
 						game.Lighting.ExposureCompensation = 0
-						--BlurSwitch.Size = 0
+						--Blurcathub.Size = 0
 						togle_up = false
 					else
-						game:GetService("CoreGui")["Switch Hub"].Enabled = true
+						game:GetService("CoreGui")["cathub Hub"].Enabled = true
 						game.Lighting.ExposureCompensation = -10
-						--BlurSwitch.Size = 80
+						--Blurcathub.Size = 80
 						togle_up = true
 					end
 				end
@@ -625,23 +621,23 @@ if _G.Switch_Hub_Series_R then
 		ToggleImgUi.BackgroundTransparency = 1
 		ToggleImgUi.Position = UDim2.new(0.0454545468, 0, 0.125000313, 0)
 		ToggleImgUi.Size = UDim2.new(0, 35, 0, 35)
-		ToggleImgUi.Image = "rbxassetid://"
+		ToggleImgUi.Image = "rbxassetid://17260696651"
 		ToggleImgUi.MouseButton1Click:Connect(function()
 			if togle_up then
 				ToggleImgUi.ImageTransparency = 0.3
 				uihide = true
-				game:GetService("CoreGui")["Switch Hub"].Enabled = false
+				game:GetService("CoreGui")["cathub Hub"].Enabled = false
 				game.Lighting.ExposureCompensation = 0
-				--BlurSwitch.Size = 0
+				--Blurcathub.Size = 0
 				togle_up = false
 				wait()
 				ToggleImgUi.ImageTransparency = 0
 			else
 				ToggleImgUi.ImageTransparency = 0.3
 				uihide = true
-				game:GetService("CoreGui")["Switch Hub"].Enabled = true
+				game:GetService("CoreGui")["cathub Hub"].Enabled = true
 				game.Lighting.ExposureCompensation = -10
-				--BlurSwitch.Size = 80
+				--Blurcathub.Size = 80
 				togle_up = true
 				wait()
 				ToggleImgUi.ImageTransparency = 0
@@ -655,7 +651,7 @@ if _G.Switch_Hub_Series_R then
 		Uitoggle.Position = UDim2.new(0.14, 0, 0.1, 0)
 		Uitoggle.Size = UDim2.new(0, 137, 0, 25)
 		Uitoggle.Font = Enum.Font.GothamSemibold
-		Uitoggle.Text = "Switch Kaitun"
+		Uitoggle.Text = "cathub Hub Kaitun"
 		Uitoggle.TextColor3 = Color3.fromRGB(255, 255, 255)
 		Uitoggle.TextSize = 12.000
 		
@@ -670,8 +666,8 @@ if _G.Switch_Hub_Series_R then
 		Yedhee.TextColor3 = Color3.fromRGB(0, 255, 186) 
 		Yedhee.TextSize = 12.000
 		
-		if game.CoreGui:FindFirstChild('Switch Hub C') then
-			game.CoreGui:FindFirstChild('Switch Hub C'):Destroy()
+		if game.CoreGui:FindFirstChild('cathub Hub C') then
+			game.CoreGui:FindFirstChild('cathub Hub C'):Destroy()
 		end
 		local function click(a)
 			game:GetService("VirtualInputManager"):SendMouseButtonEvent(a.AbsolutePosition.X+a.AbsoluteSize.X/2.5,a.AbsolutePosition.Y+50,0,true,a,1)
@@ -692,8 +688,8 @@ if _G.Switch_Hub_Series_R then
 			repeat 
 				for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Main.InventoryContainer.Right.Content.ScrollingFrame.Frame:GetDescendants()) do
 					if v.Name == 'Background' and tostring(v.BackgroundColor) == 'Bright red' and not table.find(keep_all_name,v.Parent.ItemName.Text) then 
-						v.Parent:Clone().Parent = game:GetService("CoreGui")["Switch Hub C"][Folder]
-						game:GetService("CoreGui")["Switch Hub C"][Folder][v.Parent.Name].Name = v.Parent.ItemName.Text
+						v.Parent:Clone().Parent = game:GetService("CoreGui")["cathub Hub C"][Folder]
+						game:GetService("CoreGui")["cathub Hub C"][Folder][v.Parent.Name].Name = v.Parent.ItemName.Text
 						table.insert(keep_all_name,v.Parent.ItemName.Text)
 					end
 				end
@@ -709,19 +705,19 @@ if _G.Switch_Hub_Series_R then
 				kp = kp + 1
 			until #keep_all_name > 0 and end_check or kp >= 3 and #keep_all_name == 0
 		end
-		-- Switch Hub C
-		local Switch_Hub = Instance.new("ScreenGui")
-		Switch_Hub.Name = "Switch Hub C"
-		Switch_Hub.Parent = game:GetService("CoreGui")
+		-- cathub Hub C
+		local cathub_Hub = Instance.new("ScreenGui")
+		cathub_Hub.Name = "cathub Hub C"
+		cathub_Hub.Parent = game:GetService("CoreGui")
 		-- Fruit Inventory Backpack
 		local F_FruitB = Instance.new("Frame")
 		F_FruitB.Name = "FruitB"
-		F_FruitB.Parent = game:GetService("CoreGui")["Switch Hub C"]
+		F_FruitB.Parent = game:GetService("CoreGui")["cathub Hub C"]
 		F_FruitB.Size = UDim2.new(0.17, 0, 0, 0)
 		F_FruitB.Position = UDim2.new(0.02, 0, 0.03, 0)
 		F_FruitB.Transparency = 1
 		local uig = Instance.new("UIGridLayout")
-		uig.Parent = game:GetService("CoreGui")["Switch Hub C"].FruitB
+		uig.Parent = game:GetService("CoreGui")["cathub Hub C"].FruitB
 		uig.CellSize = UDim2.new(0, 55, 0, 55)
 		--[[
 		click(game:GetService("Players").LocalPlayer.PlayerGui.Main.MenuButton) -- open menu
@@ -731,29 +727,29 @@ if _G.Switch_Hub_Series_R then
 		CheckPhoto('Treasure')
 		game:GetService("Players").LocalPlayer.PlayerGui.Main.InventoryContainer.Visible = true
 		Load_Info('Blox Fruit','FruitB')
-		game:GetService("CoreGui")["Switch Hub C"].FruitB.Visible = true
+		game:GetService("CoreGui")["cathub Hub C"].FruitB.Visible = true
 		click(game:GetService("Players").LocalPlayer.PlayerGui.Main.MenuButton) -- open menu
 		]]
 		wait(.5)
 		if _G.Setting['Black Screen'] then
 			ToggleImgUi.ImageTransparency = 0.3
 			uihide = true
-			game:GetService("CoreGui")["Switch Hub"].Enabled = true
+			game:GetService("CoreGui")["cathub Hub"].Enabled = true
 			game.Lighting.ExposureCompensation = -10
-			--BlurSwitch.Size = 80
+			--Blurcathub.Size = 80
 			togle_up = true
 			wait()
 			ToggleImgUi.ImageTransparency = 0
 		end
 		function Set_Status_X(vu)
-			game:GetService("CoreGui")["Switch Hub"].Text3.Fragments.Text = vu
+			game:GetService("CoreGui")["cathub Hub"].Text3.Fragments.Text = vu
 		end
 		--[[
 		local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/alichnochi/code/main/notifycation.lua"))()
 		local Notify = AkaliNotif.Notify
 		Notify({
 			Description = '✅ Turn on and off (White Screen "Y")',
-			Title = "Switch Hub Kaitun | "..tostring(game.Players.LocalPlayer.Name),
+			Title = "cathub Hub Kaitun | "..tostring(game.Players.LocalPlayer.Name),
 			Duration = 5
 		})
 		Notify({
@@ -762,7 +758,7 @@ if _G.Switch_Hub_Series_R then
 			Duration = 5
 		})
 		local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/alichnochi/code/main/notification.status.lua", true))()
-		status_pass = Notification.new("message", 'Switch Hub Kaitun | ', "Status: ...")
+		status_pass = Notification.new("message", 'cathub Hub Kaitun | ', "Status: ...")
 		status_pass:changeColor(Color3.fromRGB(15,15,15),Color3.fromRGB(42, 170, 138),Color3.fromRGB(255, 244, 0))
 		spawn(function()
 			while wait(1) do
@@ -814,7 +810,7 @@ if _G.Switch_Hub_Series_R then
 	end
 	
 	local PepsisWorld = library:CreateWindow({
-		Name = "Switch Hub [ Kaitun ]",
+		Name = "cathub Hub [ Kaitun ]",
 		Themeable = {	
 		}
 	})
@@ -880,12 +876,12 @@ if _G.Switch_Hub_Series_R then
 		
 		Start_S:AddToggle({
 		Name = 'Auto Farm',
-		Enabled = _G.Switch_Hub_Series_R,
+		Enabled = _G.cathub_Hub_Series_R,
 		Callback = function(vu)
 			Auto_Farm_Kaitun = vu
 		end
 		})
-		if _G.Switch_Hub_Series_R then
+		if _G.cathub_Hub_Series_R then
 			Auto_Farm_Kaitun = true
 		end
 		local Status_Run = Start_S:AddLabel({
@@ -6835,7 +6831,7 @@ if _G.Switch_Hub_Series_R then
 					if Quest_Race_V4_H then
 						ris_text = ris_text..' 🕹️'
 					end
-					game:GetService("CoreGui")["Switch Hub"].Text4.Fragments.Text  = ris_text
+					game:GetService("CoreGui")["cathub Hub"].Text4.Fragments.Text  = ris_text
 				end
 				local ris_text = ''
 				if RGB_H then
@@ -6886,7 +6882,7 @@ if _G.Switch_Hub_Series_R then
 						ris_text = ris_text..result[1]
 					end
 				end
-				game:GetService("CoreGui")["Switch Hub"].Text5.Fragments.Text = ris_text
+				game:GetService("CoreGui")["cathub Hub"].Text5.Fragments.Text = ris_text
 				wait(300)
 			end)
 		end
@@ -11250,15 +11246,15 @@ if _G.Switch_Hub_Series_R then
 					};
 					["description"] = "**Join Script**\n```lua\n"..tostring('game:GetService("ReplicatedStorage").__ServerBrowser:InvokeServer("teleport","'..game.JobId..'")').."\n```";
 					["author"] = {
-						["name"] = "Switch Hub (Notification)";
+						["name"] = "cat Hub (Wwbhook)";
 						["icon_url"] = "https://media.discordapp.net/attachments/1167889685411016756/1215942962467573860/SW.jpg?ex=65fe9621&is=65ec2121&hm=12d96eeae682639bd3987b5163ac2d2245d3fe09ad6d90a3a06e2a5fc5d98d90&=&format=webp&width=662&height=662";
 					};
 					["thumbnail"] = {
 						["url"] = "https://pbs.twimg.com/media/FDsZOHhVkAUsFeJ.jpg";
 					};
 					["footer"] = {
-						["text"] = "By Switch Hub";
-						["icon_url"] = "https://media.discordapp.net/attachments/1167889685411016756/1215942962467573860/SW.jpg?ex=65fe9621&is=65ec2121&hm=12d96eeae682639bd3987b5163ac2d2245d3fe09ad6d90a3a06e2a5fc5d98d90&=&format=webp&width=662&height=662";
+						["text"] = "Cat Hub";
+						["icon_url"] = "https://media.discordapp.net/attachments/1257201946427916330/1277102131236704400/image0-1.jpg?ex=66cbf18b&is=66caa00b&hm=0b345943d495f258f0e97df1ff7ef1935a3e180d2764df789d45921fe4b09565&";
 					};
 					["timestamp"] = DateTime.now():ToIsoDate()
 				}
@@ -11312,14 +11308,14 @@ if _G.Switch_Hub_Series_R then
 					};
 					["description"] = "**Join Script**\n```lua\n"..tostring('game:GetService("ReplicatedStorage").__ServerBrowser:InvokeServer("teleport","'..game.JobId..'")').."\n```";
 					["author"] = {
-						["name"] = "Switch Hub (Notification)";
-						["icon_url"] = "https://media.discordapp.net/attachments/1167889685411016756/1215942962467573860/SW.jpg?ex=65fe9621&is=65ec2121&hm=12d96eeae682639bd3987b5163ac2d2245d3fe09ad6d90a3a06e2a5fc5d98d90&=&format=webp&width=662&height=662";
+						["name"] = "Cat Hub (Webhook)";
+						["icon_url"] = "https://media.discordapp.net/attachments/1257201946427916330/1277102131236704400/image0-1.jpg?ex=66cbf18b&is=66caa00b&hm=0b345943d495f258f0e97df1ff7ef1935a3e180d2764df789d45921fe4b09565&";
 					};
 					["thumbnail"] = {
 						["url"] = "https://pbs.twimg.com/media/FDsZOHhVkAUsFeJ.jpg";
 					};
 					["footer"] = {
-						["text"] = "By Switch Hub";
+						["text"] = "Cat hub/https://discord.com/invite/w22cHrv985";
 						["icon_url"] = "https://media.discordapp.net/attachments/1167889685411016756/1215942962467573860/SW.jpg?ex=65fe9621&is=65ec2121&hm=12d96eeae682639bd3987b5163ac2d2245d3fe09ad6d90a3a06e2a5fc5d98d90&=&format=webp&width=662&height=662";
 					};
 					["timestamp"] = DateTime.now():ToIsoDate()
