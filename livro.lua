@@ -409,7 +409,7 @@ if _G.Switch_Hub_Series_R then
 		local Switch_Hub = Instance.new("ScreenGui")
 		Switch_Hub.Name = "Switch Hub"
 		Switch_Hub.Parent = game:GetService("CoreGui")
-		Switch_Hub.Enabled = true
+		Switch_Hub.Enabled = false
 		
 		
 		game:GetService("Players").LocalPlayer.PlayerGui.Main.BottomHUDList.SafeZone.Visible = false
@@ -797,7 +797,7 @@ if _G.Switch_Hub_Series_R then
 						Auto_Farm_Kaitun = true
 						togle_upx = false
 					else
-						Auto_Farm_Kaitun = false
+						Auto_Farm_Kaitun = true
 						togle_upx = true
 					end
 				end
