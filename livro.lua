@@ -622,7 +622,7 @@ if _G.Switch_Hub_Series_R then
 		ToggleImgUi.BackgroundTransparency = 1
 		ToggleImgUi.Position = UDim2.new(0.0454545468, 0, 0.125000313, 0)
 		ToggleImgUi.Size = UDim2.new(0, 35, 0, 35)
-		ToggleImgUi.Image = "rbxassetid://17260696651"
+		ToggleImgUi.Image = "rbxassetid://111005674884784"
 		ToggleImgUi.MouseButton1Click:Connect(function()
 			if togle_up then
 				ToggleImgUi.ImageTransparency = 0.3
