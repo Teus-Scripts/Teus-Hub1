@@ -1,3 +1,4 @@
+
 if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
 
 getgenv().Faster = { 
@@ -621,7 +622,7 @@ if _G.Switch_Hub_Series_R then
 		ToggleImgUi.BackgroundTransparency = 1
 		ToggleImgUi.Position = UDim2.new(0.0454545468, 0, 0.125000313, 0)
 		ToggleImgUi.Size = UDim2.new(0, 35, 0, 35)
-		ToggleImgUi.Image = "rbxassetid://111005674884784"
+		ToggleImgUi.Image = "rbxassetid://17260696651"
 		ToggleImgUi.MouseButton1Click:Connect(function()
 			if togle_up then
 				ToggleImgUi.ImageTransparency = 0.3
@@ -651,9 +652,10 @@ if _G.Switch_Hub_Series_R then
 		Uitoggle.Position = UDim2.new(0.14, 0, 0.1, 0)
 		Uitoggle.Size = UDim2.new(0, 137, 0, 25)
 		Uitoggle.Font = Enum.Font.GothamSemibold
-		Uitoggle.Text = "Teus Hub Kaitun"
+		Uitoggle.Text = "Switch Hub Kaitun"
 		Uitoggle.TextColor3 = Color3.fromRGB(255, 255, 255)
 		Uitoggle.TextSize = 12.000
+		
 		Yedhee.Name = "Yedhee"
 		Yedhee.Parent = ToggleFrameUi
 		Yedhee.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
