@@ -408,7 +408,7 @@ if _G.Switch_Hub_Series_R then
 		local Switch_Hub = Instance.new("ScreenGui")
 		Switch_Hub.Name = "Switch Hub"
 		Switch_Hub.Parent = game:GetService("CoreGui")
-		Switch_Hub.Enabled = false
+		Switch_Hub.Enabled = true
 		
 		
 		game:GetService("Players").LocalPlayer.PlayerGui.Main.BottomHUDList.SafeZone.Visible = false
