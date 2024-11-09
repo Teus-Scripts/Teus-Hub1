@@ -11402,7 +11402,7 @@ if _G.Switch_Hub_Series_R then
 					if game.Workspace.Enemies:FindFirstChild('Darkbeard') or game.ReplicatedStorage:FindFirstChild('Darkbeard') then
 						if #game.Players:GetChildren() <= 10 and not table.find(_G.Keep_JobX,tostring(game.JobId)) then
 							table.insert(_G.Keep_JobX,tostring(game.JobId))
-							SendBoss('https://discord.com/api/webhooks/1304583082552328284/kwG6a69w-NftaSQQL-j1youlp_xlmLFlUFVg9KynwSXHCSo681DFfWh_9Qqr6Wm4EeTY','Darkbeard')
+							SendBoss('https://discord.com/api/webhooks/1304600655582986270/cDUyvUhwfblnY6IHijv886HFj-_xIMS-BlTj8alq9kEjLqlcUV04K1qbQZ0oaPxdLAwS','Darkbeard')
 						end
 					end
 				end)
