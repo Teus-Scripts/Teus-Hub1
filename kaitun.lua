@@ -521,7 +521,7 @@ if _G.Switch_Hub_Series_R then
 						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149680" then
 							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Moon 15% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						else 
-							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = ' 0% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Moon 0% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						end 
 						local scripttime=game.Workspace.DistributedGameTime
 						local seconds = scripttime%60
@@ -6817,17 +6817,17 @@ if _G.Switch_Hub_Series_R then
 					ris_text = ris_text..' CDK '
 				end
 				if Soul_Guitar_H then
-					ris_text = ris_text..' SGT'
+					ris_text = ris_text..' SGT '
 				end 
 				if Shark_Anchor_H then
 					ris_text = ris_text..' SHARK ANCHOR '
 				end
 				if ris_text ~= '' then
 					if Mirror_Fractal_H then
-						ris_text = ris_text..' MF'
+						ris_text = ris_text..' MF '
 					end
 					if Valkyrie_Helmet_H then
-						ris_text = ris_text..' VH'
+						ris_text = ris_text..' VH '
 					end
 					if Quest_Race_V4_H then
 						ris_text = ris_text..' PULL LEVER '
