@@ -550,7 +550,7 @@ if _G.Switch_Hub_Series_R then
 		F_Text4.AnchorPoint = Vector2.new(0.5, 0.5)
 		F_Text4.Transparency = 1
 		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Teus Hub"].Text4
-		game:GetService("CoreGui")["Teus Hub"].Text4.Fragments.TextColor3 = Color3.fromRGB(0, 255, 186) 
+		game:GetService("CoreGui")["Teus Hub"].Text4.Fragments.TextColor3 = Color3.fromRGB(0, 0, 139) 
 		game:GetService("CoreGui")["Teus Hub"].Text4.Fragments.Text = '...'
 		game:GetService("CoreGui")["Teus Hub"].Text4.Fragments.Size = UDim2.new(1, 0, 0, 35)
 		game:GetService("CoreGui")["Teus Hub"].Text4.Fragments.TextXAlignment = 'Center'
