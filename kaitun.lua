@@ -6811,7 +6811,7 @@ if _G.Switch_Hub_Series_R then
 				-- Main
 				local ris_text = ''
 				if God_Human_H then
-					ris_text = ris_text..' rbxassetid://114239849954263 '
+					ToggleImgUi.Image = "rbxassetid://114239849954263
 				end
 				if Cursed_Dual_Katana_H then
 					ris_text = ris_text..' CDK '
