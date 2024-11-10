@@ -510,15 +510,15 @@ if _G.Switch_Hub_Series_R then
 			while wait(1) do
 				pcall(function()
 					if Three_World then
-						if game:GetService("Lighting").Sky.MoonTextureId == "" then
+						if game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149431" then
 							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = '🌕 100% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
-						elseif game:GetService("Lighting").Sky.MoonTextureId == "" then
+						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149052" then
 							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = '🌕 75% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
-						elseif game:GetService("Lighting").Sky.MoonTextureId == "" then
+						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709143733" then
 							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = '🌕 50% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
-						elseif game:GetService("Lighting").Sky.MoonTextureId == "" then
+						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709150401" then
 							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = '🌕 25% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
-						elseif game:GetService("Lighting").Sky.MoonTextureId == "" then
+						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149680" then
 							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = '🌕 15% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						else 
 							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = '🌕 0% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
@@ -529,7 +529,14 @@ if _G.Switch_Hub_Series_R then
 						hours = math.floor(scripttime/3600)
 						local tempo = string.format("%.0f Hours, %.0f Minutes, %.0f Seconds", hours ,minutes, seconds)
 						game:GetService("CoreGui")["Teus Hub"].Text2.Fragments.Text = tempo
-				
+					else
+						game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = ''
+						local scripttime=game.Workspace.DistributedGameTime
+						local seconds = scripttime%60
+						minutes = math.floor(scripttime/60%60)
+						hours = math.floor(scripttime/3600)
+						local tempo = string.format("", hours ,minutes, seconds)
+						game:GetService("CoreGui")["Teus Hub"].Text2.Fragments.Text = tempo
 					end
 				end)
 			end
