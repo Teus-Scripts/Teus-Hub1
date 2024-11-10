@@ -663,7 +663,7 @@ if _G.Switch_Hub_Series_R then
 		Yedhee.Position = UDim2.new(0.14, 0, 0.429166657, 0)
 		Yedhee.Size = UDim2.new(0, 137, 0, 25)
 		Yedhee.Font = Enum.Font.GothamSemibold
-		Yedhee.Text = "Track Stats Account"
+		Yedhee.Text = "Stats Account"
 		Yedhee.TextColor3 = Color3.fromRGB(0, 0, 139) 
 		Yedhee.TextSize = 12.000
 		
