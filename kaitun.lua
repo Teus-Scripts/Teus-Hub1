@@ -470,7 +470,7 @@ if _G.Switch_Hub_Series_R then
 		F_Text3.AnchorPoint = Vector2.new(0.5, 0.5)
 		F_Text3.Transparency = 1
 		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Teus Hub"].Text3
-		game:GetService("CoreGui")["Teus Hub"].Text3.Fragments.TextColor3 = Color3.fromRGB(0, 255, 186) 
+		game:GetService("CoreGui")["Teus Hub"].Text3.Fragments.TextColor3 = Color3.fromRGB(0, 0, 139) 
 		game:GetService("CoreGui")["Teus Hub"].Text3.Fragments.Text = 'Status: Farm Level.'
 		game:GetService("CoreGui")["Teus Hub"].Text3.Fragments.Size = UDim2.new(1, 0, 0, 28)
 		game:GetService("CoreGui")["Teus Hub"].Text3.Fragments.TextXAlignment = 'Center'
