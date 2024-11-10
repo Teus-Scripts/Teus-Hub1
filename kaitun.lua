@@ -6811,26 +6811,26 @@ if _G.Switch_Hub_Series_R then
 				-- Main
 				local ris_text = ''
 				if God_Human_H then
-					ris_text = ris_text..'GDH'
+					ris_text = ris_text..'GDH '
 				end
 				if Cursed_Dual_Katana_H then
-					ris_text = ris_text..'CDK'
+					ris_text = ris_text..'CDK '
 				end
 				if Soul_Guitar_H then
-					ris_text = ris_text..'SGT'
+					ris_text = ris_text..'SGT '
 				end 
 				if Shark_Anchor_H then
-					ris_text = ris_text..'SHARK ANCHOR'
+					ris_text = ris_text..'SHARK ANCHOR '
 				end
 				if ris_text ~= '' then
 					if Mirror_Fractal_H then
-						ris_text = ris_text..'MF'
+						ris_text = ris_text..'MF '
 					end
 					if Valkyrie_Helmet_H then
-						ris_text = ris_text..'VH'
+						ris_text = ris_text..'VH '
 					end
 					if Quest_Race_V4_H then
-						ris_text = ris_text..'PULL LEVER'
+						ris_text = ris_text..'PULL LEVER '
 					end
 					game:GetService("CoreGui")["Teus Hub"].Text4.Fragments.Text  = ris_text
 				end
