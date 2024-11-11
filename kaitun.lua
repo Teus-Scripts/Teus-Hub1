@@ -701,7 +701,7 @@ if _G.Switch_Hub_Series_R then
 		Yedhee.Size = UDim2.new(0, 137, 0, 25)
 		Yedhee.Font = Enum.Font.GothamSemibold
 		Yedhee.Text = "Account Status"
-		Yedhee.TextColor3 = Color3.fromRGB(0, 0, 50) 
+		Yedhee.TextColor3 = Color3.fromRGB(0, 0, 100) 
 		Yedhee.TextSize = 12.000
 		
 		if game.CoreGui:FindFirstChild('Teus Hub C') then
