@@ -405,6 +405,13 @@ if _G.Switch_Hub_Series_R then
 		if game:GetService("CoreGui"):FindFirstChild('Teus Hub') then
 			game:GetService("CoreGui"):FindFirstChild('Teus Hub'):Destroy()
 		end
+
+spawn(function()
+		if _G.Main['FPS Booster'] then
+                local CoreGui = game:GetService("StarterGui")
+                CoreGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false)
+                CoreGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, false)
+
 		-- Switch Hub
 		local Switch_Hub = Instance.new("ScreenGui")
 		Switch_Hub.Name = "Teus Hub"
