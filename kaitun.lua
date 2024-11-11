@@ -501,7 +501,7 @@ if _G.Switch_Hub_Series_R then
 		F_Text6.Transparency = 1
 		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Teus Hub"].Text6
 		game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.TextColor3 = Color3.fromRGB(255,140,0)
-		game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Discord.gg/teuscommunity ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+		game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Discord.gg/teuscommunity | Moon 75% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 		game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Size = UDim2.new(1, 0, 0, 25)
 		game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.TextXAlignment = 'Center'
 		game:GetService("CoreGui")["Teus Hub"].Text6.Position = UDim2.new(0.5, 0, -0.03, 0)
@@ -511,26 +511,26 @@ if _G.Switch_Hub_Series_R then
 				pcall(function()
 					if Three_World then
 						if game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149431" then
-							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Discord.gg/teuscommunity ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Discord.gg/teuscommunity | Moon 100% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149052" then
-							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Discord.gg/teuscommunity ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Discord.gg/teuscommunity | Moon 75% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709143733" then
-							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Discord.gg/teuscommunity ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Discord.gg/teuscommunity | Moon 50% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709150401" then
-							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Discord.gg/teuscommunity ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Discord.gg/teuscommunity | Moon 25% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149680" then
-							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Discord.gg/teuscommunity ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Discord.gg/teuscommunity | Moon 15% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						else 
-							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Moon 0% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Discord.gg/teuscommunity | Moon 0% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						end 
 						local scripttime=game.Workspace.DistributedGameTime
 						local seconds = scripttime%60
 						minutes = math.floor(scripttime/60%60)
 						hours = math.floor(scripttime/3600)
-						local tempo = string.format("Discord.gg/teuscommunity", hours ,minutes, seconds)
+						local tempo = string.format("%.0f Hours, %.0f Minutes, %.0f Seconds", hours ,minutes, seconds)
 						game:GetService("CoreGui")["Teus Hub"].Text2.Fragments.Text = tempo
 					else
-						game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Discord.gg/teuscommunity ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+						game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Discord.gg/teuscommunity | Moon 0% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						local scripttime=game.Workspace.DistributedGameTime
 						local seconds = scripttime%60
 						minutes = math.floor(scripttime/60%60)
