@@ -1,7 +1,7 @@
 
-if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
-
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Teus-Scripts/Teus-Hub1/refs/heads/main/remove.lua"))()
+
+if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
 
 getgenv().Faster = { 
     ['CDK Super Fast'] = true, -- Spawn Admin / เสกแอดมิน
