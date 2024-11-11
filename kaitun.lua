@@ -405,13 +405,6 @@ if _G.Switch_Hub_Series_R then
 		if game:GetService("CoreGui"):FindFirstChild('Teus Hub') then
 			game:GetService("CoreGui"):FindFirstChild('Teus Hub'):Destroy()
 		end
-
-spawn(function()
-		if _G.Main['FPS Booster'] then
-                local CoreGui = game:GetService("StarterGui")
-                CoreGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false)
-                CoreGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, false)
-
 		-- Switch Hub
 		local Switch_Hub = Instance.new("ScreenGui")
 		Switch_Hub.Name = "Teus Hub"
@@ -670,8 +663,8 @@ spawn(function()
 		Yedhee.Position = UDim2.new(0.14, 0, 0.429166657, 0)
 		Yedhee.Size = UDim2.new(0, 137, 0, 25)
 		Yedhee.Font = Enum.Font.GothamSemibold
-		Yedhee.Text = "Account Status"
-		Yedhee.TextColor3 = Color3.fromRGB(0, 0, 50) 
+		Yedhee.Text = "Stats Account"
+		Yedhee.TextColor3 = Color3.fromRGB(0, 0, 139) 
 		Yedhee.TextSize = 12.000
 		
 		if game.CoreGui:FindFirstChild('Teus Hub C') then
