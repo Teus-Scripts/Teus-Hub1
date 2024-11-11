@@ -523,7 +523,20 @@ if _G.Switch_Hub_Series_R then
 						else 
 							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Moon 0% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						end 
-						
+						local scripttime=game.Workspace.DistributedGameTime
+						local seconds = scripttime%60
+						minutes = math.floor(scripttime/60%60)
+						hours = math.floor(scripttime/3600)
+						local tempo = string.format("%.0f Hours, %.0f Minutes, %.0f Seconds", hours ,minutes, seconds)
+						game:GetService("CoreGui")["Teus Hub"].Text2.Fragments.Text = tempo
+					else
+						game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Moon 0% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+						local scripttime=game.Workspace.DistributedGameTime
+						local seconds = scripttime%60
+						minutes = math.floor(scripttime/60%60)
+						hours = math.floor(scripttime/3600)
+						local tempo = string.format("Discord.gg/teuscommunity", hours ,minutes, seconds)
+						game:GetService("CoreGui")["Teus Hub"].Text2.Fragments.Text = tempo
 					end
 				end)
 			end
@@ -821,19 +834,6 @@ if _G.Switch_Hub_Series_R then
 		Name = " Time Server ",
 		Side = 'Left'
 	})
-	spawn(function()
-		while wait(1) do
-			pcall(function()
-				local scripttime=game.Workspace.DistributedGameTime
-				local seconds = scripttime%60
-				minutes = math.floor(scripttime/60%60)
-				hours = math.floor(scripttime/3600)
-				local tempo = string.format("%.0f Hr(s), %.0f Min(s), %.0f Sec(s)", hours ,minutes, seconds)
-				Set_Time:SetText(tempo)
-				Time_Server_S:Set('Time Server: '..tostring(game:GetService("Lighting").TimeOfDay))
-			end) 
-		end
-	end)
 		
 		local Status_S = General_T:CreateSection({
 		Name = " Status "
