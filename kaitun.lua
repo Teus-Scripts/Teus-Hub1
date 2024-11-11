@@ -449,6 +449,42 @@ end)
 		Switch_Hub.Parent = game:GetService("CoreGui")
 		Switch_Hub.Enabled = false
 		
+                game.StarterGui:SetCore(
+                "SendNotification",
+    {
+                Title = "Teus Hub",
+                Text = "Loading",
+                Duration = 7
+   })
+local ScreenGui = Instance.new("ScreenGui")
+local TextLabel = Instance.new("TextLabel")
+local UIGradient = Instance.new("UIGradient")
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+TextLabel.Parent = ScreenGui
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.5, -100, 0, -50)  -- Subindo um pouco para cima
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.FredokaOne
+TextLabel.Text = "discord.gg/teuscommunity"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 19.000
+
+-- Mudando para um gradiente azul escuro
+UIGradient.Color = ColorSequence.new{
+    ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 50)),  -- Azul escuro
+    ColorSequenceKeypoint.new(0.01, Color3.fromRGB(0, 0, 100)),  -- Azul mais claro
+    ColorSequenceKeypoint.new(0.16, Color3.fromRGB(0, 0, 150)),  -- Azul mais claro
+    ColorSequenceKeypoint.new(0.35, Color3.fromRGB(0, 0, 200)),  -- Azul mais claro
+    ColorSequenceKeypoint.new(0.68, Color3.fromRGB(0, 0, 255)),  -- Azul
+    ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 150))   -- Azul mais escuro
+}
+UIGradient.Parent = TextLabel
+
+loadSettings()
 		
 		game:GetService("Players").LocalPlayer.PlayerGui.Main.BottomHUDList.SafeZone.Visible = false
 		game:GetService("Players").LocalPlayer.PlayerGui.Main.Code.Visible = false
@@ -701,8 +737,8 @@ end)
 		Yedhee.Position = UDim2.new(0.14, 0, 0.429166657, 0)
 		Yedhee.Size = UDim2.new(0, 137, 0, 25)
 		Yedhee.Font = Enum.Font.GothamSemibold
-		Yedhee.Text = "Stats Account"
-		Yedhee.TextColor3 = Color3.fromRGB(0, 0, 139) 
+		Yedhee.Text = "Account Status"
+		Yedhee.TextColor3 = Color3.fromRGB(0, 0, 150) 
 		Yedhee.TextSize = 12.000
 		
 		if game.CoreGui:FindFirstChild('Teus Hub C') then
