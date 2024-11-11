@@ -1,6 +1,43 @@
 
 if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
 
+for i,v in next, workspace:GetDescendants() do
+    pcall(function()
+        -- Verificar se o objeto é uma parte do personagem do jogador
+        if v:IsDescendantOf(game.Players.LocalPlayer.Character) then
+            return  -- Ignora a parte do personagem do jogador
+        end
+        v.Transparency = 1
+    end)
+end
+
+for i,v in next, getnilinstances() do
+    pcall(function()
+        -- Verificar se o objeto é uma parte do personagem do jogador
+        if v:IsDescendantOf(game.Players.LocalPlayer.Character) then
+            return  -- Ignora a parte do personagem do jogador
+        end
+        v.Transparency = 1
+        for i1,v1 in next, v:GetDescendants() do
+            if v1:IsDescendantOf(game.Players.LocalPlayer.Character) then
+                return  -- Ignora a parte do personagem do jogador
+            end
+            v1.Transparency = 1
+        end
+    end)
+end
+
+a = workspace
+a.DescendantAdded:Connect(function(v)
+    pcall(function()
+        -- Verificar se o objeto é uma parte do personagem do jogador
+        if v:IsDescendantOf(game.Players.LocalPlayer.Character) then
+            return  -- Ignora a parte do personagem do jogador
+        end
+        v.Transparency = 1
+    end)
+end)
+
 getgenv().Faster = { 
     ['CDK Super Fast'] = true, -- Spawn Admin / เสกแอดมิน
     ['Buy Color Haki'] = 3 -- Legendary Haki Max 3
