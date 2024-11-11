@@ -1,6 +1,33 @@
 
 if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
 
+local player = game.Players.LocalPlayer
+local playerCharacter = player.Character or player.CharacterAdded:Wait()
+
+-- Função para definir transparência, ignorando o personagem do jogador
+local function setTransparency(object)
+    if not object:IsDescendantOf(playerCharacter) and object:IsA("BasePart") then
+        pcall(function()
+            object.Transparency = 1
+        end)
+    end
+end
+
+-- Aplica transparência a todos os objetos no workspace, exceto o personagem do jogador
+for _, v in ipairs(workspace:GetDescendants()) do
+    setTransparency(v)
+end
+
+-- Monitora objetos adicionados ao workspace e aplica a transparência, exceto ao personagem do jogador
+workspace.DescendantAdded:Connect(function(v)
+    setTransparency(v)
+end)
+
+-- Atualiza a referência do personagem quando o jogador reseta
+player.CharacterAdded:Connect(function(newCharacter)
+    playerCharacter = newCharacter -- Atualiza para o novo personagem do jogador
+end)
+
 getgenv().Faster = { 
     ['CDK Super Fast'] = true, -- Spawn Admin / เสกแอดมิน
     ['Buy Color Haki'] = 3 -- Legendary Haki Max 3
@@ -535,7 +562,7 @@ if _G.Switch_Hub_Series_R then
 						local seconds = scripttime%60
 						minutes = math.floor(scripttime/60%60)
 						hours = math.floor(scripttime/3600)
-						local tempo = string.format("Discord.gg/teuscommunity", hours ,minutes, seconds)
+						local tempo = string.format("%.0f Hours, %.0f Minutes, %.0f Seconds", hours ,minutes, seconds)
 						game:GetService("CoreGui")["Teus Hub"].Text2.Fragments.Text = tempo
 					end
 				end)
@@ -663,8 +690,8 @@ if _G.Switch_Hub_Series_R then
 		Yedhee.Position = UDim2.new(0.14, 0, 0.429166657, 0)
 		Yedhee.Size = UDim2.new(0, 137, 0, 25)
 		Yedhee.Font = Enum.Font.GothamSemibold
-		Yedhee.Text = "Stats Account"
-		Yedhee.TextColor3 = Color3.fromRGB(0, 0, 139) 
+		Yedhee.Text = "Account Status"
+		Yedhee.TextColor3 = Color3.fromRGB(0, 0, 200) 
 		Yedhee.TextSize = 12.000
 		
 		if game.CoreGui:FindFirstChild('Teus Hub C') then
