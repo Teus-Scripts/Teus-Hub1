@@ -1,6 +1,43 @@
 
 if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
 
+for i,v in next, workspace:GetDescendants() do
+    pcall(function()
+        -- Verificar se o objeto é uma parte do personagem do jogador
+        if v:IsDescendantOf(game.Players.LocalPlayer.Character) then
+            return  -- Ignora a parte do personagem do jogador
+        end
+        v.Transparency = 1
+    end)
+end
+
+for i,v in next, getnilinstances() do
+    pcall(function()
+        -- Verificar se o objeto é uma parte do personagem do jogador
+        if v:IsDescendantOf(game.Players.LocalPlayer.Character) then
+            return  -- Ignora a parte do personagem do jogador
+        end
+        v.Transparency = 1
+        for i1,v1 in next, v:GetDescendants() do
+            if v1:IsDescendantOf(game.Players.LocalPlayer.Character) then
+                return  -- Ignora a parte do personagem do jogador
+            end
+            v1.Transparency = 1
+        end
+    end)
+end
+
+a = workspace
+a.DescendantAdded:Connect(function(v)
+    pcall(function()
+        -- Verificar se o objeto é uma parte do personagem do jogador
+        if v:IsDescendantOf(game.Players.LocalPlayer.Character) then
+            return  -- Ignora a parte do personagem do jogador
+        end
+        v.Transparency = 1
+    end)
+end)
+
 getgenv().Faster = { 
     ['CDK Super Fast'] = true, -- Spawn Admin / เสกแอดมิน
     ['Buy Color Haki'] = 3 -- Legendary Haki Max 3
@@ -239,41 +276,6 @@ if _G.Switch_Hub_Series_R then
 			end
 		end
 	end)
-
-for i,v in next, workspace:GetDescendants() do
-    pcall(function()
-        if v:IsDescendantOf(game.Players.LocalPlayer.Character) then
-            return 
-        end
-        v.Transparency = 1
-    end)
-end
-
-for i,v in next, getnilinstances() do
-    pcall(function()
-        if v:IsDescendantOf(game.Players.LocalPlayer.Character) then
-            return  
-        end
-        v.Transparency = 1
-        for i1,v1 in next, v:GetDescendants() do
-            if v1:IsDescendantOf(game.Players.LocalPlayer.Character) then
-                return 
-            end
-            v1.Transparency = 1
-        end
-    end)
-end
-
-a = workspace
-a.DescendantAdded:Connect(function(v)
-    pcall(function()
-        if v:IsDescendantOf(game.Players.LocalPlayer.Character) then
-            return 
-        end
-        v.Transparency = 1
-    end)
-end)
-
 	wait(3)
 	Weapon = 'Combat'
 	-- AFK
@@ -446,42 +448,6 @@ end)
 		Switch_Hub.Parent = game:GetService("CoreGui")
 		Switch_Hub.Enabled = false
 		
-                game.StarterGui:SetCore(
-    "SendNotification",
-    {
-        Title = "Teus Hub",
-        Text = "Loading",
-        Duration = 7
-    })
-local ScreenGui = Instance.new("ScreenGui")
-local TextLabel = Instance.new("TextLabel")
-local UIGradient = Instance.new("UIGradient")
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-TextLabel.Parent = ScreenGui
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.5, -100, 0, -50)  -- Subindo um pouco para cima
-TextLabel.Size = UDim2.new(0, 200, 0, 50)
-TextLabel.Font = Enum.Font.FredokaOne
-TextLabel.Text = "discord.gg/teuscommunity"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextSize = 19.000
-
--- Mudando para um gradiente azul escuro
-UIGradient.Color = ColorSequence.new{
-    ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 50)),  -- Azul escuro
-    ColorSequenceKeypoint.new(0.01, Color3.fromRGB(0, 0, 100)),  -- Azul mais claro
-    ColorSequenceKeypoint.new(0.16, Color3.fromRGB(0, 0, 150)),  -- Azul mais claro
-    ColorSequenceKeypoint.new(0.35, Color3.fromRGB(0, 0, 200)),  -- Azul mais claro
-    ColorSequenceKeypoint.new(0.68, Color3.fromRGB(0, 0, 255)),  -- Azul
-    ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 150))   -- Azul mais escuro
-}
-UIGradient.Parent = TextLabel
-
-loadSettings()
 		
 		game:GetService("Players").LocalPlayer.PlayerGui.Main.BottomHUDList.SafeZone.Visible = false
 		game:GetService("Players").LocalPlayer.PlayerGui.Main.Code.Visible = false
@@ -735,7 +701,7 @@ loadSettings()
 		Yedhee.Size = UDim2.new(0, 137, 0, 25)
 		Yedhee.Font = Enum.Font.GothamSemibold
 		Yedhee.Text = "Account Status"
-		Yedhee.TextColor3 = Color3.fromRGB(0, 0, 100) 
+		Yedhee.TextColor3 = Color3.fromRGB(0, 0, 200) 
 		Yedhee.TextSize = 12.000
 		
 		if game.CoreGui:FindFirstChild('Teus Hub C') then
@@ -11259,6 +11225,45 @@ loadSettings()
 			end)
 		end
 	end)
+
+-------------------------------------------------------
+
+game.StarterGui:SetCore(
+    "SendNotification",
+    {
+        Title = "Teus Hub",
+        Text = "Loading",
+        Duration = 7
+    })
+local ScreenGui = Instance.new("ScreenGui")
+local TextLabel = Instance.new("TextLabel")
+local UIGradient = Instance.new("UIGradient")
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+TextLabel.Parent = ScreenGui
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.5, -100, 0, -50)  -- Subindo um pouco para cima
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.FredokaOne
+TextLabel.Text = "discord.gg/teuscommunity"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 19.000
+
+-- Mudando para um gradiente azul escuro
+UIGradient.Color = ColorSequence.new{
+    ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 50)),  -- Azul escuro
+    ColorSequenceKeypoint.new(0.01, Color3.fromRGB(0, 0, 100)),  -- Azul mais claro
+    ColorSequenceKeypoint.new(0.16, Color3.fromRGB(0, 0, 150)),  -- Azul mais claro
+    ColorSequenceKeypoint.new(0.35, Color3.fromRGB(0, 0, 200)),  -- Azul mais claro
+    ColorSequenceKeypoint.new(0.68, Color3.fromRGB(0, 0, 255)),  -- Azul
+    ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 150))   -- Azul mais escuro
+}
+UIGradient.Parent = TextLabel
+
+loadSettings()
 
 	-- Webhook
 	function SendFullMoon(vux)
