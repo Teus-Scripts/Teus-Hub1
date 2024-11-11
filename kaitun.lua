@@ -242,9 +242,8 @@ if _G.Switch_Hub_Series_R then
 
 for i,v in next, workspace:GetDescendants() do
     pcall(function()
-        -- Verificar se o objeto é uma parte do personagem do jogador
         if v:IsDescendantOf(game.Players.LocalPlayer.Character) then
-            return  -- Ignora a parte do personagem do jogador
+            return 
         end
         v.Transparency = 1
     end)
@@ -252,14 +251,13 @@ end
 
 for i,v in next, getnilinstances() do
     pcall(function()
-        -- Verificar se o objeto é uma parte do personagem do jogador
         if v:IsDescendantOf(game.Players.LocalPlayer.Character) then
-            return  -- Ignora a parte do personagem do jogador
+            return  
         end
         v.Transparency = 1
         for i1,v1 in next, v:GetDescendants() do
             if v1:IsDescendantOf(game.Players.LocalPlayer.Character) then
-                return  -- Ignora a parte do personagem do jogador
+                return 
             end
             v1.Transparency = 1
         end
@@ -269,9 +267,8 @@ end
 a = workspace
 a.DescendantAdded:Connect(function(v)
     pcall(function()
-        -- Verificar se o objeto é uma parte do personagem do jogador
         if v:IsDescendantOf(game.Players.LocalPlayer.Character) then
-            return  -- Ignora a parte do personagem do jogador
+            return 
         end
         v.Transparency = 1
     end)
@@ -449,42 +446,6 @@ end)
 		Switch_Hub.Parent = game:GetService("CoreGui")
 		Switch_Hub.Enabled = false
 		
-                game.StarterGui:SetCore(
-                "SendNotification",
-    {
-                Title = "Teus Hub",
-                Text = "Loading",
-                Duration = 7
-   })
-local ScreenGui = Instance.new("ScreenGui")
-local TextLabel = Instance.new("TextLabel")
-local UIGradient = Instance.new("UIGradient")
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-TextLabel.Parent = ScreenGui
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.5, -100, 0, -50)  -- Subindo um pouco para cima
-TextLabel.Size = UDim2.new(0, 200, 0, 50)
-TextLabel.Font = Enum.Font.FredokaOne
-TextLabel.Text = "discord.gg/teuscommunity"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextSize = 19.000
-
--- Mudando para um gradiente azul escuro
-UIGradient.Color = ColorSequence.new{
-    ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 50)),  -- Azul escuro
-    ColorSequenceKeypoint.new(0.01, Color3.fromRGB(0, 0, 100)),  -- Azul mais claro
-    ColorSequenceKeypoint.new(0.16, Color3.fromRGB(0, 0, 150)),  -- Azul mais claro
-    ColorSequenceKeypoint.new(0.35, Color3.fromRGB(0, 0, 200)),  -- Azul mais claro
-    ColorSequenceKeypoint.new(0.68, Color3.fromRGB(0, 0, 255)),  -- Azul
-    ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 150))   -- Azul mais escuro
-}
-UIGradient.Parent = TextLabel
-
-loadSettings()
 		
 		game:GetService("Players").LocalPlayer.PlayerGui.Main.BottomHUDList.SafeZone.Visible = false
 		game:GetService("Players").LocalPlayer.PlayerGui.Main.Code.Visible = false
@@ -575,7 +536,7 @@ loadSettings()
 		F_Text6.Transparency = 1
 		game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone().Parent = game:GetService("CoreGui")["Teus Hub"].Text6
 		game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.TextColor3 = Color3.fromRGB(255,140,0)
-		game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = '🌕 75% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+		game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Moon 75% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 		game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Size = UDim2.new(1, 0, 0, 25)
 		game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.TextXAlignment = 'Center'
 		game:GetService("CoreGui")["Teus Hub"].Text6.Position = UDim2.new(0.5, 0, -0.03, 0)
@@ -585,17 +546,17 @@ loadSettings()
 				pcall(function()
 					if Three_World then
 						if game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149431" then
-							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = '🌕 100% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Moon 100% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149052" then
-							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = '🌕 75% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Moon 75% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709143733" then
-							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = '🌕 50% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Moon 50% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709150401" then
-							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = '🌕 25% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Moon 25% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149680" then
-							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = '🌕 15% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Moon 15% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						else 
-							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = '🌕 0% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+							game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Moon 0% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						end 
 						local scripttime=game.Workspace.DistributedGameTime
 						local seconds = scripttime%60
@@ -604,7 +565,7 @@ loadSettings()
 						local tempo = string.format("%.0f Hours, %.0f Minutes, %.0f Seconds", hours ,minutes, seconds)
 						game:GetService("CoreGui")["Teus Hub"].Text2.Fragments.Text = tempo
 					else
-						game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = '🌕 0% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
+						game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Moon 0% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						local scripttime=game.Workspace.DistributedGameTime
 						local seconds = scripttime%60
 						minutes = math.floor(scripttime/60%60)
@@ -696,7 +657,7 @@ loadSettings()
 		ToggleImgUi.BackgroundTransparency = 1
 		ToggleImgUi.Position = UDim2.new(0.0454545468, 0, 0.125000313, 0)
 		ToggleImgUi.Size = UDim2.new(0, 35, 0, 35)
-		ToggleImgUi.Image = "rbxassetid://111005674884784"
+		ToggleImgUi.Image = "rbxassetid://114239849954263"
 		ToggleImgUi.MouseButton1Click:Connect(function()
 			if togle_up then
 				ToggleImgUi.ImageTransparency = 0.3
@@ -738,7 +699,7 @@ loadSettings()
 		Yedhee.Size = UDim2.new(0, 137, 0, 25)
 		Yedhee.Font = Enum.Font.GothamSemibold
 		Yedhee.Text = "Account Status"
-		Yedhee.TextColor3 = Color3.fromRGB(0, 0, 150) 
+		Yedhee.TextColor3 = Color3.fromRGB(0, 0, 100) 
 		Yedhee.TextSize = 12.000
 		
 		if game.CoreGui:FindFirstChild('Teus Hub C') then
@@ -6885,26 +6846,26 @@ loadSettings()
 				-- Main
 				local ris_text = ''
 				if God_Human_H then
-					ris_text = ris_text..'👊'
+					ris_text = ris_text..' GDH '
 				end
 				if Cursed_Dual_Katana_H then
-					ris_text = ris_text..' ⚔️'
+					ris_text = ris_text..' CDK '
 				end
 				if Soul_Guitar_H then
-					ris_text = ris_text..' 🎸'
+					ris_text = ris_text..' SGT '
 				end 
 				if Shark_Anchor_H then
-					ris_text = ris_text..' ⚓'
+					ris_text = ris_text..' SHARK ANCHOR '
 				end
 				if ris_text ~= '' then
 					if Mirror_Fractal_H then
-						ris_text = ris_text..' 🧩'
+						ris_text = ris_text..' MF '
 					end
 					if Valkyrie_Helmet_H then
-						ris_text = ris_text..' 🎩'
+						ris_text = ris_text..' VH '
 					end
 					if Quest_Race_V4_H then
-						ris_text = ris_text..' 🕹️'
+						ris_text = ris_text..' PULL LEVER '
 					end
 					game:GetService("CoreGui")["Teus Hub"].Text4.Fragments.Text  = ris_text
 				end
@@ -11263,7 +11224,44 @@ loadSettings()
 		end
 	end)
 
+-------------------------------------------------------
 
+game.StarterGui:SetCore(
+    "SendNotification",
+    {
+        Title = "Teus Hub",
+        Text = "Loading",
+        Duration = 7
+    })
+local ScreenGui = Instance.new("ScreenGui")
+local TextLabel = Instance.new("TextLabel")
+local UIGradient = Instance.new("UIGradient")
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+TextLabel.Parent = ScreenGui
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.5, -100, 0, -50)  -- Subindo um pouco para cima
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.FredokaOne
+TextLabel.Text = "discord.gg/teuscommunity"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 19.000
+
+-- Mudando para um gradiente azul escuro
+UIGradient.Color = ColorSequence.new{
+    ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 50)),  -- Azul escuro
+    ColorSequenceKeypoint.new(0.01, Color3.fromRGB(0, 0, 100)),  -- Azul mais claro
+    ColorSequenceKeypoint.new(0.16, Color3.fromRGB(0, 0, 150)),  -- Azul mais claro
+    ColorSequenceKeypoint.new(0.35, Color3.fromRGB(0, 0, 200)),  -- Azul mais claro
+    ColorSequenceKeypoint.new(0.68, Color3.fromRGB(0, 0, 255)),  -- Azul
+    ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 150))   -- Azul mais escuro
+}
+UIGradient.Parent = TextLabel
+
+loadSettings()
 
 	-- Webhook
 	function SendFullMoon(vux)
