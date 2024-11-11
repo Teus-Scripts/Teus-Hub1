@@ -532,11 +532,7 @@ if _G.Switch_Hub_Series_R then
 					else
 						game:GetService("CoreGui")["Teus Hub"].Text6.Fragments.Text = 'Discord.gg/teuscommunity | Moon 0% ('..tostring(game:GetService("Lighting").TimeOfDay)..')'
 						local scripttime=game.Workspace.DistributedGameTime
-						local seconds = scripttime%60
-						minutes = math.floor(scripttime/60%60)
-						hours = math.floor(scripttime/3600)
-						local tempo = string.format("Discord.gg/teuscommunity", hours ,minutes, seconds)
-						game:GetService("CoreGui")["Teus Hub"].Text2.Fragments.Text = tempo
+						
 					end
 				end)
 			end
