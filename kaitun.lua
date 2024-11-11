@@ -11228,10 +11228,6 @@ UIGradient.Parent = TextLabel
 
 loadSettings()
 
-local CoreGui = game:GetService("StarterGui")
-CoreGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false)
-CoreGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, false)
-
 	-- Webhook
 	function SendFullMoon(vux)
 		local Mystic = nil
