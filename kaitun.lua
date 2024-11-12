@@ -11377,7 +11377,7 @@ loadSettings()
 						["icon_url"] = "https://cdn.discordapp.com/attachments/1257709517135679489/1304585572697903105/2024091815265416.jpg?ex=672fed7e&is=672e9bfe&hm=09efa976a922f670786625614dd4e221047cd8d7e90421351670e70773378b57&";
 					};
 					["thumbnail"] = {
-						["url"] = "";
+						["url"] = "https://pbs.twimg.com/media/FDsZOHhVkAUsFeJ.jpg";
 					};
 					["footer"] = {
 						["text"] = "By Teus Hub";
@@ -11419,12 +11419,11 @@ loadSettings()
 							if #game.Players:GetChildren() <= 9 and not table.find(_G.Keep_JobX,tostring(game.JobId)) then
 								table.insert(_G.Keep_JobX,tostring(game.JobId))
 								SendBoss('https://discord.com/api/webhooks/1304583082552328284/kwG6a69w-NftaSQQL-j1youlp_xlmLFlUFVg9KynwSXHCSo681DFfWh_9Qqr6Wm4EeTY','rip_indra True Form')
-            end
-            if game.Workspace.Enemies:FindFirstChild('Dough King') or game.ReplicatedStorage:FindFirstChild('Dough King') then
+                                                end
+                                                if game.Workspace.Enemies:FindFirstChild('Dough King') or game.ReplicatedStorage:FindFirstChild('Dough King') then
 							if #game.Players:GetChildren() <= 9 and not table.find(_G.Keep_JobX,tostring(game.JobId)) then
 								table.insert(_G.Keep_JobX,tostring(game.JobId))
 								SendBoss('https://discord.com/api/webhooks/1306008221562961990/uoJmnD6HuAWeVY8tA44JILItq_NAdSR5jrTsMe-3CZesy7YKgNL4fUZBwHgkc9f1JemW','Dough King')
-							end
 						end
 						if #game.Players:GetChildren() <= 3 then
 							SendFullMoon('https://discord.com/api/webhooks/1221652705513046087/4ur0toVQ-hLOk1ceKZpDql2PBKoCrBGETwy4doN9-a4PfuExB5juZ9zaHxYvTzndiAGS')
