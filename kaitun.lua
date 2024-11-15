@@ -3761,7 +3761,7 @@ if _G.Switch_Hub_Series_R then
 			end
 			if Old_World and game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == false then
 				local Lv = game.Players.LocalPlayer.Data.Level.Value
-				if game.Players.LocalPlayer.Data.Level.Value >= 100 and game.Players.LocalPlayer.Data.Level.Value < 650 and #game.Players:GetPlayers() > 5 then
+				if game.Players.LocalPlayer.Data.Level.Value >= 50 and game.Players.LocalPlayer.Data.Level.Value < 650 and #game.Players:GetPlayers() > 5 then
 					if string.find(tostring(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("PlayerHunter")),'We') then
 						if game.Players.LocalPlayer.PlayerGui.Main.Quest.Visible == true then
 							local at_time = 0
