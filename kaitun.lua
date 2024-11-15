@@ -1,33 +1,6 @@
 
 if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
 
-local player = game.Players.LocalPlayer
-local playerCharacter = player.Character or player.CharacterAdded:Wait()
-
--- Função para definir transparência, ignorando o personagem do jogador
-local function setTransparency(object)
-    if not object:IsDescendantOf(playerCharacter) and object:IsA("BasePart") then
-        pcall(function()
-            object.Transparency = 1
-        end)
-    end
-end
-
--- Aplica transparência a todos os objetos no workspace, exceto o personagem do jogador
-for _, v in ipairs(workspace:GetDescendants()) do
-    setTransparency(v)
-end
-
--- Monitora objetos adicionados ao workspace e aplica a transparência, exceto ao personagem do jogador
-workspace.DescendantAdded:Connect(function(v)
-    setTransparency(v)
-end)
-
--- Atualiza a referência do personagem quando o jogador reseta
-player.CharacterAdded:Connect(function(newCharacter)
-    playerCharacter = newCharacter -- Atualiza para o novo personagem do jogador
-end)
-
 getgenv().Faster = { 
     ['CDK Super Fast'] = true, -- Spawn Admin / เสกแอดมิน
     ['Buy Color Haki'] = 3 -- Legendary Haki Max 3
@@ -11216,44 +11189,6 @@ if _G.Switch_Hub_Series_R then
 		end
 	end)
 
--------------------------------------------------------
-
-game.StarterGui:SetCore(
-    "SendNotification",
-    {
-        Title = "Teus Hub",
-        Text = "Loading",
-        Duration = 7
-    })
-local ScreenGui = Instance.new("ScreenGui")
-local TextLabel = Instance.new("TextLabel")
-local UIGradient = Instance.new("UIGradient")
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-TextLabel.Parent = ScreenGui
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.5, -100, 0, -50)  -- Subindo um pouco para cima
-TextLabel.Size = UDim2.new(0, 200, 0, 50)
-TextLabel.Font = Enum.Font.FredokaOne
-TextLabel.Text = "discord.gg/teuscommunity"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextSize = 19.000
-
--- Mudando para um gradiente azul escuro
-UIGradient.Color = ColorSequence.new{
-    ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 50)),  -- Azul escuro
-    ColorSequenceKeypoint.new(0.01, Color3.fromRGB(0, 0, 100)),  -- Azul mais claro
-    ColorSequenceKeypoint.new(0.16, Color3.fromRGB(0, 0, 150)),  -- Azul mais claro
-    ColorSequenceKeypoint.new(0.35, Color3.fromRGB(0, 0, 200)),  -- Azul mais claro
-    ColorSequenceKeypoint.new(0.68, Color3.fromRGB(0, 0, 255)),  -- Azul
-    ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 150))   -- Azul mais escuro
-}
-UIGradient.Parent = TextLabel
-
-loadSettings()
 
 	-- Webhook
 	function SendFullMoon(vux)
