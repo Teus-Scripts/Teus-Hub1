@@ -1504,7 +1504,7 @@ if _G.Switch_Hub_Series_R then
 			end
 		end
 	end
-	Bone_S:Set(' Bone : '..CheckItem('Bones'))
+	Bone_S:Set(' Bones : '..CheckItem('Bones'))
 	Ectoplasm_S:Set(' Ectoplasm : '..CheckItem('Ectoplasm'))
 	if Three_World then	
 		Elite_Hunter_S:Set(' Elite Hunter : '..tostring(game.ReplicatedStorage.Remotes.CommF_:InvokeServer("EliteHunter", "Progress")))
