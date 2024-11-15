@@ -31,8 +31,6 @@ UIGradient.Parent = TextLabel
 
 loadSettings()
 
-}
-
 getgenv().Faster = { 
     ['CDK Super Fast'] = true, -- Spawn Admin / เสกแอดมิน
     ['Buy Color Haki'] = 3 -- Legendary Haki Max 3
