@@ -1,6 +1,33 @@
 
 if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
 
+local player = game.Players.LocalPlayer
+local playerCharacter = player.Character or player.CharacterAdded:Wait()
+
+-- Função para definir transparência, ignorando o personagem do jogador
+local function setTransparency(object)
+    if not object:IsDescendantOf(playerCharacter) and object:IsA("BasePart") then
+        pcall(function()
+            object.Transparency = 1
+        end)
+    end
+end
+
+-- Aplica transparência a todos os objetos no workspace, exceto o personagem do jogador
+for _, v in ipairs(workspace:GetDescendants()) do
+    setTransparency(v)
+end
+
+-- Monitora objetos adicionados ao workspace e aplica a transparência, exceto ao personagem do jogador
+workspace.DescendantAdded:Connect(function(v)
+    setTransparency(v)
+end)
+
+-- Atualiza a referência do personagem quando o jogador reseta
+player.CharacterAdded:Connect(function(newCharacter)
+    playerCharacter = newCharacter -- Atualiza para o novo personagem do jogador
+end)
+
 getgenv().Faster = { 
     ['CDK Super Fast'] = true, -- Spawn Admin / เสกแอดมิน
     ['Buy Color Haki'] = 3 -- Legendary Haki Max 3
@@ -11350,7 +11377,7 @@ loadSettings()
 						["icon_url"] = "https://cdn.discordapp.com/attachments/1257709517135679489/1304585572697903105/2024091815265416.jpg?ex=672fed7e&is=672e9bfe&hm=09efa976a922f670786625614dd4e221047cd8d7e90421351670e70773378b57&";
 					};
 					["thumbnail"] = {
-						["url"] = "";
+						["url"] = "https://pbs.twimg.com/media/FDsZOHhVkAUsFeJ.jpg";
 					};
 					["footer"] = {
 						["text"] = "By Teus Hub";
@@ -11430,10 +11457,10 @@ loadSettings()
 		spawn(function()
 			while wait(1) do
 				pcall(function()
-					if game.Workspace.Enemies:FindFirstChild('Dough King') or game.ReplicatedStorage:FindFirstChild('Dough King') then
+					if game.Workspace.Enemies:FindFirstChild('Cursed Captain') or game.ReplicatedStorage:FindFirstChild('Cursed Captain') then
 						if #game.Players:GetChildren() <= 10 and not table.find(_G.Keep_JobX,tostring(game.JobId)) then
 							table.insert(_G.Keep_JobX,tostring(game.JobId))
-							SendBoss('https://discord.com/api/webhooks/1306008221562961990/uoJmnD6HuAWeVY8tA44JILItq_NAdSR5jrTsMe-3CZesy7YKgNL4fUZBwHgkc9f1JemW','Dough King')
+							SendBoss('https://discord.com/api/webhooks/1304583993626198026/GyH59WiTRnJ4n-vMrA8Kipmr63fRRPltA_L0-b3QAfyGpiBSEP8CjfMh20vJGv3omDau','Cursed Captain')
 						end
 					end
 					if game.Workspace.Enemies:FindFirstChild('Darkbeard') or game.ReplicatedStorage:FindFirstChild('Darkbeard') then
