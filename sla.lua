@@ -1,6 +1,6 @@
 _G.whiteScreen = false
 _G.fps = 120
-_G.Mode = false
+_G.Mode = true
 loadstring(game:HttpGet('https://raw.githubusercontent.com/AloneBiNgu/AloneHub/main/lag'))()
 
 -- Max level, godhuman
