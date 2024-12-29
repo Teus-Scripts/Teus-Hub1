@@ -6,7 +6,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/AloneBiNgu/AloneHub/m
 -- Max level, godhuman
 getgenv().Configs = {
     ["Team"] = "Pirates",
-    ["Gun Farm"] = true,
+    ["Gun Farm"] = false,
     ["FPS Boost"] = {
         ["Enable"] = true,
         ["FPS Cap"] = 60,
