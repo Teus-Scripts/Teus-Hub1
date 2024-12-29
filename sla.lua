@@ -9,7 +9,7 @@ getgenv().Configs = {
     ["Gun Farm"] = false,
     ["FPS Boost"] = {
         ["Enable"] = true,
-        ["FPS Cap"] = 60,
+        ["FPS Cap"] = 120,
     },
     ["Farm Boss Drops"] = {
         ["Enable"] = false,
