@@ -3,14 +3,14 @@ _G.fps = 120
 _G.Mode = true
 loadstring(game:HttpGet('https://raw.githubusercontent.com/AloneBiNgu/AloneHub/main/lag'))()
 
--- Max level, godhuman, cdk, sgt , getkey
+-- Max level, godhuman, cdk, sgt
 script_key = "U6GJTMMIV6XLH2FX433O77X2ZLU7D57J7XF35KNXXI"
 getgenv().Shutdown = false -- Turn on if u are farming bulk accounts
 getgenv().Configs = {
     ["Team"] = "Marines",
     ["Gun Farm"] = false, -- Disabled
     ["FPS Boost"] = {
-        ["Enable"] = false,
+        ["Enable"] = true,
         ["FPS Cap"] = 30,
     },
     ["Farm Boss Drops"] = {
@@ -22,10 +22,10 @@ getgenv().Configs = {
     ["Skull Guitar"] = false,
     ["Find Fruit"] = false, -- Will find 1m+ fruit to unlock swan door to access third sea
     ["Cursed Dual Katana"] = false,
-    ["Switch Melee"] = true,  -- farm all melee
+    ["Switch Melee"] = true,
     ["Eat Fruit"] = "", -- leave blank for none, put the fruit name like this example: Smoke Fruit, T-Rex Fruit, ...
     ["Snipe Fruit"] = "", -- leave blank for none, put the fruit name like this example: Smoke Fruit, T-Rex Fruit, ...
-    ["Lock Fragment"] = 10000,
+    ["Lock Fragment"] = 0,
     ["Buy Stuffs"] = true -- buso, geppo, soru, ken haki
 }
 repeat task.wait() pcall(function() loadstring(game:HttpGet("https://reviewphim.fun/Xero%20Hub/Blox%20Fruit/kaitun.lua"))() end) until getgenv().Check_Execute
