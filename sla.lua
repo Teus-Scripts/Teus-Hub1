@@ -1,8 +1,3 @@
-_G.whiteScreen = false
-_G.fps = 120
-_G.Mode = true
-loadstring(game:HttpGet('https://raw.githubusercontent.com/AloneBiNgu/AloneHub/main/lag'))()
-
 -- Max level, godhuman, cdk, sgt
 script_key = "U6GJTMMIV6XLH2FX433O77X2ZLU7D57J7XF35KNXXI"
 getgenv().Shutdown = false -- Turn on if u are farming bulk accounts
