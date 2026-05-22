@@ -5,7 +5,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/AloneBiNgu/AloneHub/m
 
 
 script_key = "U3VLB2EKRGQJJCVX433PZM5HXGYA" -- Put ur key between ""
-getgenv().Shutdown = true -- Turn on if u are farming bulk accounts
+getgenv().Shutdown = false -- Turn on if u are farming bulk accounts
 getgenv().Configs = {
     ["Team"] = "Marines",
     ["FPS Boost"] = {
@@ -18,14 +18,14 @@ getgenv().Configs = {
     },
     ["Hop"] = {
         ["Enable"] = true,
-        ["Hop Find Tushita"] = true,
+        ["Hop Find Tushita"] = false,
         ["Hop Find Valkyrie Helm"] = false,
-        ["Hop Find Mirror Fractal"] = true,
-        ["Hop Find Darkbeard"] = true, -- For skull guitar
-        ["Hop Find Soul Reaper"] = true, -- For CDK
+        ["Hop Find Mirror Fractal"] = false,
+        ["Hop Find Darkbeard"] = false, -- For skull guitar
+        ["Hop Find Soul Reaper"] = false, -- For CDK
         ["Hop Find Mirage"] = false, -- For pull lever
         ["Find Fruit"] = true, -- Will find 1m+ fruit to unlock swan door to access third sea
-        ["Hop Elite"] = true, -- For god chalice farming
+        ["Hop Elite"] = false, -- For god chalice farming
     },
     ["Farm Mastery"] = {
         ["Enable"] = false,
@@ -46,7 +46,7 @@ getgenv().Configs = {
         ["Key"] = "2", -- Get from xerohub.click
         ["Device"] = "msi" -- u can put any name here
     },
-    ["Fruit to use for auto third sea"] = {}, -- example: {"Shadow-Shadow", "Buddha-Buddha"}
+    ["Fruit to use for auto third sea"] = {"Spider-Spider", "Quake-Quake","Buddha-Buddha", "Love-Love", "Creation-Creation", "Sound-Sound", "Phoenix-Phoenix"}, -- example: {"Shadow-Shadow", "Buddha-Buddha"}
     ["Get Fruits"] = true,
     ["Auto Spawn rip_indra"] = false,
     ["Auto Spawn Dough King"] = false,
@@ -54,7 +54,7 @@ getgenv().Configs = {
     ["Auto Collect Berry"] = false,
     ["Auto Evo Race"] = false,
     ["Awaken Fruit"] = false,
-    ["Rainbow Haki"] = true,
+    ["Rainbow Haki"] = false,
     ["Hop Player Near"] = true,
     ["Skull Guitar"] = false,
     ["Cursed Dual Katana"] = false,
