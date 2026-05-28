@@ -1,5 +1,5 @@
 _G.whiteScreen = true
-_G.fps = 15
+_G.fps = 60
 _G.Mode = true
 loadstring(game:HttpGet('https://raw.githubusercontent.com/AloneBiNgu/AloneHub/main/lag'))()
 
@@ -10,7 +10,7 @@ getgenv().Configs = {
     ["Team"] = "Marines",
     ["FPS Boost"] = {
         ["Enable"] = true,
-        ["FPS Cap"] = 15, --recommend 15
+        ["FPS Cap"] = 60, --recommend 15
     },
     ["Farm Boss Drops"] = {
         ["Enable"] = false,
