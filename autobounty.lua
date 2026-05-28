@@ -5,7 +5,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/AloneBiNgu/AloneHub/m
 
 
 script_key = "U3VLB2EKRGQJJCVX433PZM5HXGYA" -- Put ur key between ""
-getgenv().Shutdown = false -- Turn on if u are farming bulk accounts
+getgenv().Shutdown = true -- Turn on if u are farming bulk accounts
 getgenv().Configs = {
     ["Team"] = "Marines",
     ["FPS Boost"] = {
