@@ -1,3 +1,23 @@
+for i,v in next, workspace:GetDescendants() do
+    pcall(function()
+        v.Transparency = 1
+    end)
+end
+for i,v in next, getnilinstances() do
+    pcall(function()
+        v.Transparency = 1
+        for i1,v1 in next, v:GetDescendants() do
+            v1.Transparency = 1
+        end
+    end)
+end
+a = workspace
+a.DescendantAdded:Connect(function(v)
+    pcall(function()
+        v.Transparency = 1
+    end)
+end)
+
 script_key = "U3VLB2EKRGQJJCVX433PZM5HXGYA" -- Put ur key between ""
 getgenv().Shutdown = false -- Turn on if u are farming bulk accounts
 getgenv().Configs = {
@@ -40,7 +60,7 @@ getgenv().Configs = {
         ["Key"] = "2", -- Get from xerohub.click
         ["Device"] = "msi" -- u can put any name here
     },
-    ["Fruit to use for auto third sea"] = {"Spider-Spider", "Quake-Quake","Buddha-Buddha", "Love-Love", "Creation-Creation", "Sound-Sound", "Phoenix-Phoenix"}, -- example: {"Shadow-Shadow", "Buddha-Buddha"}
+    ["Fruit to use for auto third sea"] = {"Spider-Spider","Barrier-Barrier","Quake-Quake","Buddha-Buddha","Love-Love","Sound-Sound","Phoenix-Phoenix","Portal-Portal","Blizzard-Blizzard"} -- example: {"Shadow-Shadow", "Buddha-Buddha"}
     ["Get Fruits"] = true,
     ["Auto Spawn rip_indra"] = false,
     ["Auto Spawn Dough King"] = false,
