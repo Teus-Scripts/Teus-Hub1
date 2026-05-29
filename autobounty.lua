@@ -1,9 +1,3 @@
-_G.whiteScreen = true
-_G.fps = 60
-_G.Mode = true
-loadstring(game:HttpGet('https://raw.githubusercontent.com/AloneBiNgu/AloneHub/main/lag'))()
-
-
 script_key = "U3VLB2EKRGQJJCVX433PZM5HXGYA" -- Put ur key between ""
 getgenv().Shutdown = false -- Turn on if u are farming bulk accounts
 getgenv().Configs = {
