@@ -1,23 +1,3 @@
-for i,v in next, workspace:GetDescendants() do
-    pcall(function()
-        v.Transparency = 1
-    end)
-end
-for i,v in next, getnilinstances() do
-    pcall(function()
-        v.Transparency = 1
-        for i1,v1 in next, v:GetDescendants() do
-            v1.Transparency = 1
-        end
-    end)
-end
-a = workspace
-a.DescendantAdded:Connect(function(v)
-    pcall(function()
-        v.Transparency = 1
-    end)
-end)
-
 script_key = "U3VLB2EKRGQJJCVX433PZM5HXGYA" -- Put ur key between ""
 getgenv().Shutdown = false -- Turn on if u are farming bulk accounts
 getgenv().Configs = {
@@ -79,3 +59,23 @@ getgenv().Configs = {
     ["Buy Stuffs"] = true -- buso, geppo, soru, ken haki, ...
 }
 repeat task.wait(0.01) pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Xero2409/XeroHub/refs/heads/main/kaitun.lua"))() end) until getgenv().Check_Execute
+
+for i,v in next, workspace:GetDescendants() do
+    pcall(function()
+        v.Transparency = 1
+    end)
+end
+for i,v in next, getnilinstances() do
+    pcall(function()
+        v.Transparency = 1
+        for i1,v1 in next, v:GetDescendants() do
+            v1.Transparency = 1
+        end
+    end)
+end
+a = workspace
+a.DescendantAdded:Connect(function(v)
+    pcall(function()
+        v.Transparency = 1
+    end)
+end)
