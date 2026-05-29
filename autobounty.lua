@@ -40,7 +40,7 @@ getgenv().Configs = {
         ["Key"] = "2", -- Get from xerohub.click
         ["Device"] = "msi" -- u can put any name here
     },
-    ["Fruit to use for auto third sea"] = {"Spider-Spider","Barrier-Barrier","Quake-Quake","Buddha-Buddha","Love-Love","Sound-Sound","Phoenix-Phoenix","Portal-Portal","Blizzard-Blizzard"} -- example: {"Shadow-Shadow", "Buddha-Buddha"}
+    ["Fruit to use for auto third sea"] = {"Spider-Spider","Barrier-Barrier","Quake-Quake","Buddha-Buddha","Love-Love","Sound-Sound","Phoenix-Phoenix","Portal-Portal","Blizzard-Blizzard"}
     ["Get Fruits"] = true,
     ["Auto Spawn rip_indra"] = false,
     ["Auto Spawn Dough King"] = false,
